@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+<html lang="En">
+<head>
+<script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name" : "Punjab National Bank",
+          "url" : "https://www.pnbindia.in/",
+          "logo" : "https://www.pnbindia.in/images/logo-new.png",
+          "address":
+          [
+          {
+          "@type": "PostalAddress",
+          "addressLocality": "New Delhi",
+          "addressRegion": "New Delhi",
+          "postalCode": "110075",
+          "streetAddress": "Plot No 4, Sector -10 Dwarka,",
+          "telephone": " 1800 180 2222"
+          },
+          {
+          "@type": "PostalAddress",
+          "addressLocality": "New Delhi ",
+          "addressRegion": "New Delhi ",
+          "postalCode": "110075",
+          "streetAddress": " Plot No 4, Sector -10 Dwarka ",
+          "telephone": [" 1800 180 2222",
+          " 1800 103 2222",
+          " 011-28044907"
+          ],
+          "email" : "care[at]pnb[dot]co[dot]in"
+          },
+          {
+          "@type": "PostalAddress",
+          "addressLocality": " New Delhi ",
+          "addressRegion": " New Delhi ",
+          "postalCode": "110075",
+          "streetAddress": "Plot No 4, Sector -10 Dwarka",
+          "telephone": [" 1800 180 2222",
+          " 1800 103 2222",
+          " 011-28044907"
+          ],
+          "email": "care[at]pnb[dot]co[dot]in"
+          }
+          ],
+          "sameAs" : [
+          "https://www.facebook.com/pnbindia",
+          "https://twitter.com/pnbindia",
+          "https://www.linkedin.com/company/punjab-national-bank",
+          "https://www.youtube.com/pnbindia",
+          "https://www.instagram.com/pnbindia/"
+          ]
+        }
+      </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84964116-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	Page Not Found
+</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /><link rel="stylesheet" href="css/merge.css?i=4" type="text/css" media="screen" />
+    <!--<link rel="stylesheet" href="css/style.css?i=2" type="text/css" media="screen" /><link rel="stylesheet" href="css/vertical_menu.css" type="text/css" media="screen" /><link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />-->
+    <!--css & js for banner slider Start-->
+    <link rel="stylesheet" href="css/tab-style.css" type="text/css" media="screen" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- <script src="js/bootstarp.min.js"></script> -->
+    <script src="js/validation.js"></script>
+    
+    <script src="js/customfunction.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <!--animation-->
+    <!-- Date Time Picker-->
+    <link href="css/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.datetimepicker.full.js"></script>
+    <!-- Date Time Picker-->
+	
+
+	
+    <!--Favicon Code start here-->
+    <link rel="shortcut icon" href="https://www.pnbindia.in/images/favicon.ico" type="image/x-icon" /><link rel="icon" href="https://www.pnbindia.in/images/favicon.ico" type="image/x-icon" />
+    <!--End here-->
+    <script>
+        if (document.layers) {
+            //Capture the MouseDown event.
+            document.captureEvents(Event.MOUSEDOWN);
+
+            //Disable the OnMouseDown event handler.
+            document.onmousedown = function () {
+                return false;
+            };
+        }
+        else {
+            //Disable the OnMouseUp event handler.
+            document.onmouseup = function (e) {
+                if (e != null && e.type == "mouseup") {
+                    //Check the Mouse Button which is clicked.
+                    if (e.which == 2 || e.which == 3) {
+                        //If the Button is middle or right then disable.
+                        return false;
+                    }
+                }
+            };
+        }
+
+        //Disable the Context Menu event.
+        var pageURL = $(location).attr("href");
+        //alert(pageURL);
+        if (pageURL == 'https://www.pnbindia.in/important-updates.html') {
+        }
+        else {
+            document.oncontextmenu = function () {
+                return false;
+            };
+        }
+    </script>
+    <!-- Change Website Font Size Script-->
+    <script>
+
+
+        $(document).ready(function () {
+            var y = 2;
+            $("#ddmenu").removeClass("menuFontClass");
+            $('body').delegate('.increase', 'click', function (e) {
+                $("#ddmenu").removeClass("menuFontClass");
+                $("#ddmenu").addClass("menuFontClass");
+                if (y < 4) {
+                    $('*').each(function () {
+                        var x = parseInt($(this).css("font-size"));
+                        x = x + 1;
+                        $(this).css("font-size", x);
+                    });
+                    y = y + 1;
+                }
+            });
+            $('body').delegate('.decrease', 'click', function (e) {
+                if (y > 0) {
+                    $('*').each(function () {
+                        var x = parseInt($(this).css("font-size"));
+                        x = x - 1;
+                        $(this).css("font-size", x);
+                    });
+                    y = y - 1;
+                }
+            });
+            $('body').delegate('.reset', 'click', function (e) {
+                $("#ddmenu").removeClass("menuFontClass");
+                $('*').each(function () {
+                    $(this).css("font-size", "");
+                });
+                y = 2;
+            });
+
+            $("#ddmenu").click(function () {
+                $("#ddmenu").addClass("menuClass");
+            });
+        });
+
+    
+    </script>
+    <!-- End Change Website Font Size Script-->
+    <!--right-pannel-->
+    
+    <!--responsive-->
+    <!--Main Menu File-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/webslidemenu.css" />
+    <script src="js/webslidemenu.js"></script>
+    <!--start-responsive-menu-->
+    <script>
+        $(document).ready(function () {
+            $('.search-mob').click(function () {
+                $('.srchbx').animate({ height: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.right-pannl-mob').click(function () {
+                $('.bannerrgtpanel').animate({ width: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.personal').click(function () {
+                $('.personal-detial').animate({ height: 'toggle' }, "fast");
+
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.corporate-menu').click(function () {
+                $('.corporate-detail').animate({ height: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var x = $('.mega-menu-detail'); // this is your element
+            var w = $(document).width();
+            if (w >= 0 && w >= 993) {
+                x.removeClass('mega-menu-detail');
+            }
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.international').click(function () {
+                $('.international-detail').animate({ height: 'toggle' }, "fast");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.capital').click(function () {
+                $('.capital-detail').animate({ height: 'toggle' }, "fast");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.mob-policy').click(function () {
+                $('.policy-detail').animate({ height: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.mob-knoloeg').click(function () {
+                $('.knoloeg-detail').animate({ height: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.mob-other').click(function () {
+                $('.mob-detail').animate({ height: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.mob-grava').click(function () {
+                $('.grav-detial').animate({ height: 'toggle' }, "fast");
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.mob-organation').click(function () {
+                $('.mob-organation-detail').animate({ height: 'toggle' }, "slow");
+
+            });
+        });
+    </script>
+    <!--end-responsive-menu-->
+    <!--Main Menu File-->
+    <!--For Demo Only (Remove below css file and Javascript) -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/demo.css" />
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $(".gry, .blue, .green, .red, .orange, .yellow, .purple, .pink, .whitebg, .tranbg").on("click", function () {
+                $(".wsmenu")
+            .removeClass()
+            .addClass('wsmenu pm_' + $(this).attr('class'));
+            });
+
+            $(".blue-grdt, .gry-grdt, .green-grdt, .red-grdt, .orange-grdt, .yellow-grdt, .purple-grdt, .pink-grdt").on("click", function () {
+                $(".wsmenu")
+            .removeClass()
+            .addClass('wsmenu pm_' + $(this).attr('class'));
+            });
+        });
+    </script>
+    <!--For Demo Only (End Removable) -->
+    <script>
+        $(document).ready(function () {
+            var w = $(window).width();
+            if (w >= 0 && w <= 992)
+                $(".mega-menu-heading").click(function () {
+                    var get_tab_nav_id = $(this).attr('data-tab');
+                    $('#' + get_tab_nav_id).animate({ height: 'toggle' }, "slow"); ;
+
+                });
+        });
+    </script>
+	<!-- Voice Process JS-->
+    <script src='js/responsivevoice.js'></script>
+    <!-- Voice Process JS-->
+    
+<script type='text/javascript'>
+        $(document).ready(function () {
+            var url = window.location.toString();
+            var matchurl = 'https://www.pnbindia.in/Recruitments.html'
+			var purl='https://www.pnbindia.in/Public-Notices.html';
+            if (matchurl == url) {
+                window.location.replace('https://www.pnbindia.in/Recruitments.aspx');    
+            }
+			if(purl == url) {
+                window.location.replace('https://www.pnbindia.in/Public-Notices.aspx');    
+            }
+			window.onunload = function() {
+ responsiveVoice.cancel();
+}
+
+  })
+		
+    </script>
+
+<meta http-equiv="description" name="description" /><meta http-equiv="keywords" name="keywords" /></head>
+<body>
+    <form method="post" action="./Page-Not-Found.html?page=Page-Not-Found.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=n44K96c_HQEn4giF4xtW-udPqPR487Bv7j7ihqxwR3oJsKC03T9AlJMOLlDkdmoHAcpCtiP79lsB8pyD6Odk4nxwM381&amp;t=637814858020000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=OPWVavPmj2M2b8xRDdGnW3RjxxAOUf1hXsarJaiJ7Gb4GjiI73nMQT_c-NNLk_KvybWorkTF3e4GIHjv6nsLOcCIqa38cUrNT--1blkKSoSGfK8N0&amp;t=f2cd5c5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=itntTDH1AKyFNWudfI22C3fonZRu23CZGxBGScX6a7BAUe24lzUpqGIctJ3USd0o1Q7x4k8YDjlS99MYOrsdHmkvdV-K7Pt119v2_kYjOKLRr647A5oiScWRflQjDa72Jyfe3Q2&amp;t=f2cd5c5" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B0403316" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="QpQrNchvBNEHKBtO3KKhzvNbMwL+XnkyR+DKhQbcB98o0iZ/YRqAEjcSsKhsonDVx1FafgGqkcXcJLpjnzDHP7QHx6XjYrYUvpq531kPt7rGkbs60UEnVLClb2xkyhk8Dd3apWIjM2i967qOAy3sS8S2B0I=" />
+</div>
+    <input type="hidden" name="ctl00$HdnLangID" id="HdnLangID" value="1" />
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div>
+        
+        <div class="right-fix-section">
+            <div class="right-section">
+                <ul>
+               <li><a href="Recruitments.aspx" target="_blank" title="Recruitments"><span class="social-span"><strong class="recruitment">
+                    <img src="https://www.pnbindia.in/images/recruitment.png" alt="Recruitments" longdesc="PNB" /></strong><span class="social-span-content">Recruitments</span></span></a></li>
+                <!-- <li><a href="https://www.pnbrewardz.com/" target="_blank" title="PNB Rewardz"><strong -->
+                    <!-- class="fa fa-star"></strong><span>PNB Rewardz</span></a></li> -->
+					
+                <!--<li><a href="download-form.html" title="Download Forms"><span class="social-span"><strong class="fa fa-download"></strong>
+                    <span class="social-span-content">Download Forms</span></span></a></li>-->
+                <li><a href="https://www.facebook.com/pnbindia" target="_blank"
+                    title="Punjab National Bank Facebook"><span class="social-span"><strong class="fa fa-facebook facebook"></strong>
+                    <span class="social-span-content">Facebook </span></span></a></li>
+                <li><a href="https://twitter.com/pnbindia" target="_blank" title="Punjab National Bank Twitter">
+                    <span class="social-span"><strong class="fa fa-twitter twitter"></strong><span class="social-span-content">Twitter </span></span></a></li>
+                <li><a href="https://www.linkedin.com/company/punjab-national-bank" target="_blank"
+                    title="Punjab National Bank Facebook Linkedin"><span class="social-span"><strong class="fa fa-linkedin linkedin">
+                    </strong><span class="social-span-content">Linkedin </span></span></a></li>
+                <li><a href="https://www.pnbindia.in/app-store.html" target="_blank"
+                    title="Punjab National Bank Facebook App Store"><span class="social-span"><strong class="fa fa-apple"></strong>
+                    <span class="social-span-content">App Store </span></span></a></li>
+                <li><a href="google-play-store.html" title="Punjab National Bank Facebook Google Play">
+                    <span class="social-span"><strong class="fa fa-android"></strong><span class="social-span-content">Google Play </span></span></a></li>
+                      <li><a href="https://www.instagram.com/pnbindia/" target="_blank" title="Instagram"><span class="social-span"><strong class="">
+                    <img src="https://www.pnbindia.in/images/Instagram_Img.png" alt="Instagram" longdesc="PNB" /></strong><span class="social-span-content">Instagram</span></span></a></li>
+                     <li><a href="https://www.youtube.com/pnbindia" target="_blank" title="YouTube"><span class="social-span"><strong class="">
+                    <img src="https://www.pnbindia.in/images/YouTube_Img.png" alt="YouTube" longdesc="PNB" /></strong><span class="social-span-content">YouTube</span></span></a></li>
+					<li><a href="https://www.kooapp.com/profile/pnbindia" target="_blank" title="KOO"><span class="social-span"><strong class="">
+                    <img src="https://www.pnbindia.in/images/snipImage.PNG" height="28" width="28" alt="KOO" longdesc="PNB" /></strong><span class="social-span-content">KOO</span></span></a></li>
+					<li><a href="https://wa.me/message/GFOLYHMKQGOKF1" target="_blank" title="WhatsApp"><span class="social-span"><strong class="">
+                    <img src="https://www.pnbindia.in/images/whatsapp-logo.PNG" height="28" width="28" alt="WhatsApp" /></strong><span class="social-span-content">WhatsApp</span></span></a></li>
+            </ul>
+            </div>
+        </div>
+        <!--Top bar Start-->
+        <div class="main tpbr" id="top-menu-arrow">
+            <div class="midcontainer">
+                <div class="topheader">
+                  <ul>
+				  <li><a href="#slider-skip">Skip to main content </a></li>
+                        <!-- <li class="top-mob-none"><a href="WebsiteFeedback.aspx"> -->
+                            <!-- <img src="images/feedback.gif" alt="Website feedback" /> -->
+                        <!-- </a></li> -->
+                        <li>
+                            Sunday, April 30, 2023</li>
+                        <li>
+                            <a id="lnkLang" href="javascript:__doPostBack(&#39;ctl00$lnkLang&#39;,&#39;&#39;)">हिंदी संस्करण</a>
+                        </li>
+                        <li class="top-mob-none"><a href="home.aspx" title="Home">Home </a></li>
+                        <li class="top-mob-none"><a href="contact-us.html" title="Contact Us ">Contact Us </a></li>
+                        <li class="top-mob-none"><a href="sitemap.html" title="Sitemap">Sitemap</a></li>
+                        <li style="border-right: none; padding-right: 0px;"><a href="javascript:void(0)"
+                            class="decrease" title="Decrease font size">
+                            <img src="https://www.pnbindia.in/images/text-small.jpg" width="27" height="26" alt="Decrease font size" style="margin-top: -5px;"
+                                longdesc="PNB" /></a> <a href="javascript:void(0)" class="reset" title="Reset font size">
+                                    <img src="https://www.pnbindia.in/images/text-reset.jpg" width="27" height="26" alt="Reset font size" longdesc="PNB" style="margin-right: 5px;
+                                        margin-top: -5px;" /></a><strong></strong> <a href="javascript:void(0)" class="increase" title="Increase font size">
+                                            <img src="https://www.pnbindia.in/images/text-large.jpg" width="27" height="26" alt="Increase font size" longdesc="PNB" style="margin-top: -5px;" /></a>
+                        </li>
+                    </ul>
+                    <div class="srchbx">
+                        <input type="text" onkeypress="javascript:return isTextNum(event)" id="txthsearch" onfocus="if(this.value=='Search')this.value=''"
+                            onblur="if(this.value=='')this.value='Search'" value="Search" class="srchbx1" />
+                        <label for="txthsearch" style="display: none;">
+                            Search</label>
+                        <input id="txthbsearch" onkeypress="javascript:return isTextNum(event)" value=" " name="Search" type="button" class="srchbtn" />
+                        <label for="txthbsearch" style="display: none;">
+                            Search</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <!--Top bar End-->
+        <!--Top Header Start-->
+        <div class="headercontainer">
+            <div class="midcontainer" style="position: relative;">
+                <div class="logo">
+                    <a href="Home.aspx" title="Punjab National Bank">
+                        <img src="https://www.pnbindia.in/images/logo-new.png" alt="PNB BANK" longdesc='PNB' /></a></div>
+                <div class="search-mob">
+                    <strong class="fa fa-search"><span>Search</span></strong>
+                    
+                </div>
+                <div class="right-pannl-mob">
+                    <strong class="fa fa-lock"><span>Login</span></strong>
+                    
+                </div>
+                <div class="wsmenucontainer clearfix">
+                    <div class="overlapblackbg">
+                    </div>
+                    <div class="wsmobileheader clearfix">
+                        <a id="wsnavtoggle" class="animated-arrow"><span></span>
+                            <h5>
+                                Menu</h5>
+                        </a>
+                    </div>
+                    <div class="wrapper clearfix">
+                    </div>
+                    <!--Main Menu HTML Code-->
+                    <nav class="wsmenu clearfix">
+        <ul id="ulmenu" class="mobile-wsmenu-list wsmenu-list"><li>
+   <a href='#' title='About Us'><strong class='mob-icon fa fa-male'></strong>About Us<strong class='fa fa-angle-down'></strong></a>
+   <div class='megamenu clearfix'>
+      <div class='dd-inner'>
+         <div class='column2 singledropdown'>
+            <img src='../UploadFile/menu/MenuL12016-06-23_09-55-56.781.jpg' alt='About Us' longdesc='PNB' class='menucolimg' /> <a href='suchna.html' title='Suchna'>Suchna</a><a href='corporate-mission.html' title='Corporate Mission'>Corporate Mission</a><a href='origin-of-PNB.html' title='Origin of PNB'>Origin of PNB</a><a href='profile.html' title='Profile'>Profile</a><a href='heritage.html' title='Heritage'>Heritage</a><a href='#' class='mega-menu-heading' data-tab='tab0'>Organisational Structure <strong class='fa fa-angle-down'></strong></a>
+            <div class='custsubmenu mega-menu-detail' style='margin-left:15px;' id='tab0'> <a href='BoardofDirectors.aspx' title='Board of Directors '>Board of Directors </a><a href='general-managers.aspx' title='General Managers '>General Managers </a><a href='ZONAL-MANAGERS.html' title='Zonal Managers '>Zonal Managers </a><a href='circle-offices-branches.html' title='Circle Offices '>Circle Offices </a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=ZSDVVOiTz+8H2R7yqBqiCw==' title='Branches ' target='_blank'>Branches </a></div>
+            <a href='subsidiaries-and-JVs.html' title='Subsidiaries Associates and JVs'>Subsidiaries Associates and JVs</a><a href='awards.html' title='Awards'>Awards</a><a href='Gallery.html' title='Gallery'>Gallery</a><a href='Business-responsibility-report.html' title='Business Responsibility Report'>Business Responsibility Report</a><a href='csr-activities.html' title='CSR Activities'>CSR Activities</a><a href='sports-activities.html' title='Sports Activities'>Sports Activities</a><a href='LKMC.html' title='Learning and Knowledge Management Centre'>Learning and Knowledge Management Centre</a>
+         </div>
+      </div>
+   </div>
+</li>
+<li>
+   <a href='#' title='Products'><strong class='mob-icon fa fa-archive'></strong>Products<strong class='fa fa-angle-down'></strong></a>
+   <div class='megamenu clearfix multiple-menu'>
+      <div class='dropdown'>
+         <div class='dd-inner fullwidthmenu'>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab1'>Personal <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab1'>
+                  <img src='../UploadFile/menu/MenuL12016-06-23_09-56-31.127.jpg' alt='Personal' longdesc='PNB' class='menucolimg' /><a href='deposit.html' title='Deposit'>Deposit</a><a href='' title='Loans'>Loans</a>
+                  <div class='custsubmenu' style='margin:0 0 0 10px;'><a href='loans.html' title='Retail'>Retail</a><a href='SMEBanking.html' title='MSME'>MSME</a><a href='https://www.pnbindia.in/agricultural-banking.html' title='Agriculture'>Agriculture</a></div>
+                  <a href='housing-projects.aspx' title='Housing Projects'>Approved Housing Projects</a><a href='https://www.pnbnet.org.in/OTSCF/' title='Apply For OTS In NPA Accounts'>Apply For OTS In NPA Accounts</a><a href='Insurance-Business.html' title='Insurance'>Insurance</a><a href='government-business.html' title='Government Business'>Government Business</a><a href='financial-inclusion.html' title='Financial Inclusion'>Financial Inclusion</a><a href='priority-sector.html' title='Priority Sector'>Priority Sector</a>
+               </div>
+            </div>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab2'>Corporate <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab2'> <img src='../UploadFile/menu/MenuL12016-06-23_09-56-44.349.jpg' alt='Corporate' longdesc='PNB' class='menucolimg' /><a href='corporate-loans.html' title='Corporate Loans'>Corporate Loans</a><a href='EXIM-finance.html' title='EXIM finance'>Forex Services offered to Exporter and Importer</a><a href='cash-management-services.html' title='Cash Management Services'>Cash Management Services</a><a href='gold-card-scheme-for-exporters.html' title='Gold Card Scheme for Exporters'>Gold Card Scheme for Exporters</a></div>
+            </div>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab3'>International <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab3'> <img src='../UploadFile/menu/MenuL12016-06-23_09-57-06.304.jpg' alt='International' longdesc='PNB' class='menucolimg' /><a href='FX-RETAIL-PLATFORM.html' title='FX RETAIL PLATFORM'>FX RETAIL PLATFORM</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=bx0CmCC9ezaU334FeKBWMA==' title='LIBOR TRANSITION' target='_blank'>LIBOR TRANSITION</a><a href='schemes-products-services.html' title='Schemes / Products / Services'>Schemes / Products / Services</a><a href='NRI-services.html' title='NRI Services'>NRI Services</a><a href='PNB-helpdesk-forexservices.html' title='Help Desk For Forex Services'>Help Desk For Forex Services</a><a href='PNB-World-travel-card.html' title='World Travel Card'>World Travel Card</a><a href='foreign-branches-offices.html' title='Foreign Office Details'>Foreign Office Details</a><a href='https://pnbtfr.pnbindia.in/omniapp' title='Trade Finance Redefined Portal'>Trade Finance Redefined Portal</a><a href='OutwardRemittanceLRS.html' title='Outward Remittance under LRS'>Outward Remittance under LRS</a></div>
+            </div>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab4'>Capital Services <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab4'> <img src='../UploadFile/menu/MenuL12016-06-23_09-57-30.563.jpg' alt='Capital Services' longdesc='PNB' class='menucolimg' /><a href='Depository-Services.html' title='Depository Services'>Depository Services</a><a href='MF-Disclaimer.html' title='Mutual Funds'>Mutual Funds</a><a href='merchant-banking-overview.html' title='Merchant Banking'>Merchant Banking</a><a href='asba.html' title='ASBA'>ASBA</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</li>
+<li>
+   <a href='#' title='E-Services'><strong class='mob-icon fa fa-mouse-pointer'></strong>E-Services<strong class='fa fa-angle-down'></strong></a>
+   <div class='megamenu clearfix'>
+      <div class='dd-inner'>
+         <div class='column2 singledropdown'><img src='../UploadFile/menu/MenuL12016-06-23_09-58-47.319.jpg' alt='E-Services' longdesc='PNB' class='menucolimg' /> <a href='mobile-banking.html' title='PNB ONE'>PNB ONE</a><a href='FINTECH.html' title='FinTech Initiatives'>FinTech Initiatives</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=9J+L3eq0tIdOKlV5MndxUw==' title='Positive Pay System (PPS)' target='_blank'>Positive Pay System (PPS)</a><a href='PNB-PIHU.html' title='PNB PIHU'>PNB PIHU</a><a href='Banking-Services-On-WhatsApp.html' title='Banking Services Through WhatsApp'>Banking Services Through WhatsApp</a><a href='https://www.pnbindia.in/otp-aadhaar-seeding.html' title='OTP Based Aadhaar Seeding'>OTP Based Aadhaar Seeding</a><a href='retail-Internet-banking.html' title='Retail Internet Banking'>Retail Internet Banking</a><a href='corporate-internet-banking.html' title='Corporate Internet Banking'>Corporate Internet Banking</a><a href='Unified-Payments-Interface.html' title='BHIM PNB (UPI)'>BHIM PNB (UPI)</a><a href='rtgsneftecs.html' title='RTGS/NEFT/IMPS/ECS/NACH'>RTGS/NEFT/IMPS/ECS/NACH</a><a href='green-pin-debit-card.html' title='Green PIN - Debit Card'>Green PIN - Debit Card</a><a href='Missed-Call.html' title='Missed Call Services'>Missed Call Services</a><a href='PNB-E-Statement.html' title='E-Statement'>E-Statement</a><a href='SMS-banking.html' title='SMS Banking'>SMS Banking</a><a href='More-E-Services.html' title='More....'>More....</a></div>
+      </div>
+   </div>
+</li>
+<li>
+   <a href='#' title='Investor Info'><strong class='mob-icon fa fa-line-chart'></strong>Investor Info<strong class='fa fa-angle-down'></strong></a>
+   <div class='megamenu clearfix'>
+      <div class='dd-inner'>
+         <div class='column2 singledropdown'>
+            <img src='../UploadFile/menu/MenuL12016-07-12_095349479.jpg' alt='Investor Corner' longdesc='PNB' class='menucolimg' /> <a href='financials-current.html' title='Financials'>Financials</a><a href='#' class='mega-menu-heading' data-tab='tab5'>Disclosures under Regulation 46 & 62 <strong class='fa fa-angle-down'></strong></a>
+            <div class='custsubmenu mega-menu-detail' style='margin-left:15px;' id='tab5'> <a href='https://www.pnbindia.in/Annual-Secretarial-Compliance-Report.html' title='Annual Secretarial Compliance Report'>Annual Secretarial Compliance Report</a><a href='https://www.pnbindia.in/Policies.html' title='Policies'>Policies</a><a href='https://www.pnbindia.in/Disclosures-in-terms-of-Regulation.html' title='Other Information Disclosures'>Other Information/Disclosures</a><a href='Statement-of-Deviation.html' title='Statement of Deviation' target='_blank'>Statement of Deviation</a><a href='Intimation-relating-to-Debt-Securities.html' title='Intimation relating to Debt Securities' target='_blank'>Intimation relating to Debt Securities</a><a href='Notices-published-in-Newspapers.html' title='Notices published in Newspapers' target='_blank'>Notices published in Newspapers</a><a href='Important-Announcement-to-Physical-Shareholders.html' title='Important Announcement to Physical Shareholders '>Important Announcement to Physical Shareholders </a><a href='Amalgamation.html' title='Amalgamation '>Amalgamation </a><a href='Investor-Calendar.html' title='Investor Calendar '>Investor Calendar </a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=kL2w86db0JApE9DmBxqOyQ==' title='List of Statutory Central Auditors ' target='_blank'>List of Statutory Central Auditors </a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=R5hq0BW7+6GUhpXwT6y+BQ==' title='Information related to shares of Global Trust Bank ' target='_blank'>Information related to shares of Global Trust Bank </a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=Z9uQN2KlmlhZ5Hoqq8SwuQ==' title='Information related to shares of Nedungadi Bank Ltd' target='_blank'>Information related to shares of Nedungadi Bank Ltd</a><a href='https://www.pnbindia.in/Bank-Rating.html' title='Bank Ratings '>Bank Ratings </a><a href='http://www.beetalfinancial.in/beetalfinancial/investorquery.aspx' title='Online Shareholder queries/requests/grievances '>Online Shareholder queries/requests/grievances </a><a href='basic-information.html' title='Basic Information '>Basic Information </a><a href='shareholding-pattern.html' title='Share Holding Pattern '>Share Holding Pattern </a><a href='corporate-governance-reports.html' title='Corporate Governance Reports '>Corporate Governance Reports </a><a href='dividends.html' title='Unclaimed Dividends '>Unclaimed Dividends </a><a href='annual-reports.html' title='Annual Reports '>Annual Reports </a><a href='https://www.pnbindia.in/AGM-EGM.html' title='AGM/EGM Updates '>AGM/EGM Updates </a><a href='regulation-acts-schemes.html' title='Regulation Acts Schemes '>Regulation Acts Schemes </a><a href='Intimations-to-Stock-Exchanges.html' title='Intimation to Stock Exchanges '>Intimation to Stock Exchanges </a><a href='Debenture-Trustee.html' title='Debenture Trustee '>Debenture Trustee </a></div>
+         </div>
+      </div>
+   </div>
+</li>
+<li>
+   <a href='#' title='Customer Care'><strong class='mob-icon fa fa-phone'></strong>Customer Care<strong class='fa fa-angle-down'></strong></a>
+   <div class='megamenu clearfix multiple-menu'>
+      <div class='dropdown'>
+         <div class='dd-inner fullwidthmenu'>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab6'>Policies <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab6'> <img src='../UploadFile/menu/MenuL12016-06-23_09-59-31.265.jpg' alt='Policies' longdesc='PNB' class='menucolimg' /><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=dOajYzLAWISp84yF1avnxg==' title='Classification of Borrower Accounts as SMA/NPA' target='_blank'>Classification of Borrower Accounts as SMA/NPA</a><a href='Know-Your-Customer.html' title='KYC - AML Policy'>KYC - AML Policy</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=CeovOOxRFDcDY6pjRj9Ccg==' title='Grievance Redressal Policy' target='_blank'>Grievance Redressal Policy</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=bbbBzDMCd2Sjda8xJv3XYg==' title='Customer Compensation Policy' target='_blank'>Customer Compensation Policy</a><a href='model-policy-on-bank-deposits.html' title='Model Policy on Bank Deposits'>Model Policy on Bank Deposits</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=/kfwBatRm4R5enxwvWmpdQ==' title='Cheque Collection Policy' target='_blank'>Cheque Collection Policy</a><a href='whistle-blower-policy.html' title='Whistle Blower Policy for Bank'>Whistle Blower Policy for Bank</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=08MmVjp5qvYb0/1vqmfq+w==' title='Customer Rights Policy' target='_blank'>Customer Rights Policy</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=4bPFUNoo33kFrMl01CpoZQ==' title='Policy for Door Step Banking Services' target='_blank'>Policy for Door Step Banking Services</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=wqCnVeA4AffOIHga5fi5DA==' title='Social Media Policy' target='_blank'>Social Media Policy</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=NzQmMJuebUGCwKpJFJCcAg==' title='Policy for General Management of Branches' target='_blank'>Policy for General Management of Branches</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=QKP4xDrC4p1DQrnKvz3ouw==' title='Customer Responsibilities in AA Framework' target='_blank'>Customer Responsibilities in AA Framework</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=uta5pXPhbV9W9YKF5oK3ag==' title='Banks Record Maintenance Policy' target='_blank'>Banks Record Maintenance Policy</a></div>
+            </div>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab7'>Knowledge <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab7'>
+                  <img src='../UploadFile/menu/MenuL12016-06-23_09-59-42.511.jpg' alt='Knowledge' longdesc='PNB' class='menucolimg' /><a href='' title='Rates and Charges'>Rates and Charges</a>
+                  <div class='custsubmenu' style='margin:0 0 0 10px;'><a href='Interest-Rates-Deposit.html' title='Interest Rates - Deposit'>Interest Rates - Deposit</a><a href='interest-rates-bulk-deposit.html' title='Interest Rates - Bulk Deposit'>Interest Rates - Bulk Deposit</a><a href='interst-rate-on-advances-linked-to-mclr.html' title='Interest Rates - Loans and Advances'>Interest Rates - Loans and Advances</a><a href='NRI-Interest-Rates.html' title='Interest Rates - NRI'>Interest Rates - NRI</a><a href='Fees-and-Services.html' title='Fees and Services'>Fees and Services</a></div>
+                  <a href='Nomination-Facilities.html' title='Nomination Facilities'>Nomination Facilities</a><a href='Deceased-Claim-cases.html' title='Deceased Claim cases'>Deceased Claim cases</a><a href='Locker-Facilities.html' title='Locker Facility'>Locker Facility</a>
+               </div>
+            </div>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab8'>Others <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab8'> <img src='../UploadFile/menu/MenuL12016-06-23_09-59-57.653.jpg' alt='Others' longdesc='PNB' class='menucolimg' /><a href='List-Of-Panel-Advocates.html' title='List Of Panel Advocates'>List Of Panel Advocates</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=GxGtxUpFtms9m+sxfCWg+Q==' title='Base Branch Services' target='_blank'>Base Branch Services</a><a href='Right-to-Information-Act.html' title='Right to Information Act'>Right to Information Act</a><a href='Vigilance.html' title='Vigilance'>Vigilance</a><a href='Regulatory.html' title='Regulatory'>Regulatory</a><a href='fair-practice-code.html' title='Fair practice code'>Fair practice code</a><a href='Senior-Citizen.html' title='Senior Citizen'>Senior Citizen</a><a href='Citizen-Charter.html' title='Citizen`s Charter'>Citizen`s Charter</a><a href='document/Banking_ombudsman.pdf' title='Banking Ombudsman' target='_blank'>Banking Ombudsman</a><a href='https://www.pnbindia.in/inoperactive-accounts.aspx' title='Unclaimed Accounts'>Unclaimed Accounts</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=EwvxQ6w5tU+d0l4FspbsOQ==' title='Grievance Redressal related to Amalgamation' target='_blank'>Grievance Redressal related to Amalgamation</a></div>
+            </div>
+            <div class='column'>
+               <h3 class='mega-menu-heading' data-tab='tab9'>How Do I <strong class='fa fa-angle-down'></strong> </h3>
+               <div class='mega-menu-detail' id='tab9'> <img src='../UploadFile/menu/MenuL12016-06-23_10-00-07.514.jpg' alt='How Do I' longdesc='PNB' class='menucolimg' /><a href='Lodge-Complaint.html' title='Complaint'>Lodge Complaint</a><a href='CcsrmsFormServiceRequest.aspx' title='Lodge Service Request'>Lodge Service Request</a><a href='https://www.pnbindia.in/User-Awareness.html' title='User Awareness'>User Awareness</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=nNHD+Cih2wzXEFIYg0SGfA==' title='Know Statewise GSTIN' target='_blank'>Know Statewise GSTIN</a><a href='https://www.pnbindia.in/downloadprocess.aspx?fid=gGSKEjrB4VLdm2gWOE5uRQ==' title='Protect My Account' target='_blank'>Protect My Account</a><a href='hotlist-debit-card.html' title='Manage My Cards'>Manage My Cards</a><a href='block-net-banking.html' title='Block Net Banking'>Block Net Banking</a><a href='contact-us.html' title='Contact Us'>Contact Us</a><a href='customers-Feedback.aspx' title='Customer Feedback'>Submit Feedback</a><a href='feedback.aspx' title='Submit Feedback'>Submit Feedback for Branch/ATM/Digihut</a><a href='https://qdeg.in/Wo3dJeb' title='Submit Feedback of UPI'>Submit Feedback of UPI</a><a href='https://qdeg.in/0LpWnR' title='Submit Feedback of IMPS'>Submit Feedback of IMPS</a><a href='https://qdeg.in/CEJgXzr' title='Submit Feedback of RuPay'>Submit Feedback of RuPay</a><a href='FAQ.html' title='FAQ'>FAQ</a><a href='Services-for-Customers-with-Disabilities.html' title='Inclusive Banking'>Inclusive Banking</a><a href='DoorStep-Banking.html' title='Doorstep Banking Service'>Doorstep Banking Service</a></div>
+            </div>
+            <div class='call-center'>
+               <ul>
+                  <li>
+                     <div class='callcenterheadintxt'>for banking</div>
+                     <div class='tollfreetxt'>1800 1800, 1800 2021 <br />1800 180 2222 & 1800 103 2222 <span>(Toll Free)</span></div>
+                     <div class='Phonenumbertxt'>+91 120 2490000<span>(Global Users)</span></div>
+                  </li>
+                  <li>
+                     <div class='callcenterheadintxt'>FOR BALANCE ENQ.(BY MISSED CALL)</div>
+                     <div class='tollfreetxt'>1800 180 2223 <span>(Toll Free)</span></div>
+                     <div class='Phonenumbertxt'>+91 120 2303090<span>(Global Users)</span></div>
+                  </li>
+                  <li>
+                     <div class='callcenterheadintxt'>for credit card</div>
+                     <div class='tollfreetxt'>1800 180 2345<span>(Toll Free)</span></div>
+                     <div class='Phonenumbertxt'>+91 120 4616200<span>(Global Users)</span></div>
+                  </li>
+                  <li>
+                     <div class='callcenterheadintxt'>for apply online</div>
+                     <div class='tollfreetxt'>1800 180 5555 <span>(For Other Retail Products) </span></div>
+                     <div class='Phonenumbertxt'>1800 330 3333 (For Digital Products)<span></span></div>
+                  </li>
+                   <li>
+                     <div class='callcenterheadintxt'></div>
+                     <div class='tollfreetxt'>1800 180 8888 <span>(For Loan Products) </span></div>
+                     <div class='Phonenumbertxt'>PNB &lt;SPACE&gt; PROD on 5607040 (By SMS)<span></span></div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</li>
+
+<li><a href='NRI-services.html' title='NRI'><strong class='mob-icon fa fa-info'></strong>NRI</a></li>
+<li><a href='download-form.html' title='Download Forms'><strong class='mob-icon fa fa-info'></strong>Download Forms</a></li><li class="r-pannel">
+		<a href="https://www.psballiance.com/doorstep-banking.html" title="DOORSTEP Banking Service"><strong><img alt="PNB" src="Images/form16-icon-hov.png" /></strong><span style="padding-left: 4px;">DOORSTEP Banking Service</span></a></li>
+
+
+	<li class="r-pannel covid">
+		<span class="wsmenu-click"></span><a href="#">COVID-19 Package</a>
+		<div class="megamenu clearfix" style="overflow: hidden; display: none;">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<img alt="#" class="menucolimg" src="images/social-banking.jpg" />
+					<p style="margin-bottom:0px;">
+						<strong>Framework 1.0</strong></p>
+					<a href="https://pnbindia.in/covid-schemes.html" target="_blank" title="COVID-19 Schemes">COVID-19 Schemes</a> <a href="https://www.pnbindia.in/downloadprocess.aspx?fid=rGITHAyDD8w+YYuZUaB0JQ==" target="_blank" title="Nodal Officers">Nodal Officers for COVID-19</a><a href="https://www.pnbnet.org.in/PMP_COVID/RestrucutreAdvances.do" target="_blank" title="Nodal Officers">Restructuring for COVID-19</a>
+					<p style="margin-bottom:0px;"><strong>
+						Framework 2.0</strong></p>
+					<a href="https://www.pnbindia.in/downloadprocess.aspx?fid=WgcCOUMxY5Fv33OvEfIj1A==" target="_blank" title="Offer cum acceptance letter in bilingual language ">Offer cum acceptance letter in bilingual language </a><a href="https://www.pnbindia.in/downloadprocess.aspx?fid=4VteDgIBtFzzrVrpc7UKZw==" target="_blank" title="Zonal Covid Restructuring Team">Zonal Covid Restructuring Team</a></div>
+			</div>
+		</div>
+	</li>
+
+<li class="r-pannel">
+		<span class="wsmenu-click"></span><span class="wsmenu-click"></span><span class="wsmenu-click"></span> <a href="#"> Online Services</a>
+		<div class="megamenu clearfix" style="overflow: hidden; display: none;">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<img alt="#" class="menucolimg" src="images/social-banking.jpg" /> <a href=" https://loanrepay.mypnb.in" target="_blank" title="">PNB Loan EMI Repayment</a> <a href="https://www.psbloansin59minutes.com/pnb" target="_blank" title="PSB Loans">PSB Loans in 59 Minutes</a><a href="https://pabl.mypnb.in/pnb/pabl/" target="_blank" title="Pre- Approved Business Loan">Pre- Approved Business Loan</a> <a href="https://weblens.pnb.in/lendperfect/home" target="_blank" title="">Loan</a> <a href="https://weblens.pnb.in/lendperfect/home" target="_blank" title="MSME Helpline ">MSME Helpline </a><a href="https://pnbnet.org.in/OOSA/" target="_blank" title="">Saving Account</a><a href="https://pnbnet.org.in/OLEALGS/" target="_blank" title="">Loan Eligibility Home & Car</a> <a href="https://mypnb.in/ExportCreditFlow/" target="_blank" title="">Export Credit - Online Application</a> <a href="https://www.pnbindia.in/LoanApplicationStatus.aspx" target="_blank" title="">Track Loan Application</a> <a href="https://instaloans.pnbindia.in/" target="_blank" title="">InstaLoans</a> <a href="https://onlinesb.pnbindia.in" target="_blank" title="">Saving Account: 1) Instant e-KYC Account. 2)Video KYC Account</a><a href="https://weblens.pnb.in/lendperfect/home" target="_blank" title="">Online Loans-Apply</a><a href="https://onlinesb.pnbindia.in" target="_blank" title="">LC submission through Video KYC</a> <a href="lockeravailabilityNew.aspx" title=""> Locker Availability</a><a href="https://enps.nsdl.com/eNPS/ApySubRegistration.html" title="">eAPY</a><a href="https://apply.pnbcard.in:4443/" title="Pre-Qualified Credit Card">Pre-Qualified Credit Card</a><a href="https://kccrenewal.pnbindia.in:447/lendperfect/landing" title="KCC Digital Renewal">KCC Digital Renewal</a><a href="https://eots.mypnb.in" title="e-OTS">e-OTS</a><a href="https://mypnb.in/DeathClaim/" title="PNB Claim Settlement Portal">PNB Claim Settlement Portal</a><a href="https://digitallending.pnbindia.in" title="Krishi Tatkal Rin">Krishi Tatkal Rin</a><a href="https://www.jansamarth.in/apply/pnb" title="Digital KCC">Digital KCC</a></div>
+			</div>
+		</div>
+	</li><li class="r-pannel">
+		<span class="wsmenu-click"></span><span class="wsmenu-click"></span> <a href="#" title="Online Payment">Online Payment</a>
+		<div class="megamenu clearfix" style="">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<a href="#" title="Others">Bills/Others</a>
+					<div class="custsubmenu">
+						<p>
+							<span> <a href="https://loanrepay.mypnb.in/" target="_blank" title="PNB Loan Emi Repayment">PNB Loan Emi Repayment</a></span></p>
+						<p>
+							<span> <a href="https://www.billdesk.com/pgidsk/pgmerc/instpy/PNBIndex.jsp" target="_blank" title="Bill Payment">Bill Payment</a></span></p>
+						<p>
+							<span> <a href="https://www.netpnb.com/web/L001/webpages/ASBA.html" target="_blank" title="ASBA">ASBA</a></span></p>
+						<p>
+							<span> <a href="https://www.pnbindia.in/LIC-Disclaimer.html" target="_blank" title="LIC premium">LIC premium</a></span></p>
+						<p>
+							<span> <a href="https://www.pnbindia.in/ML-Disclaimer.html" target="_blank" title="PNB MetLife">PNB MetLife</a></span></p>
+					</div>
+					<a href="#" title="PNB e-taxes">PNB e-taxes</a>
+					<div class="custsubmenu">
+						<p>
+							<span><a href="https://gateway.netpnb.com/pnbgstprod/home.html" target="_blank" title="GST">GST</a></span></p>
+						<p>
+							<span><a href="https://www.netpnb.com/web/L001/webpages/custom.html" target="_blank" title="Customs">Customs </a></span></p>
+						<p>
+							<span><a href="https://gateway.pnbibanking.in/TIN2PNB/initiate.html" target="_blank" title="Direct tax/Income tax">Direct tax/Income tax </a></span></p>
+						<p>
+							<span><a href="https://www.netpnb.com/web/L001/webpages/dgft.htm" target="_blank" title="DGFT">DGFT </a></span></p>
+						<p>
+							<span><a href="https://www.netpnb.com/web/L001/webpages/exciseservicetax.html" target="_blank" title="Excise/service tax">Excise/service tax </a> </span></p>
+					</div>
+					<a href="#">Fees Payments</a>
+					<div class="custsubmenu">
+						<p>
+							<span> <a href="https://www.netpnb.com/web/L001/webpages/annamalai.html" target="_blank" title="Annamalai university">Annamalai university </a></span></p>
+						<p>
+							<span> <a href="https://www.pnbindia.in/IGNOU-Disclaimer.html" target="_blank" title="IGNOU"> IGNOU </a></span></p>
+						<p>
+							<span> <a href="https://gateway.netpnb.com/AGDAV/home.html" target="_blank" title="AGDAV Delhi">AGDAV Delhi</a></span></p>
+						<p>
+							<span> <a href="https://www.netpnb.com/web/L001/webpages/lovelypu.html" target="_blank" title="Lovely professional univ">Lovely professional univ</a></span></p>
+					</div>
+					<a href="#" title="Donations">Donations</a>
+					<div class="custsubmenu">
+						<p>
+							<span> <a href="Janmbhoomi-Teerth-Kshetra.html" target="_blank" title="Shri Ram Janmbhoomi Teerth Kshetra">Shri Ram Janmbhoomi Teerth Kshetra</a></span></p>
+						<p>
+							<span> <a href="https://www.pnbindia.in/Guruvayur-Temple-Disclaimer.html" target="_blank" title="Guruvayur temple"> Guruvayur temple</a></span></p>
+						<p>
+							<span> <a href="https://gateway.netpnb.com/MJS/Default.aspx" target="_blank" title="MJS medical relief society">MJS medical relief society</a></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li><li class="r-pannel">
+		<span class="wsmenu-click"></span><span class="wsmenu-click"></span> <a href="#" title="Mobile Banking Apps">Mobile Banking Apps</a>
+		<div class="megamenu clearfix">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<a href="PNB-mPassBook.html" target="_blank" title="PNB M Passbook">PNB M Passbook </a> <a href="BHIM.html" target="_blank" title="BHIM PNB">BHIM PNB</a> <a href="mobile-banking.html" target="_blank" title="PNB ONE">PNB ONE</a> <a href="PNB-Bharat-QR-Merchant.html" target="_blank" title="PNB Bharat QR Merchant">PNB Bharat QR Merchant</a> <a href="BHIM-AADHAAR-PNB.html" target="_blank" title="BHIM AADHAAR PNB">BHIM AADHAAR PNB</a></div>
+			</div>
+		</div>
+	</li>
+<li class="r-pannel">
+		<span class="wsmenu-click"></span> <a href="#" title="Debit Card">Debit & Credit Cards</a>
+		<div class="megamenu clearfix card">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<a href="card-index.html" title="Type of Debit cards">Type of Debit cards</a> <a href="green-pin-debit-card.html" title="Generate Debit Card PIN">Generate Debit Card PIN</a> <a href="Debit-Card-Trans-Enable-Disable.html" title="Manage Debit card">Manage Debit card</a> <a href="Platinum-debit-card.html" title="Offers on Debit cards">Offers on Debit cards</a> <a href="https://pnbcard.in/" title="Manage Credit card">Manage Credit card</a> <a href="https://apply.pnbcard.in/" title="Cebit cards">Apply Credit card</a></div>
+			</div>
+		</div>
+	</li>
+<li class="r-pannel">
+		<span class="wsmenu-click"></span> <a href="#" title="Credit Card">Interest Rates</a>
+		<div class="megamenu clearfix card">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<a href="Interest-Rates-Deposit.html" title="Interest Rates Deposit">Interest Rates Deposit</a><a href="interest-rates-bulk-deposit.html" title="Interest Rates">Interest Rates Bulk Deposit</a><a href="interst-rate-on-advances-linked-to-mclr.html" title="Interest Rates Deposit">Interest Rates Loans and Advances</a><a href="NRI-Interest-Rates.html" title="Interest Rates">Interest Rates NRI</a>
+				</div>
+			</div>
+		</div>
+	</li><li class="r-pannel">
+		<span class="wsmenu-click"></span><span class="wsmenu-click"></span> <a href="#" title="Locate us">Locate us</a>
+		<div class="megamenu clearfix about-us">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<a href="LocateUS.aspx?parmtype=ATM" target="_blank" title="ATM">ATM </a> <a href="LocateUS.aspx?parmtype=Branch" target="_blank" title="Branch">Branch </a> <a href="LocateUS.aspx?parmtype=PUM" target="_blank" title="Pass Book Update Machine">Pass Book Update Machine</a> <a href="LocateUS.aspx?parmtype=BULK" target="_blank" title="Bulk Note Acceptor">Bulk Note Acceptor</a></div>
+			</div>
+		</div>
+	</li>
+
+	<li class="r-pannel">
+		<span class="wsmenu-click"></span><span class="wsmenu-click"></span> <a href="#" title="Cyber Security Tips/Alerts">Cyber Security Tips/Alerts</a>
+		<div class="megamenu clearfix" style="overflow: hidden; display: none;">
+			<div class="dd-inner">
+				<div class="column2 singledropdown">
+					<h2>
+						<u><a href="downloadprocess.aspx?fid=iXH+9W9QZzMqZlv74jGMNQ==">Advisory on Ponzi Scheme/ Money mule</a></u></h2>
+					<h2>
+						<u><a href="downloadprocess.aspx?fid=LXauX2REC77tFBhQYtdnRg==">SOVA Android Trojan- Precautions</a></u></h2>
+					<img alt="#" class="menucolimg" src="images/social-banking.jpg" />
+					<p style="font-size:14px; font-weight:900; color: #a20a3a;">
+						To report any cyber crime, please visit National Cyber Crime Reporting Portal <u>https://cybercrime.gov.in</u> or call helpline number 1930.</p>
+					<h4>
+						<a href="downloadprocess.aspx?fid=B5MXqlYmnoOleaZvonu09w==" style="color: #a20a3a;">Advisory on Android.Banker.A9480 Trojan <strong><img alt="#" src="Images/new_image.gif" /></strong></a></h4>
+					<h4>
+						Please be aware of the following :</h4>
+					<ul class="cybetipsmob">
+						<li>
+							Phishing is a deception technique where fraudster uses fraudulent emails to capture your personal sensitive information like passwords, CVV, Date of Birth, Debit Card/ Credit Card Number, address, expiry date, PIN etc.</li>
+						<li>
+							Vishing (also known as Voice Phishing) is a deception technique where the fraudster uses a phone call to lure you into giving your personal confidential banking information.</li>
+						<li>
+							Smishing is a deception technique where the fraudster uses Short Message Service (SMS) to send false message to lure you to call a phone number or visit a website for giving your personal confidential banking information.</li>
+						<li>
+							Please don’t give any of your personal confidential credentials like PAN, Date of Birth, Account Number, Debit or Credit Card Number & its Expiry Date, Father/Mother’s Name, User ID, Password, PIN, CVV, OTP etc.upon receiving the Phishing, Vishing or Smishing. Our Bank never asks such information from customers.</li>
+						<li style="background:none; margin:0px; padding:0px;">
+							<a href="advisories.html" style="margin-top:0px;" title="Read More">Read More </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</li>
+
+	<li class="r-pannel">
+		<a href="https://www.pnbindia.in/otp-aadhaar-seeding.html" title="Update Aadhar"><strong><img src="Images/aadhar-logo.png" alt="Aadhar" /></strong><span style="padding-left: 4px;">Update Aadhar</span></a></li>
+
+
+	<li class="r-pannel">
+		<a href="https://gateway.pnbibanking.in/Form16/" title="Get Your Form 16A"><strong><img src="Images/form16-icon-hov.png" alt="#" /></strong><span style="padding-left: 4px;">Get Your Form 16A</span></a></li>
+
+<li class='r-pannel'><a href='#'><strong class='mob-icon fa fa-desktop'></strong>Digital Products<strong class='fa fa-angle-down'></strong></a><div class='megamenu clearfix about-us'><div class='dd-inner'><div class='column2 singledropdown'> <a target='_blank' href='retail-Internet-banking.html'>PNB Retail Internet Banking</a><a target='_blank' href='corporate-internet-banking.html'>PNB Corporate Internet Banking</a><a target='_blank' href='mobile-banking.html'>PNB Mobile Banking</a><a target='_blank' href='Banking-Services-On-WhatsApp.html'>PNB Banking Services through Whatsapp</a></div></div></div></li><li class='r-pannel'><a href='#'><strong class='mob-icon fa fa-money'></strong>Loans<strong class='fa fa-angle-down'></strong></a><div class='megamenu clearfix about-us'><div class='dd-inner'><div class='column2 singledropdown'> <a target='_blank' href='housing-loan.html'>HOUSING</a><a target='_blank' href='vehicle.html'>VEHICLE</a><a target='_blank' href='education.html'>EDUCATION</a><a target='_blank' href='personal.html'>PERSONAL</a></div></div></div></li><li class='r-pannel'><a href='#'><strong class='mob-icon fa fa-file-text'></strong>Deposit<strong class='fa fa-angle-down'></strong></a><div class='megamenu clearfix about-us'><div class='dd-inner'><div class='column2 singledropdown'> <a target='_blank' href='saving.html'>SAVING</a><a target='_blank' href='current.html'>CURRENT</a><a target='_blank' href='fixeddeposite.html'>FIXED DEPOSIT</a><a target='_blank' href='capital-gain-account.html'>CAPITAL GAINS</a></div></div></div></li></ul>
+      </nav>
+	   <!--<div class="obc-nav">
+        <ul>
+        <li><a href="https://www.obcindia.co.in/" target="_blank" title="Oriental Bank of Commerce"><span><img src="images/merge/obc-logo.jpg" title="Oriental Bank of Commerce"/></span><strong>OBC</strong></a></li>
+        <li><a href="https://www.unitedbank.co.in/" target="_blank" title="United Bank of India"><span><img src="images/merge/ubi-logo.jpg" title="United Bank of India" /></span><strong>UBI</strong></a></li>
+        </ul>
+      </div>-->
+                    <!--Menu HTML Code-->
+                </div>
+            </div>
+        </div>
+        <!--Top Header End-->
+        <div class="clear" id="slider-skip">
+        </div>
+        <!--banner start-->
+        
+		<div class="innerbannerrgtpanel index-inr index-inr-master">
+                    <div class="bannerrgtpanel">
+                        <div class="orgbx">
+                            <h3 class="net-banking">
+                                <img src="https://www.pnbindia.in/images/mouse-xxl-1.png" style="width: 28px; margin: -3px 7px -6px 0;" />
+                               <a href="https://pnbibanking.in" target="_blank"> Internet Banking <i class="fa fa-angle-right"></i></a>
+                               
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+        <!--banner end-->
+        
+        
+
+   <div class="page-not-found-header">
+	 </div>
+<div class="midcontainer pagenotfound">
+	<p>The page you’ve requested either does not exist or has moved.<br>
+We suggest you to check if the URL is correct.  </p>
+<div class="tc"><a href="home.aspx">Go Back Home <strong aria-hidden="true" class="fa fa-caret-right"></strong></a></div>
+<div class="clear height40"></div>
+</div>
+<div class='card-index-right'><div></div></div>
+    <a onclick='txtSpeak()' class="btnListen"><strong class="fa fa-volume-up" ></strong>Listen</a>
+
+
+        
+        
+        
+        
+
+
+
+<script>
+function txtSpeak()
+{
+
+function voiceStartCallback() {
+    $('.btnListen').html('<strong class="fa fa-volume-up" ></strong>Stop');
+}
+ 
+function voiceEndCallback() {
+    $('.btnListen').html('<strong class="fa fa-volume-up" ></strong>Listen');
+}
+ 
+var parameters = {
+rate: 1.1,
+    onstart: voiceStartCallback,
+    onend: voiceEndCallback
+}
+
+
+if(responsiveVoice.isPlaying()) {
+  responsiveVoice.cancel();
+  $('.btnListen').html('<strong class="fa fa-volume-up" ></strong>Listen');
+}
+else
+{
+responsiveVoice.setDefaultVoice("US English Male");
+$('.btnListen').html('<strong class="fa fa-volume-up" ></strong>Stop');
+var txtforspeech=$(".main-detail").text().replace(/\s+/g, " ");
+responsiveVoice.speak(txtforspeech,'US English Male',parameters);
+}
+
+}
+
+</script>
+
+
+
+        
+        
+    </div>
+    <div class="rewarded">
+        <div class="midcontainer ">
+            <ul>
+                <li><span>
+                    <img src="https://www.pnbindia.in/images/card/rewarded.png" longdesc='PNB' alt="Rewarded" /></span>
+                    <h3>
+                        <a href="#">Rewarded</a></h3>
+                    <p>
+                        Earn reward points on transactions made at POS and e-commerce outlets</p>
+                </li>
+                <li><span>
+                    <img src="https://www.pnbindia.in/images/card/locker.png" longdesc='PNB' alt="Book your locker" /></span>
+                    <h3>
+                        <a href="#">Book your locker</a></h3>
+                    <p>
+                        Deposit lockers are available to keep your valuables in a stringent and safe environment</p>
+                </li>
+                <li><span>
+                    <img src="https://www.pnbindia.in/images/card/advice.png" longdesc='PNB' alt="Financial Advice?" /></span>
+                    <h3>
+                        <a href="#">Financial Advice?</a></h3>
+                    <p>
+                        Connect to our financial advisors to seek assistance and meet set financial goals.</p>
+                </li>
+                <li><span>
+                    <img src="https://www.pnbindia.in/images/card/pnb-locator.png" longdesc='PNB' alt="ATM & Branch Network" /></span>
+                    <h3>
+                        <a href="#">ATM & Branch Network</a></h3>
+                    <p>
+                        Find PNB Branches and ATMs in proximity to your location.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--end-card-index-inner-page-->
+    <div class="clear height10">
+    </div>
+    <!--Footer Start-->
+    <div class="footertopimg">
+        <div class="midcontainer">
+            <div class="footertop">
+                        <span>Important Links: </span><a href="https://www.rbi.org.in/" target="_blank" title="RBI">
+                            RBI</a> | <a href="https://rbikehtahai.rbi.org.in/" target="_blank" title="RBI Kehta hai">RBI Kehta Hai</a> | <a href="http://www.nseindia.com/" target="_blank" title="NSE">NSE</a>
+                        | <a href="http://www.bseindia.com/" target="_blank" title="BSE">BSE</a> | <a href="http://www.sebi.gov.in/sebiweb/"
+                            target="_blank" title="SEBI">SEBI</a> | <a href="https://www.irdai.gov.in/" target="_blank"
+                                title="IRDA">IRDA</a> | <a href="https://www.standupmitra.in/" target="_blank"
+                                title="StandUpMitra">SUM</a>
+                    </div>
+            <div class="footertoprgt">
+                <a href="subsidiaries-and-JVs.html " title="Subsidiaries and Joint Ventures">Subsidiaries and Joint Ventures </a>
+            </div>
+        </div>
+    </div>
+    <!--start-mobile-footer-->
+    <div class="mobile-footer">
+        <ul>
+            <li><a title="Recruitments" target="_blank" href=" Recruitments.html"><strong class="recruitment">
+                <img alt="Recruitments" src="https://www.pnbindia.in/images/recruitment.png" longdesc="PNB"></strong><span>Recruitments</span></a></li>
+            <!-- <li><a title="PNB Rewardz" target="_blank" href="https://www.pnbrewardz.com/"><strong -->
+                <!-- class="fa fa-star"></strong><span>PNB Rewardz</span></a></li> -->
+            <li><a title="Downloads" target="_blank" href="download-form.html "><strong class="fa fa-download">
+            </strong><span>Downloads</span></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/pnbindia">
+                <strong title="PNB Facebook" class="fa fa-facebook facebook"></strong><span>Facebook
+                </span></a></li>
+            <li><a target="_blank" href="https://twitter.com/pnbindia"><strong title="PNB Twitter"
+                class="fa fa-twitter twitter"></strong><span>Twitter </span></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/company/punjab-national-bank">
+                <strong title="PNB Linkedin" class="fa fa-linkedin linkedin"></strong><span>Linkedin
+                </span></a></li>
+            <li><a target="_blank" href="https://www.pnbindia.in/app-store.html">
+                <strong title="PNB Iphone apps" class="fa fa-apple"></strong><span>App Store </span>
+            </a></li>
+            <li><a title="PNB Mobile apps" target="_blank" href=" google-play-store.html "><strong
+                class="fa fa-android"></strong><span>Google Play </span></a></li>
+				  <li><a href="https://www.instagram.com/pnbindia/" target="_blank" title="Instagram"><strong class="">
+                    <img src="https://www.pnbindia.in/images/Instagram_Img.png" alt="Instagram" longdesc="PNB" /></strong><span style="font-size:x-small;">Instagram</span></a></li>
+                     <li><a href="https://www.youtube.com/pnbindia" target="_blank" title="YouTube"><strong class="">
+                    <img src="https://www.pnbindia.in/images/YouTube_Img.png" alt="YouTube" longdesc="PNB" /></strong><span style="font-size:x-small;">YouTube</span></a></li>
+					<li><a href="https://www.kooapp.com/profile/pnbindia" target="_blank" title="KOO"><strong class="">
+                    <img src="https://www.pnbindia.in/images/snipImage.PNG" height="28" width="28" alt="KOO" longdesc="PNB" /></strong><span style="font-size:x-small;">KOO</span></a></li>
+					<li><a href="https://wa.me/message/GFOLYHMKQGOKF1" target="_blank" title="WhatsApp"><strong class="">
+                    <img src="https://www.pnbindia.in/images/whatsapp-logo.PNG" height="28" width="28" alt="WhatsApp" /></strong><span style="font-size:x-small;">WhatsApp</span></a></li>
+        </ul>
+    </div>
+    <!--end-mobile-footer-->
+    <div class="footer-boder">
+    </div>
+    <!--CREDIT CARD FORM END HERE-->
+    <div class="main footer">
+        <div class="midcontainer">
+                    <div class="footbx">
+                    <div><span style="color:#91203e;">Corporate Office:</span> Plot No 4, Sector -10 Dwarka New Delhi -110075
+                    <a href="https://www.google.co.in/maps/@28.5805443,77.0553804,18z" target="_blank">
+ <img src="https://www.pnbindia.in/images/reachus.jpg" alt="Reach Us" style="width:25px; height:25px;"/></a><br/>
+  <div class="copyrgt">Copyright &copy;  Punjab National Bank. All rights reserved.</div>
+  <br/></div>
+                        <!-- <a href="https://acs2.enstage-sas.com/ACSWeb/EnrollWeb/PNB/main/index.jsp" target="_blank"> -->
+                            <!-- <img src="images/rupay-img.jpg" alt="Rupay" longdesc="PNB"  /></a> -->
+                        <!-- <img src="images/norton-img.jpg" alt="pnb Bank" class="footerimg" longdesc="PNB" /> -->
+						</div>
+                    <div class="fr footerrgt">
+                       <div class="footerlink">
+                            <a href="Screen-Reader-Accessibilty.html" target="_blank" title="Screen Reader Accessibility">Screen Reader Accessibility
+                            </a>| <a href="disclaimer.html" title="Disclaimer">Disclaimer </a>| <a href="privacypolicy.html" title="Privacy Policy">Privacy
+                                Policy </a>| <a href="contact-us.html" title="Contact Us">Contact Us </a>| <a href="sitemap.html" title="Sitemap">Sitemap</a>|
+                            <a href="Terms-of-use.html" title="Terms of use">Terms of use </a>
+                        </div>
+                         <div class="fotvisitor" style="visibility: hidden;height:0px;"> 
+                             <span class="countspan">You are Visitor number. </span><span> 
+                                 <span id="lblVisitorCount">1419979685</span></span> 
+                         </div> 
+                        <p style="color:#666; font-size:12px; font-family:open_sansregular;">Site best viewed at 1366x768 resolution in Chrome 30+, IE 11+, Firefox 27+, Android 5+ &amp; latest version of others</p>
+                       
+                        <div class="clear">
+                        </div>
+                       <div class="poweredbytext">
+                   <span><span id="lblUpdatedText">Last Updated: </span>
+                       <span id="lblUpdateDate">02-08-2016 | </span></span></div>
+            </div>
+
+                    </div>
+                </div>
+    </div>
+    <span id="urlchk"></span>
+    <!--Footer End-->
+    <div class="fixed-top-ment">
+        <a href="#top-menu-arrow"><strong class="fa fa-angle-up"></strong><span>back to top</span>
+        </a>
+    </div>
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+
+            $('.scrollup').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+
+
+        });
+    </script>
+    <script>
+        $(function () {
+            $('a[href*=\\#]:not([href=\\#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y > 300) {
+                $('.fixed-top-ment').fadeIn();
+            } else {
+                $('.fixed-top-ment').fadeOut();
+            }
+        });
+    </script>
+	<script> 
+$(".wsmenu-list > li > a, .verticle-menu, .box-h3 + a, .daily-update").focus(function(){
+	   $(".wsmenu-list > li > a, .verticle-menu, .box-h3 + a, .daily-update").removeClass("focusdropdown");
+       $(this).addClass("focusdropdown");
+
+  });
+  $("body").click(function(){
+	   $(".wsmenu-list > li > a, .verticle-menu, .box-h3 + a, .daily-update").removeClass("focusdropdown");
+
+  });
+    $(".sliderbanner .slider a").focus(function(){
+	   $(".wsmenu-list > li > a").removeClass("focusdropdown");
+
+  });
+    </script>
+    <div class="clear">
+    </div>
+    </div>
+    </form>
+    
+</body>
+</html>
