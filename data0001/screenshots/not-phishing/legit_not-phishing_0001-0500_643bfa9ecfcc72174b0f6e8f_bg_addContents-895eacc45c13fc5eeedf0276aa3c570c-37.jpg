@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>my Rakuten - 楽天会員専用の情報管理ページ</title>
+  <meta name="Description" content="my Rakutenでは楽天会員情報やメルマガ設定、楽天市場のご利用状況などをご確認いただけます。">
+  <meta name="Keywords" content="">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta property="og:image" content="https://my.rakuten.co.jp/image/common/ogp.png">
+  <meta property="og:site_name" content="my Rakuten">
+  <link rel="icon" href="https://jp.rakuten-static.com/1/im/ci/rakuten/favicon/cr.ico">
+  <link rel="mask-icon" href="https://jp.rakuten-static.com/1/im/ci/rakuten/favicon/Rakuten_SafariPin.svg" color="#bf0000">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?20230208" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/overwrite.css?20201001">
+  <script src="//www.rakuten.co.jp/com/advance/point_club/myRakuten_PC/pc/condition.js"></script>
+  <script src="//r.r10s.jp/com/ap/target/phoenix-2.7.2.min.js"></script>
+</head>
+<body id="myrakuten">
+  
+  <!-- script for banner display and targeting -->
+  <script src="//jp.rakuten-static.com/1/grp/banner/js/create.js"></script>
+  <!-- PC header banner -->
+  <div id="mkdiv_header_pitari"></div>
+
+  <!-- ========== header ========== -->
+  <div id="grpheader">
+    <h1 id="siteID">
+      <a href="https://my.rakuten.co.jp/?scid=wi_myr_logo">
+        <img height="32" alt="my Rakutenはあなた専用のご利用情報管理サービス" class="serviceLogo" src="/image/pc/myr_logo_pc.png">
+      </a>
+    </h1>
+
+    <dl id="remoteNav">
+      <dt>楽天グループ関連</dt>
+      <dd class="grpRelation">
+        <ul>
+          <li id="grpNote">
+          </li>
+          <li class="grpHome"><a href="https://www.rakuten.co.jp/">楽天市場へ</a></li>
+        </ul>
+        <script type="text/javascript" src="//jp.rakuten-static.com/1/js/lib/prm_selector.js"></script>
+        <script type="text/javascript" src="//jp.rakuten-static.com/1/js/grp/hdr/prm_sender.js"></script>
+      </dd>
+
+
+      <dt>補助メニュー</dt>
+      <dd class="siteUtility">
+        <ul>
+          <li class="last"><a href="https://ichiba.faq.rakuten.net/">ヘルプ</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <!-- ========== /header ========== -->
+
+  <div id="contents-wrap">
+    <div id="contents" class="logout clearfix">
+      <div id="mypage-contents">
+
+
+<a href="https://ichiba.faq.rakuten.net/detail/000033783" class="notice-area">
+  <p><i class="rex-icon sign-info-f"></i>ログイン時に送信される通知メールについて</p>
+</a>
+
+
+    <div id="members_info" class="user-status-area contents-card">
+
+      <div id="logout-disp">
+        <ul>
+          <li>
+            <div class="txtblock">
+              <h1><em>my Rakuten</em>へようこそ</h1>
+              <p class="color-light">ご利用にはログインが必要です</p>
+            </div>
+            <a href="https://grp02.id.rakuten.co.jp/rms/nid/login?service_id=i20&return_url=retargeting/conditioning&scid=wi_myr_log"
+              class="btn loginbtn"><i><img src="/image/pc/login.svg" alt=""></i>ログイン</a>
+          </li>
+          <li>
+            <div class="txtblock">
+              <p>楽天会員の登録をされていない方は<br>こちらから</p>
+            </div>
+            <a href="https://grp02.id.rakuten.co.jp/rms/nid/registfwd?service_id=i20&return_url=retargeting/conditioning&scid=wi_myr_log"
+              class="btn registbtn">楽天会員登録(無料)</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="login-disp">
+        <div class="name-block">
+          <ul class="rankbadge">
+            <li class="rank_diamond"><img src="/image/common/membership/diamond.svg" alt="ダイヤモンド"></li>
+            <li class="rank_platinum"><img src="/image/common/membership/platinum.svg" alt="プラチナ"></li>
+            <li class="rank_gold"><img src="/image/common/membership/gold.svg" alt="ゴールド"></li>
+            <li class="rank_silver"><img src="/image/common/membership/silver.svg" alt="シルバー"></li>
+            <li class="rank_regular"></li>
+          </ul>
+          <h2><span>こんにちは <em id="mystatus_name"></em></span> さん</h2>
+          <p class="rank">あなたは<em><span id="mystatus_rankName"></span>会員</em>です</p>
+          <a href="https://point.rakuten.co.jp/club/rank/reward/?scid=wi_myr_member_rank_pc"
+            class="yuutai">会員優待</a>
+          <div class="not-user"><a href="https://member.id.rakuten.co.jp/r/logout.html">ログアウト</a></div>
+        </div>
+        <div class="point-block">
+          <div class="point-block-disparea">
+            <a href="https://point.rakuten.co.jp/?scid=wi_myr_member_point_pc">
+              <div class="allpoint"> <span class="ttl">利用可能ポイント</span>
+                <div class="ptc_tooltip_set type_icon"> <a href="#" class="ptc_icon icon_help js-ptc-tooltip-trigger"></a>
+                  <div class="ptc_tooltip  animated faster" role="ptc_tooltip animated faster" style="background-color: unset;">
+                    <div class="arrow"></div>
+                    <div class="ptc_tooltip_inner">
+                      <div class="ptc_modal_header">
+  <h2 class="ptc_modal_title ptc_tooltip_title font_weight_n">ポイントの表示変更について</h2>
+</div>
+<div class="ptc_modal_body">
+  <p>2020年5月13日より、ご利用可能なポイント数がよりわかりやすくなるよう、ポイントの表示を変更しております。</p>
+  <p>
+    <img class="block_pc" src="/image/common/tooltip/change_point_type_name.png" alt="">
+  </p>
+  <ul class="ptc_list_disc font_size_small modal_text_area">
+    <li class="modal_text">利用可能ポイントとは、通常ポイントと期間限定ポイントの合計です。運用ポイントや楽天キャッシュは含まれません。</li>
+    <li class="modal_text">楽天キャッシュの残高は、<a href="https://point.rakuten.co.jp/history/" style="display: inline;">ポイント実績</a>ページからご確認いただけます。</li>
+  </ul>
+</div>
+                    </div>
+                  </div>
+                </div>
+                <a href="https://point.rakuten.co.jp/?scid=wi_myr_member_point_pc">
+                  <span class="point">
+                    <em id="mystatus_all_point"></em>
+                    <i><img src="/image/pc/arrow-large.svg" alt=""></i>
+                  </span>
+                </a>
+              </div>
+              <!-- allpoint -->
+              <div class="limited_point">
+                <span class="ttl">うち期間限定</span>
+                <span class="point">
+                  <em id="mystatus_limited_point"></em>
+                </span>
+              </div>
+              <!-- limited_point -->
+            </a>
+            <div class="tobe_point">
+              <span class="ttl">獲得予定ポイント</span>
+              <span class="point">
+                <em id="mystatus_tobe_point"></em>
+              </span>
+            </div>
+            <!-- tobe_point -->
+            <div class="rcash"> 
+              <span class="ttl">楽天キャッシュ</span> 
+              <span class="point">
+                <em id="mystatus_r_cash"></em>
+              </span> 
+            </div>
+            <!-- rcash -->
+          </div>
+          <!-- point-block-disparea -->
+          <div class="point-block-otherarea">
+            <div class="otherarea_sv">
+              <p><a href="https://point.rakuten.co.jp/?scid=wi_myr_member_point_pc">楽天PointClub</a></p>
+              <div class="otherarea_sv_cate">
+                <p><a
+                    href="https://point.rakuten.co.jp/history/?scid=wi_myr_member_point_top_history_pc">ポイント実績を見る</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- point-block -->
+      </div>
+      <!-- login-disp -->
+
+    </div>
+
+
+<div id="members_info" class="frequently-service-area contents-card active">
+	<h2 class="frequently_title">よく使われている項目</h2>
+  <ul class="frequently_list">
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/user.svg" alt="会員情報の登録・確認・変更">
+      <a href="https://member.id.rakuten.co.jp/rms/nid/menufwd?scid=myr_popular_menu_pc">会員情報の登録・確認・変更</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/favorite.svg" alt="お気に入り">
+      <a href="https://my.bookmark.rakuten.co.jp/item?scid=myr_popular_bookmark_pc">お気に入り（楽天市場）</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/mailmag.svg" alt="楽天からのメールマガジンの確認・停止">
+      <a href="https://emagazine.rakuten.co.jp/ns?act=chg_news&f=member&scid=myr_popular_mail_pc">楽天からのメールマガジンの確認・停止</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/purchase_history.svg" alt="購入履歴">
+      <a href="https://order.my.rakuten.co.jp/?scid=myr_popular_purchasehist_pc">購入履歴（楽天市場）</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/coupon.svg" alt="myクーポン">
+      <a href="https://coupon.rakuten.co.jp/myCoupon?scid=wi_myr_popular_mycoupon_pc">myクーポン</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/review.svg" alt="myレビュー">
+      <a href="https://manager.review.rakuten.co.jp/?menu=mnglist&scid=myr_popular_review_pc">myレビュー（楽天市場）</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/icon/rmobile.svg" alt="my 楽天モバイル">
+      <a href="https://ac.ebis.ne.jp/tr_set.php?argument=ZMhPE4GP&ai=rgp_mno_003842">楽天モバイル(my 楽天モバイル)</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/credit-card.svg" alt="楽天カード(e-NAVI)">
+      <a href="https://www.rakuten-card.co.jp/e-navi/?scid=wi_myr_popular_enavi_pc">楽天カード(e-NAVI)</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/panel/delivery.svg" alt="お届け先リストの登録・変更（楽天市場）">
+      <a href="https://address.rakuten.co.jp/rms/wsp/ab/p/menufwd?scid=myr_popular_addresslist_pc">お届け先リストの登録・変更（楽天市場）</a>
+    </li>
+    <li class="frequently_content">
+      <img class="icon frequently_icon" src="/image/common/mypage_list/bank.svg" alt="楽天銀行">
+      <a href="https://www.rakuten-bank.co.jp/?scid=myr_popular_bnk_pc">楽天銀行</a>
+    </li>
+  </ul>
+</div>
+        <div class="contents-card">
+          <div id="tab">
+            <ul class="tab_selector">
+              <li id="tl" class="change_tab actv mr8 bsr"><div class="tab_inner"><p class='tab_txt'>会員情報管理</p><p class="js-txt tab_txt_actv">氏名、メールアドレス、住所など、ご登録いただいているお客様情報の確認、変更などはこちら</p></div></li>
+              <li id="tr" class="change_tab"><div class="tab_inner"><p class='tab_txt'>楽天市場や各サービスの管理</p><p class="js-txt">楽天市場や楽天カードなどの各サービスの利用履歴、お気に入りリスト、マイページなどはこちら</p></div></li>
+            </ul>
+            <div></div>
+            <ul class="tab_content" style="padding: 1px;box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.12);margin-top: 0px;z-index: 100;position: relative;">
+              <li class="actv">
+              <section id="member_setting">
+                <div class="setting_panel">
+                  <h3>会員情報の登録・確認・変更</h3>
+
+                  <ul>
+                    <li>• 氏名、ニックネーム</li>
+                    <li>• 銀行口座</li>
+                    <li>• ユーザーID</li>
+                    <li>
+                      • myデータ<img class="show_tooltip" src="/image/common/panel/info.svg">
+                      <div class="tooltip mydata">
+                        <img src="/image/pc/tooltip_mydata.png">
+                        <a class="btn_ok">OK</a>
+                      </div>
+                    </li>
+                    <li>• 本人連絡先（アドレス、住所、電話番号など）</li>
+                    <li>• パスワードと秘密の質問</li>
+                    <li>• ログインアラート<img class="show_tooltip" src="/image/common/panel/info.svg">
+                      <div class="tooltip login_alert">
+                        <img src="/image/pc/tooltip_login_alert.png">
+                        <a class="btn_ok">OK</a>
+                      </div>
+                    </li>
+                    <li>• クレジットカード</li>
+                    <li>• 退会</li>
+                  </ul>
+              
+                  <a class="btn_link" href="https://member.id.rakuten.co.jp/rms/nid/menufwd?scid=myr_membersetting_menu_pc">設定画面に移動する</a>
+                </div>
+
+
+              </section>
+              <!-- member_setting -->
+
+<section id="delivery_setting" class="link_panel_base">
+	<h2 class="section_title">メールマガジンの設定</h2>
+
+	<div class="section_inner">
+		<ul>
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/panel/mailmag.svg" alt="楽天からのメールマガジンの確認・停止">
+					<a href="https://emagazine.rakuten.co.jp/ns?act=chg_news&f=member&scid=myr_membersetting_mail_pc">楽天からのメールマガジンの確認・停止</a>
+					<p>
+						楽天から配信されているメールマガジンの確認・停止ができます
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/mypage_list/mail_register.svg" alt="楽天からのメールマガジンの新規登録">
+					<a href="https://emagazine.rakuten.co.jp/?scid=wi_myr_membersetting_mailregist_pc">楽天からのメールマガジンの新規登録</a>
+					<p>
+						楽天から配信されるメールマガジンの新規登録ができます
+					</p>
+				</div>
+			</li>
+		</ul>
+
+		<ul>
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/mypage_list/shop.svg" alt="ショップからのメールマガジンの確認・停止">
+					<a href="https://emagazine.rakuten.co.jp/ns?act=chg_rmail&f=member&mflg=0&scid=wi_myr_membersetting_mailshop_pc">ショップからのメールマガジンの確認・停止</a>
+					<p>
+						登録済みのショップから配信されているメールの確認・停止ができます
+					</p>
+				</div>
+			</li>
+			<li></li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="link_panel_base">
+  <h2 class="section_title" >お届け先リスト（楽天市場）の設定</h2>
+
+	<div class="section_inner">
+		<ul style="position: relative;">
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/panel/delivery.svg" alt="お届け先リストの登録・変更">
+					<a href="https://address.rakuten.co.jp/rms/wsp/ab/p/menufwd?scid=myr_membersetting_address_pc">お届け先リストの登録・変更</a>
+					<p>
+						楽天市場のお届け先リストの登録・変更ができます
+					</p>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="link_panel_base">
+  <h2 class="section_title" >履歴の確認</h2>
+
+	<div class="section_inner">
+		<ul style="position: relative;">
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/panel/login.svg" alt="ログイン履歴の確認">
+					<a href="https://history.id.rakuten.co.jp/history/?scid=myr_membersetting_loginhist_pc">ログイン履歴の確認</a>
+					<p>
+						楽天サービスにログインした履歴を確認できます
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/panel/campaign.svg" alt="キャンペーンエントリー履歴の確認">
+					<a href="https://oubo.rakuten.co.jp/list/?scid=wi_myr_membersetting_campaignhist_pc">キャンペーンエントリー履歴の確認</a>
+					<p>
+						キャンペーンにエントリーした履歴を確認できます
+					</p>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="link_panel_base">
+  <h2 class="section_title" >広告配信・行動情報の確認・変更</h2>
+
+	<div class="section_inner">
+		<ul style="position: relative;">
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/panel/gear.svg" alt="Cookie等の確認・停止">
+					<a href="https://grp12.ias.rakuten.co.jp/optout/index.html?scid=wi_myr_membersetting_cookie_pc">Cookie等の確認・停止</a>
+					<p>
+						楽天サービスでの行動ターゲティング広告の確認・停止や行動情報の利用・取得の詳細が確認できます
+					</p>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="link_panel_base">
+  <h2 class="section_title" >プライバシー関連情報の確認</h2>
+
+	<div class="section_inner">
+		<ul style="position: relative;">
+			<li>
+				<div class="link_panel type_icon">
+					<img class="icon" src="/image/common/panel/privacy.svg" alt="プライバシーセンター">
+					<a href="https://corp.rakuten.co.jp/privacy/?scid=wi_myr_membersetting_privacycenter_pc">プライバシーセンター</a>
+					<p>
+						個人情報保護方針やプライバシー保護に関する情報を確認できます
+					</p>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section id="register_info" class="link_panel_base">
+	<h2 class="section_title">情報登録でさらにお得・便利に</h2>
+
+	<div class="section_inner">
+		<ul>
+			<li>
+				<div class="link_panel type_logo">
+					<img class="logo" src="/image/pc/logo_mamawari.png" alt="Rakutenママ割">
+					<p>
+						お子様の情報を登録すると、お得なポイントキャンペーンや限定クーポンをご利用いただけます。さらに毎月抽選でサンプルボックスをプレゼント。
+					</p>
+					<a href="https://mydata.id.rakuten.co.jp/family/?scid=wi_myr_membersetting_mamawari_pc">登録・変更ページに移動する</a>
+				</div>
+			</li>
+			<li>
+				<div class="link_panel type_logo">
+					<img class="logo" src="/image/pc/logo_petwari.png" alt="Rakutenペット割">
+					<p>
+						ペットの情報を登録すると、バースデークーポンやお得なポイントキャンペーンをご利用いただけます。さらに毎月抽選で、サンプルボックスや無料血液検査クーポンをプレゼント。
+					</p>
+					<a href="https://mydata.id.rakuten.co.jp/pet/?scid=wi_myr_membersetting_petwari_pc">登録・変更ページに移動する</a>
+				</div>
+			</li>
+		</ul>
+
+		<ul>
+			<li>
+				<div class="link_panel type_logo">
+					<img class="logo" src="/image/pc/logo_mycarwari.png" alt="Rakutenマイカー割">
+					<p>
+						クルマの情報を登録すると、ポイントキャンペーンや車用品クーポンなどをご利用いただけます。さらに、お得な情報満載のマイカー割ニュースもお届け。
+					</p>
+					<a href="https://mydata.id.rakuten.co.jp/car/?scid=wi_myr_membersetting_mycarwari_pc">登録・変更ページに移動する</a>
+				</div>
+			</li>
+
+			<li>
+				<div class="link_panel type_logo">
+					<img class="logo" src="/image/pc/logo_gakuwari.png" alt="Rakuten学割">
+					<p>
+						15～25歳なら社会人も対象。年齢認証＆学校情報を登録すると、送料無料クーポンやポイントキャンペーン、楽天グループのその他特典をご利用いただけます。
+					</p>
+					<a href="https://mydata.id.rakuten.co.jp/school/?scid=wi_myr_membersetting_gakuwari_pc">登録・変更ページに移動する</a>
+				</div>
+			</li>
+		</ul>
+
+		<div class="link_panel type_logo register_wear_size mt16">
+			<h3>サイズ登録でお買い物を便利に</h3>
+			<div class="padding_base">
+				<p>
+					忘れがちな洋服や靴のサイズを登録しておくと、お買い物や検索の際に便利になります。
+				</p>
+				<a href="https://mydata.id.rakuten.co.jp/?scid=wi_myr_membersetting_mydata_pc">登録・変更ページに移動する</a>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+              </li>
+              <li>
+              <section id="service_usage" class="link_panel_base">
+                <div class="section_inner">
+                  <h2>楽天市場</h2>
+                  <ul>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/cart.svg" alt="買い物かご">
+                        <a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cartall/?scid=myr_serviceusage_basket_pc">買い物かご</a>
+                        <p>楽天市場でご利用中の買い物かごを確認できます</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/favorite.svg" alt="お気に入り">
+                        <a href="https://my.bookmark.rakuten.co.jp/item?scid=myr_serviceusage_bookmark_pc">お気に入り</a>
+                        <p>楽天市場でお気に入りに登録した商品・ショップの確認・削除ができます</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/view_history.svg" alt="閲覧履歴">
+                        <a href="https://ashiato.rakuten.co.jp/rms/ashiato/page?scid=myr_serviceusage_ashiato_pc">閲覧履歴</a>
+                        <p>楽天市場で閲覧した商品の履歴を確認できます</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/purchase_history.svg" alt="購入履歴">
+                        <a href="https://order.my.rakuten.co.jp/?scid=myr_serviceusage_purchasehist_pc">購入履歴</a>
+                        <p>楽天市場でご購入いただいた商品を確認できます</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/review.svg" alt="myレビュー">
+                        <a href="https://manager.review.rakuten.co.jp/?menu=mnglist&scid=myr_serviceusage_review_pc">myレビュー</a>
+                        <p>投稿したレビューの管理ができます</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/reserve.svg" alt="定期・予約購入申し込み履歴">
+                        <a href="https://reserve.my.rakuten.co.jp/rms/mall/reserve/my/pc/applyList?scid=myr_serviceusage_reserve_pc">定期・予約購入申し込み履歴</a>
+                        <p>予約、定期、頒布会商品への申し込み履歴を確認できます </p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/mypage_list/ticket.svg" alt="楽券の購入履歴・ご利用状況">
+                        <a href="https://voucher.rakuten.co.jp/myrakken/?scid=myr_serviceusage_rak_pc">楽券の購入履歴・ご利用状況</a>
+                        <p>楽券の購入履歴とご利用状況が確認できます</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/delivery.svg" alt="お届け先リストの登録・変更">
+                        <a href="https://address.rakuten.co.jp/rms/wsp/ab/p/menufwd?scid=myr_serviceusage_addresslist_pc">お届け先リストの登録・変更</a>
+                        <p>楽天市場のお届け先リストの登録・変更ができます</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/message.svg" alt="楽天市場ショップ問い合わせ履歴">
+                        <a href="https://inquiry.my.rakuten.co.jp/?scid=myr_serviceusage_shopinquiry_pc">楽天市場ショップ問い合わせ履歴</a>
+                        <p>ショップへの過去の問い合わせが確認できます</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/shop_mail.svg" alt="楽天市場ショップからのメール一覧">
+                        <a href="https://message.my.rakuten.co.jp/message-my/index.phtml?scid=myr_serviceusage_shopmailhist_pc">楽天市場ショップからのメール一覧</a>
+                        <p>ショップからの注文に関するメールを確認できます</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <section class="banners">
+                    <a href="https://event.rakuten.co.jp/anshin/anshinshopping/?scid=wi_grp_gmx_myrakuten_pc"><img src="/image/pc/banner_anshin_shopping.png" alt="楽天あんしんショッピングサービス"></a>
+                    <a href="https://event.rakuten.co.jp/guide/shop_inquiry/?scid=myr_serviceusage_shopinquiry_pc"><img src="/image/pc/banner_shop_inquiry.png" alt="ショップへのご相談"></a>
+                  </section>
+              
+                  <h2>クーポン</h2>
+                  <ul>
+                    <li>
+                      <div class="link_panel type_icon">
+                        <img class="icon" src="/image/common/panel/coupon.svg" alt="myクーポン">
+                        <a href="https://coupon.rakuten.co.jp/myCoupon?scid=wi_myr_serviceusage_mycoupon_pc">myクーポン</a>
+                        <p>楽天市場や楽天トラベルで利用できるクーポンを確認できます</p>
+                      </div>
+                    </li>
+                    <li>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <!-- usage_situation -->
+
+              </li>
+            </ul>
+
+          </div>
+            <div id="mypage-list">
+              <h2 style="margin-bottom: -13px; padding-left: 30px;">楽天グループのMyページ</h2>
+              <ul>
+                <a href="https://www.rakuten-card.co.jp/e-navi/?scid=wi_myr_mypage_enavi_pc">
+                  <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/credit-card.svg" alt="楽天カード（e-NAVI）">
+                      <p>楽天カード（e-NAVI）</p>
+                  </h3>
+                  <p>ご利用状況や明細の確認・各種変更</p>
+                </li>
+              </a>
+              <a href="http://my.travel.rakuten.co.jp/mytravel/?scid=wi_myr_mypage_trv_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/travel.svg" alt="楽天トラベル">
+                      <p>楽天トラベル</p>
+                  </h3>
+                  <p>予約の確認・各種変更</p>
+                </li>
+              </a>
+              <a href="https://www.rakuten-bank.co.jp/?scid=wi_myr_mypage_bnk_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/bank.svg" alt="楽天銀行">
+                      <p>楽天銀行</p>
+                  </h3>
+                  <p>預金残高・入出金明細の確認</p>
+                </li>
+              </a>
+              <a href="https://ac.ebis.ne.jp/tr_set.php?argument=ZMhPE4GP&ai=rgp_mno_003843">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/mobile.svg" alt="楽天モバイル">
+                      <p>楽天モバイル</p>
+                  </h3>
+                  <p>ご契約内容（料金プラン）の確認・変更</p>
+                </li>
+              </a>
+              <a href="https://manager.gora.golf.rakuten.co.jp/?scid=wi_myr_mypage_gra_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/gora.svg" alt="楽天GORA">
+                      <p>楽天GORA</p>
+                  </h3>
+                  <p>予約の確認・各種変更</p>
+                </li>
+              </a>
+              <a href="https://my.checkout.rakuten.co.jp/mych/?scid=wi_myr_mypage_pay_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/rpay.svg" alt="楽天ペイ(オンライン決済)">
+                      <p>楽天ペイ(オンライン決済)</p>
+                  </h3>
+                  <p>ネットでのお支払い履歴</p>
+                </li>
+              </a>
+              <a href="https://books.rakuten.co.jp/mypage/top?scid=wi_myr_mypage_books_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/books.svg" alt="楽天ブックス">
+                      <p>楽天ブックス</p>
+                  </h3>
+                  <p>購入履歴・配送状況確認</p>
+                </li>
+              </a>
+              <a href="https://r10.to/hz1zY0">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/securities.svg" alt="楽天証券">
+                      <p>楽天証券</p>
+                  </h3>
+                  <p>資産情報・マーケット情報の確認</p>
+                </li>
+              </a>
+              <a href="http://calendar.rakuten.co.jp/?scid=wi_myr_mypage_cld_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/calendar.svg" alt="楽天カレンダー">
+                      <p>楽天カレンダー</p>
+                  </h3>
+                  <p>カレンダーの確認・追加変更</p>
+                </li>
+              </a>
+              <a href="https://edy.rakuten.co.jp/?l-id=wi_gmx_myr_ser_pc_edy">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/edy.svg" alt="楽天Edy">
+                      <p>楽天Edy</p>
+                  </h3>
+                  <p>残高・利用履歴の確認</p>
+                </li>
+              </a>
+              <a href="https://affiliate.rakuten.co.jp/report/?scid=wi_myr_mypage_aff_pc">
+                <li>
+                  <h3>
+                      <img src="/image/common/mypage_list/affiliate.svg" alt="楽天アフィリエイト">
+                      <p>楽天アフィリエイト</p>
+                  </h3>
+                  <p>成果情報の確認</p>
+                </li>
+              </a>
+              <a href="https://toto.rakuten.co.jp/my-toto/?scid=wi_myr_mypage_tot_pc">
+                <li>
+                  <h3>
+                    <img src="/image/common/mypage_list/toto.svg" alt="楽天toto">
+                    <p>楽天toto</p>
+                </h3>
+                  <p>ご利用状況や明細の確認・各種変更</p>
+                </li>
+              </a>
+            </ul>
+            </div>
+
+        </div>
+
+<section id="support_list" class="contents-card">
+<h2 class="section_title"><img src="/image/common/panel/help.svg" alt="各サービスのよくある質問">各サービスのよくある質問</h2>
+<div class="section_inner">
+	<div class="support_list_block">
+		<div class="support_list_item">
+			<p class="support_list_title">楽天市場</p>
+			<ul class="support_list_detail">
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/detail/000006428?scid=wi_myr_top_ichibafaq_pc">購入履歴や注文内容を確認したい</a>
+				</li>
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/detail/000006775?scid=wi_myr_top_ichibafaq_pc">商品の配送状況を確認したい</a>
+				</li>
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/category/search-order/change-cancellation/?scid=wi_myr_top_ichibafaq_pc">ご注文のキャンセル・返品・交換をしたい</a>
+				</li>
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/?scid=wi_myr_top_ichibafaq_pc">その他の質問を見る</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="support_list_item">
+			<p class="support_list_title">楽天カード</p>
+			<ul class="support_list_detail">
+				<li>
+					<a href="https://support.rakuten-card.jp/faq/show/77?site_domain=guest&scid=wi_myr_top_cardfaq_pc">ご利用明細を確認したい</a>
+				</li>
+				<li>
+					<a href="https://support.rakuten-card.jp/faq/show/5658?site_domain=guest&scid=wi_myr_top_cardfaq_pc">ご入会特典のポイントが獲得できない</a>
+				</li>
+				<li>
+					<a href="https://www.rakuten-card.co.jp/support/robbery/?scid=wi_myr_top_cardfaq_pc">カードの紛失・盗難に対処したい</a>
+				</li>
+				<li>
+					<a href="https://www.rakuten-card.co.jp/support/?scid=wi_myr_top_cardfaq_pc">その他の質問を見る</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="support_list_item">
+			<p class="support_list_title">楽天モバイル</p>
+			<ul class="support_list_detail">
+				<li>
+					<a href="https://network.mobile.rakuten.co.jp/support/payment/bill/?scid=wi_myr_top_mobilefaq_pc">請求金額を確認したい</a>
+				</li>
+				<li>
+					<a href="https://network.mobile.rakuten.co.jp/support/area/data/?scid=wi_myr_top_mobilefaq_pc">データ使用量を確認したい</a>
+				</li>
+				<li>
+					<a href="https://network.mobile.rakuten.co.jp/search-b/?q=%E9%80%9A%E4%BF%A1%E7%92%B0%E5%A2%83%E3%82%92%E6%94%B9%E5%96%84%E3%81%97%E3%81%9F%E3%81%84&scid=wi_myr_top_mobilefaq_pc">通信環境を改善したい・つながりにくい</a>
+				</li>
+				<li>
+					<a href="https://network.mobile.rakuten.co.jp/support/?scid=wi_myr_top_mobilefaq_pc">その他の質問を見る</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="support_list_item">
+			<p class="support_list_title">楽天ポイント</p>
+			<ul class="support_list_detail">
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/detail/000006501?scid=wi_myr_top_pointfaq_pc">ポイント獲得や利用の実績を確認したい</a>
+				</li>
+				<li>
+					<a href="https://point.rakuten.co.jp/guidance/rule/?scid=wi_myr_top_pointfaq_pc">ポイントが獲得できない</a>
+				</li>
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/detail/000006979?scid=wi_myr_top_pointfaq_pc">ポイントが減ったように見える</a>
+				</li>
+				<li>
+					<a href="https://ichiba.faq.rakuten.net/category/rakuten-super-point/?scid=wi_myr_top_pointfaq_pc">その他の質問を見る</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="other_services">
+		<a href="https://www.rakuten.co.jp/sitemap/inquiry.html?scid=wi_myr_top_faq_pc">その他サービスのお問い合わせ</a>
+	</div>
+</div>
+</section>
+
+
+      </div>
+      <!-- /#mypage-contents -->
+      <div id="sideNav">
+        <div id="randomAdArea" data-phoenix-myrakuten_pc_pc>
+          <a href="https://ac.ebis.ne.jp/tr_set.php?argument=ZMhPE4GP&ai=rgp_mno_96" data-ratid="mno_rectangle_def" data-ratevent="click,appear">
+            <img src="/image/pc/banner/rightupper/202302/mno_myr_0214.jpg" width="300" height="250" alt="楽天モバイル">
+          </a>
+        </div>
+    <!-- ▼ パンコレ -->
+    <section class="type-notice areaPlc">
+      <div class="section_inner">
+        <h2 class="section_title">お買いものパンダと楽しむ楽天ライフ</h2>
+        <div class="section_body">
+          <!-- #campaign-data -->
+          <div id="panda-sbc-campaign-data"
+            data-startdate="2023-04-01"
+            data-enddate="2023-04-30"
+            data-campaignurl="pandaful01042023">
+          </div>
+          <!-- /#campaign-data -->
+          <div id="panda-sbc">
+            <div id="panda-sbc-noentry">
+              <a href="https://event.rakuten.co.jp/group/pandafullife/?scid=wi_grp_gmx_myr_top_plcex_link_before">
+                <img src="/image/pc/panda_sbc/before-entry/before-bnr.png" alt="今月はもうエントリーした？">
+              </a>
+              <a href="https://event.rakuten.co.jp/okaimonopanda/pandashop/?scid=wi_grp_gmx_myr_top_pandashop">
+                <img src="/image/pc/panda_sbc/before-entry/pandashop-bnr.png" alt="お買いものパンダSHOP">
+              </a>
+		        </div>  
+            <div id="panda-sbc-entry">
+              <div id="panda-sbc-entry-empty">
+                <img src="/image/pc/panda_sbc/after-entry/img_empty.png" width="300" height="232" alt="初めてサービスを使うごとにもれなくパンダグッズゲット! 全サービスご利用中">
+              </div>
+              <!-- /.panda-sbc-entry-empty -->
+              <div id="panda-sbc-entry-normal">
+              <h3><img src="/image/pc/panda_sbc/after-entry/title.png?2018" alt="初めてサービスを使うごとにもれなくパンダグッズゲット!"></h3>
+              <div id="panda-sbc-entry-crsl-area">
+                <p><img src="/image/pc/panda_sbc/after-entry/after_text.png" alt="あなたの対象サービス"></p>
+                <ul id="panda-sbc-entry-crsl" class="js-serviceTotalNum">
+                  <li class="item" data-service="mall">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/ichiba/?scid=wi_grp_gmx_ichi_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_ichiba_01.png" alt="楽天市場">
+                    </a>
+                  </li>
+                  <li class="item" data-service="app">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/ichibaapp/?scid=wi_grp_gmx_ichia_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_app_01.png" alt="楽天市場アプリ">
+                    </a>
+                  </li>
+                  <li class="item" data-service="card">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/card/?scid=wi_grp_gmx_card_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_card_01.png" alt="楽天カード">
+                    </a>
+                  </li>
+                  <li class="item" data-service="bank">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/bank/?scid=wi_grp_gmx_bank_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_bank_01.png" alt="楽天銀行">
+                    </a>
+                  </li>
+                  <!-- <li class="item" data-service="travel">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/travel/?scid=wi_grp_gmx_trv_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_travel_01.png" alt="楽天トラベル">
+                    </a>
+                  </li>
+                  <li class="item" data-service="energy">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/energy/?scid=wi_grp_gmx_ene_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_energy_01.png" alt="楽天でんき">
+                    </a>
+                  </li> -->
+                  <li class="item" data-service="keiba_p">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/keiba/?scid=wi_grp_gmx_kba_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_keiba_01.png" alt="楽天競馬">
+                    </a>
+                  </li>
+                  <li class="item" data-service="rlife_p">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/life/?scid=wi_grp_gmx_life_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_life_01.png" alt="楽天生命">
+                    </a>
+                  </li>
+                  <li class="item" data-service="toolbar">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/toolbar/?scid=wi_grp_gmx_too_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_toolbar_01.png" alt="楽天ウェブ検索">
+                    </a>
+                  </li>
+                  <li class="item" data-service="rba">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/rba/?scid=wi_grp_gmx_rba_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_rba_01.png" alt="Rakuten Fashion">
+                    </a>
+                  </li>
+                  <li class="item" data-service="kobo_p">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/kobo/?scid=wi_grp_gmx_kobo_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_kobo_01.png" alt="楽天Kobo">
+                    </a>
+                  </li>
+                  <li class="item" data-service="showtime_p">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/rakutentv/?scid=wi_grp_gmx_tv_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_tv_01.png" alt="楽天TV">
+                    </a>
+                  </li>
+                  <li class="item" data-service="pet_insurance">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/pet/?scid=wi_grp_gmx_pet_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_pet_01.png" alt="楽天ペット保険">
+                    </a>
+                  </li>
+                  <li class="item" data-service="sonpo">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/sonpo/?scid=wi_grp_gmx_sonpo_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_carinsurance_01.png" alt="楽天損保">
+                    </a>
+                  </li>
+                  <!-- <li class="item" data-service="toto">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/toto/?scid=wi_grp_gmx_toto_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_toto_01.png" alt="楽天toto">
+                    </a>
+                  </li>
+                  <li class="item" data-service="magazine">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/magazine/?scid=wi_grp_gmx_rmz_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_magazine_01.png" alt="楽天マガジン">
+                    </a>
+                  </li>
+                  <li class="item" data-service="buyback">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/buyback/?scid=wi_grp_gmx_usd_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_buyback_01.png" alt="楽天買取">
+                    </a>
+                  </li> -->
+                  <li class="item" data-service="gora">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/gora/?scid=wi_grp_gmx_gora_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_gora_01.png" alt="楽天GORA">
+                    </a>
+                  </li>
+                  <!-- <li class="item" data-service="ragri_p">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/ragri/?scid=wi_grp_gmx_rgr_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_ragri_01.png" alt="Ragri(ラグリ)">
+                    </a>
+                  </li> -->
+                  <li class="item" data-service="shaken">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/shaken/?scid=wi_grp_gmx_sha_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_shaken_01.png" alt="楽天Car車検">
+                    </a>
+                  </li>
+                  <li class="item" data-service="raxy">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/raxy/?scid=wi_grp_gmx_raxy_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_raxy_01.png" alt="RAXY(ラクシー)">
+                    </a>
+                  </li>
+                  <li class="item" data-service="young">
+                    <a href="https://event.rakuten.co.jp/group/pandafullife/young/?scid=wi_grp_gmx_yng_plc_myrak">
+                      <img src="https://event.rakuten.co.jp/group/pandafullife/_cmn/img/panda/img_service_young_01.png" alt="楽天学割">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="panda-sbc-new-flag-img"><i class="panda-sbc-new-icon"><img src="/image/pc/panda_sbc/after-entry/after_new_icon.png" alt="NEW"></i></div>
+              </div>
+              <!-- /.panda-sbc-entry-normal -->
+              <div class="panda-sbc-link-btn"><a href="https://event.rakuten.co.jp/group/pandafullife/?scid=wi_grp_gmx_myr_top_plcex_link_after"><img src="/image/pc/panda_sbc/after-entry/entryed-btn.png" alt="詳しく見る"></a></div>
+
+              <div id="panda-point-zukan">
+                <a href="https://event.rakuten.co.jp/okaimonopanda/pandashop/?scid=wi_grp_gmx_myr_top_pandashop">
+                  <img src="/image/pc/panda_sbc/before-entry/pandashop-bnr.png" alt="お買いものパンダSHOP">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ▲ パンコレ -->
+
+
+
+
+
+        <div class="sv-list side-card">
+          <h2>楽天グループ&nbsp;サービス</h2>
+          <h3>お買い物</h3>
+          <ul>
+            <li><a href="https://www.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_icb">楽天市場</a></li>
+            <li><a href="http://books.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_bks">楽天ブックス</a></li>
+            <li><a href="https://fril.jp/?scid=wi_gmx_myr_ser_pc_rkm">ラクマ</a></li>
+          </ul>
+
+          <h3>スポーツ・レジャー</h3>
+          <ul>
+            <li><a href="http://travel.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_trv">楽天トラベル</a></li>
+            <li><a href="https://gora.golf.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_gor">楽天GORA</a></li>
+            <li><a href="https://ticket.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_tic">楽天チケット</a></li>
+          </ul>
+
+          <h3>マネー・ファイナンス</h3>
+          <ul>
+            <li><a href="http://ad2.trafficgate.net/t/r/9286/1441/99636_99636/">楽天カード</a></li>
+            <li><a href="http://www.rakuten-bank.co.jp/?scid=wi_gmx_myr_ser_pc_bnk">楽天銀行</a></li>
+            <li><a href="https://money.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_mny">お金の総合案内</a></li>
+          </ul>
+
+          <h3>暮らし・生活</h3>
+          <ul>
+            <li><a href="https://ac.ebis.ne.jp/tr_set.php?argument=ZMhPE4GP&ai=rgp_mno_98">楽天モバイル</a></li>
+            <li><a href="https://beauty.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_bat">楽天ビューティ</a></li>
+          </ul>
+
+          <h3>メディア・ツール</h3>
+          <ul>
+            <li><a href="https://member.insight.rakuten.co.jp/?scid=wi_gmx_myr_poi_pc_res">楽天インサイト</a></li>
+            <li><a href="https://toolbar.rakuten.co.jp/?scid=wi_gmx_myr_poi_pc_tlb">楽天ウェブ検索</a></li>
+            <li><a href="https://screen.rakuten.co.jp/?scid=wi_gmx_myr_poi_pc_sps">楽天スーパーポイントスクリーン</a></li>
+          </ul>
+
+          <h3>エンターテインメント</h3>
+          <ul>
+            <li><a href="https://tv.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_tv">Rakuten TV</a></li>
+            <li><a href="https://music.rakuten.co.jp?scid=wi_gmx_myr_ser_pc_msc">Rakuten Music</a></li>
+            <li><a href="https://magazine.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_mgz">楽天マガジン</a></li>
+            <li><a href="https://kuji.rakuten.co.jp/?scid=wi_gmx_myr_ser_pc_kji">ラッキーくじ一覧</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://www.rakuten.co.jp/sitemap/?scid=wi_gmx_myr_ser_pc_map"
+                class="more">楽天グループのサービス一覧を見る</a></li>
+          </ul>
+        </div>
+
+<!--
+        <div class="sv-list side-card">
+          <h2>お得なポイントサービス</h2>
+          <h3>ポイントゲット</h3>
+          <ul>
+            <li><a href="">ラッキーくじ一覧</a></li>
+            <li><a href="">ポイナビ</a></li>
+            <li><a href="">楽天Infoseek お小遣いゲーム</a></li>
+          </ul>
+        </div>
+-->
+
+      </div>
+    <!-- /#sideNav -->
+    <div class="clearfix"></div>
+
+        <div id="btm-cpn-crsl" class="contents-card">
+          <h2>お得なキャンペーン情報のご紹介</h2>
+          <div id="cpn-crsl">
+            <ul>
+             <li><a href="https://www.rakuten-bank.co.jp/account/campaign/payment1000.html?scid=wi_grp_gmx_bnk_myr_camp_top_1000pt" data-ratid="bank_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202212/bnk_myr_1226.png" width="170" height="170" alt="楽天銀行"></a></li>
+             <li><a href="https://member.insight.rakuten.co.jp/campaign/campaign00221.html?scid=wi_grp_gmx_rsc_myr_camp_top" data-ratid="insight_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202302/insight_myr_0201.png" width="170" height="170" alt="楽天インサイト"></a></li>
+             <li><a href="http://img.travel.rakuten.co.jp/image/tr/userm/xu/VA4tH/" data-ratid="trv_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202303/trv_myr_0316.jpg" width="170" height="170" alt="楽天トラベル"></a></li>
+             <li><a href="https://keiba.rakuten.co.jp/special_event/campaign/rkb_special230412?scid=wi_grp_gmx_kba_myr_camp_top_point" data-ratid="keiba_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202304/kba_myr_0412.png" width="170" height="170" alt="楽天競馬"></a></li>
+             <li><a href="https://www.rakuten-wallet.co.jp/campaign/group500program/?scid=wi_grp_gmx_rwt_myr_camp_top" data-ratid="walle_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202302/rwt_myr_0201.png" width="170" height="170" alt="楽天ウォレット"></a></li>
+             <li><a href="https://rakuma.rakuten.co.jp/info/campaign/login/700/ichiba/?scid=wi_grp_gmx_rkm_myr_camp_top" data-ratid="rakuma_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202205/rkm_myr_0502.gif" width="170" height="170" alt="ラクマ"></a></li>
+             <li><a href="https://keirin.kdreams.jp/campaign/special/regist/?rmd=MYRKOTCP&scid=wi_grp_gmx_kdr_myr_camp_top_regist" data-ratid="kdreams_myr_camp" data-ratevent="click">
+               <img src="/image/common/campaign_carousel/202112/kdr_myr_2112.png" width="170" height="170" alt="Kドリームス"></a></li>
+            </ul>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+  <!-- /#contents-wrap -->
+
+
+
+  <div id="survey-area"></div>
+
+  <!-- ========== footer ========== -->
+  <div id="grpRakutenLinkArea">
+
+    <!-- PC footer banner -->
+    <div id="mkdiv_footer_pitari"></div>
+
+    <ul id="grpSpelinlk">
+      <li><a href="https://my.rakuten.co.jp/">ご利用情報</a></li>
+      <li><a href="https://order.my.rakuten.co.jp/?scid=wi_myr_up_pur">購入履歴</a></li>
+      <li><a href="http://ashiato.rakuten.co.jp/rms/sd/ashiato/vc?scid=wi_myr_up_ins">閲覧履歴</a></li>
+      <li><a href="https://member.id.rakuten.co.jp/rms/nid/menufwd?scid=wi_myr_up_reg">会員登録情報</a></li>
+      <li><a href="https://point.rakuten.co.jp/?scid=wi_myr_up_point">ポイント情報</a></li>
+      <li><a href="https://coupon.rakuten.co.jp/?scid=wi_myr_up_coupon">クーポン情報</a></li>
+      <li><a href="https://my.bookmark.rakuten.co.jp/item?scid=wi_myr_up_fav">お気に入りブックマーク</a></li>
+      <li class="grpLast"><a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cartall/?__event=ES01_003_001&amp;scid=wi_myr_up_cag">買い物かご</a>
+      </li>
+    </ul>
+
+    <div id="grpFooter">
+      <div id="groupServiceFooter">
+        <dl class="title">
+          <dt>楽天グループのサービス</dt>
+          <dd class="allService"><span><a href="https://www.rakuten.co.jp/sitemap/" onclick="s.gclick(&#39;sitemap&#39;,&#39;ftr&#39;)">サービス一覧</a></span></dd>
+          <dd class="allService inquiryList"><span><a href="https://www.rakuten.co.jp/sitemap/inquiry.html" onclick="s.gclick(&#39;inquiry&#39;,&#39;ftr&#39;)">お問い合わせ一覧</a></span></dd>
+        </dl>
+
+        <dl class="Introduce">
+          <dt class="IntroduceTitle">関連サービス</dt>
+          <dd class="IntroduceDetail">
+            <ul id="selectedService" class="serviceCol4">
+              <li class="first">
+                <dl>
+                  <dt><a href="http://travel.rakuten.co.jp/" onclick="s.gclick(&#39;travel_dom&#39;,&#39;ftr-rel&#39;)">旅行に出かけてポイントを貯める</a></dt>
+                  <dd>楽天トラベル</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt><a href="https://event.rakuten.co.jp/pointup/" onclick="s.gclick(&#39;ichiba&#39;,&#39;ftr-rel&#39;)">ポイントアップ商品を購入する</a></dt>
+                  <dd>楽天市場</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt><a href="http://books.rakuten.co.jp/" onclick="s.gclick(&#39;books&#39;,&#39;ftr-rel&#39;)">本・DVD・ゲームを今すぐ購入する</a></dt>
+                  <dd>楽天ブックス</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt><a href="http://gora.golf.rakuten.co.jp/" onclick="s.gclick(&#39;gora&#39;,&#39;ftr-rel&#39;)">ゴルフ場をオンライン予約する</a></dt>
+                  <dd>楽天GORA</dd>
+                </dl>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl class="Introduce">
+          <dt class="IntroduceTitle">おすすめ</dt>
+          <dd class="IntroduceDetail" id="grpRakutenRecommend">
+            <a href="https://ad2.trafficgate.net/t/r/7/6104/279001_347336/">【ダイヤモンド・プラチナ会員様限定】Edy-楽天ポイントカード＆Edy200円分をプレゼント！！</a>
+          </dd>
+        </dl>
+      </div><!-- /div#groupServiceFooter -->
+
+      <div id="companyFooter">
+        <ul>
+          <li><a href="https://corp.rakuten.co.jp/" rel="nofollow">企業情報</a></li>
+          <li><a href="https://privacy.rakuten.co.jp/" rel="nofollow">個人情報保護方針</a></li>
+          <li><a href="https://corp.rakuten.co.jp/csr/">社会的責任[CSR]</a></li>
+          <li class="grpLast"><a href="https://corp.rakuten.co.jp/careers/">採用情報</a></li>
+        </ul>
+        <p id="copyright">Copyright &copy; Rakuten Group, Inc. All Rights Reserved.</p>
+      </div><!-- /div#companyFooter -->
+
+    </div><!-- /div#grpFooter -->
+
+  <script type="text/javascript" src="//jp.rakuten-static.com/1/js/grp/ftr/js/parm_selector_footer.js"></script>
+  </div>
+  <!-- ========== /footer ========== -->
+<script src="/js/user_info.min.js?20220901"></script>
+  <script src="https://r.r10s.jp/com/js/d/common/jquery-1.7.2.min.js"></script>
+  <script src="/js/lodash.min.js"></script>
+  <script src="/js/jquery.cookie.min.js"></script>
+  <script src="/js/pc/detectBrowser.min.js"></script>
+  <script src="/js/slick.min.js?20200714"></script>
+  <script src="/js/index.min.js?20220203"></script>
+  <script src="/js/pc/main.min.js?20230407"></script>
+  <script src="/js/ptc_common.js"></script>
+
+  <!-- <script src="/js/pc/sideAdvertisement.min.js"></script> -->
+  <script type="text/javascript" src="https://event.rakuten.co.jp/group/survey/_cmn/js/jquery.survey-plugin_v3.js?20220121" charset="UTF-8"></script>
+  <script>
+    $(function(){
+      $('#survey-area').survey(1,'');
+    });
+  </script>
+
+  <!-- RAT tag start-->
+  <!-- Generic Parameter -->
+  <input type="hidden" name="rat" id="ratAccountId" value="400">
+  <input type="hidden" name="rat" id="ratServiceId" value="1">
+  <input type="hidden" name="rat" id="ratPageLayout" value="pc">
+  <input type="hidden" name="rat" id="ratSiteSection" value="myrakuten">
+  <input type="hidden" name="rat" id="ratAdobeSiteSection" value="myrakuten">
+  <input type="hidden" name="rat" id="ratPageType" value="">
+  <input type="hidden" name="rat" id="ratPageName" value="">
+  <!-- Custom Parameter -->
+  <input type="hidden" name="rat" id="ratCustomParameters" value="">
+  <!-- Conversion Parameter -->
+  <input type="hidden" name="rat" id="ratCvEvent" value="">
+  <script type="text/javascript" src="//r.r10s.jp/com/rat/js/rat-main.js"></script>
+  <!-- /RAT tag end-->
+
+</body>
+</html>
