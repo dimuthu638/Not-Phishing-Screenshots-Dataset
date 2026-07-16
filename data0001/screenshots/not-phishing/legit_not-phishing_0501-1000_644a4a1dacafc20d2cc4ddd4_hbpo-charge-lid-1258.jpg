@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&#038;subset=cyrillic,cyrillic-ext,latin,latin-ext,vietnamese&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXw.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w9.woff) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w9.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w7.woff2) format('woff2');}</style><link rel="alternate" href="https://www.plasticomnium.com/en/modules-and-personalization/" hreflang="en" />
+<link rel="alternate" href="https://www.plasticomnium.com/fr/modules-et-personnalisation/" hreflang="fr" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v17.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Plastic Omnium - Design and assembly of complex modules</title>
+	<meta name="description" content="Shaping modular cars: front-end module, cockpit, center console ... ever more complex solutions, personalized and connected with best in class quality, worldwide" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.plasticomnium.com/en/modules-and-personalization/" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:locale:alternate" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Plastic Omnium - Design and assembly of complex modules" />
+	<meta property="og:description" content="Shaping modular cars: front-end module, cockpit, center console ... ever more complex solutions, personalized and connected with best in class quality, worldwide" />
+	<meta property="og:url" content="https://www.plasticomnium.com/en/modules-and-personalization/" />
+	<meta property="og:site_name" content="Plastic Omnium" />
+	<meta property="article:modified_time" content="2022-12-13T15:47:14+00:00" />
+	<meta property="og:image" content="https://www.plasticomnium.com/wp-content/uploads/2020/07/plastic_omnium_logo.png" />
+	<meta property="og:image:width" content="166" />
+	<meta property="og:image:height" content="132" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@PlasticOmnium" />
+	<meta name="twitter:label1" content="Estimated reading time" />
+	<meta name="twitter:data1" content="30 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.plasticomnium.com/en/#organization","name":"Plastic Omnium","url":"https://www.plasticomnium.com/en/","sameAs":["https://www.linkedin.com/company/plastic-omnium","https://www.youtube.com/channel/UCDBu8Lg8Ls2OCIxz4jSDIjQ","https://twitter.com/PlasticOmnium"],"logo":{"@type":"ImageObject","@id":"https://www.plasticomnium.com/en/#logo","inLanguage":"en-GB","url":"https://www.plasticomnium.com/wp-content/uploads/2020/07/plastic_omnium_logo.png","contentUrl":"https://www.plasticomnium.com/wp-content/uploads/2020/07/plastic_omnium_logo.png","width":166,"height":132,"caption":"Plastic Omnium"},"image":{"@id":"https://www.plasticomnium.com/en/#logo"}},{"@type":"WebSite","@id":"https://www.plasticomnium.com/en/#website","url":"https://www.plasticomnium.com/en/","name":"Plastic Omnium","description":"","publisher":{"@id":"https://www.plasticomnium.com/en/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.plasticomnium.com/en/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.plasticomnium.com/en/modules-and-personalization/#webpage","url":"https://www.plasticomnium.com/en/modules-and-personalization/","name":"Plastic Omnium - Design and assembly of complex modules","isPartOf":{"@id":"https://www.plasticomnium.com/en/#website"},"datePublished":"2020-11-16T13:44:36+00:00","dateModified":"2022-12-13T15:47:14+00:00","description":"Shaping modular cars: front-end module, cockpit, center console ... ever more complex solutions, personalized and connected with best in class quality, worldwide","breadcrumb":{"@id":"https://www.plasticomnium.com/en/modules-and-personalization/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.plasticomnium.com/en/modules-and-personalization/"]}]},{"@type":"BreadcrumbList","@id":"https://www.plasticomnium.com/en/modules-and-personalization/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.plasticomnium.com/en/"},{"@type":"ListItem","position":2,"name":"Modules and personalization"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//code.highcharts.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Plastic Omnium &raquo; Feed" href="https://www.plasticomnium.com/en/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.plasticomnium.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.plasticomnium.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-event-list-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-event//assets/css/po-event-list.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-media-share-list-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-media-share//assets/css/po-media-share-list.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-regulated-info-popup-list-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-regulated-info//assets/css/po-regulated-info-popup-list.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-s2022-carousel-image-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes-2022//assets/css/po-s2022-carousel-image.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-s2022-carousel-video-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes-2022//assets/css/po-s2022-carousel-video.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-s2022-slide-spotlight-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes-2022//assets/css/po-s2022-slide-spotlight.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-simple-carousel-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-simple-carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-block-rollover-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-block-rollover.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-news-card-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-news-card.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-news-carousel-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-news-carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-news-list-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-news-list.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-modal-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-modal.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-home-carousel-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-home-carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-item-indicator-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-item-indicator.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-social-card-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-social-card.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-marquee-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-marquee.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-carouse-mode-image-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-carousel-mode-image.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-site-map-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-site-map.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-student-card-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-student-card.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-student-carousel-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-student-carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-press-release-list-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-press-release-list.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-news-actualites-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/css/po-shortcode-news-actualites.css' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css-css'  href='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/css/owl.carousel.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-default-theme-css'  href='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/css/owl.theme.default.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-editor-font-css'  href='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/css/po-editor-font.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-bootstrap-css-css'  href='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-fontawesome-cdn-css'  href='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/css/fontawesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-style-css'  href='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='po-divi-interface-styles-css'  href='https://www.plasticomnium.com/wp-content/plugins/po-divi-interface/styles/style-dbp.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-builder-style-css'  href='https://www.plasticomnium.com/wp-content/plugins/divi-builder/css/style-static.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='cmplz-cookie-css'  href='https://www.plasticomnium.com/wp-content/plugins/complianz-gdpr/assets/css/cookieconsent.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/javascript/marquee.js' id='marquee-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js' id='gtm4wp-form-move-tracker-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/javascript/script.js' id='wpbs-custom-script-js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/js/html5.js' id='html5hiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://www.plasticomnium.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.plasticomnium.com/wp-json/wp/v2/pages/4119" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.plasticomnium.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.plasticomnium.com/?p=4119' />
+<link rel="alternate" type="application/json+oembed" href="https://www.plasticomnium.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.plasticomnium.com%2Fen%2Fmodules-and-personalization%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.plasticomnium.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.plasticomnium.com%2Fen%2Fmodules-and-personalization%2F&#038;format=xml" />
+<meta name="generator" content="MYOB">
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+var google_tag_params = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"admin"};
+	var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"admin","google_tag_params":window.google_tag_params};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WP556FC');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->	<style>
+		.twitter-tweet.cmplz-blocked-content-container {
+			padding: 10px 40px;
+		}
+	</style>
+	<link rel="pingback" href="https://www.plasticomnium.com/xmlrpc.php">    <style type="text/css">
+        #page-sub-header { background: #fff; }
+    </style>
+    <link rel="icon" href="https://www.plasticomnium.com/wp-content/uploads/2020/11/cropped-favicon-260x260.png" sizes="32x32" />
+<link rel="icon" href="https://www.plasticomnium.com/wp-content/uploads/2020/11/cropped-favicon-260x260.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.plasticomnium.com/wp-content/uploads/2020/11/cropped-favicon-260x260.png" />
+<meta name="msapplication-TileImage" content="https://www.plasticomnium.com/wp-content/uploads/2020/11/cropped-favicon.png" />
+<script type="text/javascript" src="https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/javascript/menu.js"></script>
+</head>
+
+<body data-cmplz=1 class="page-template page-template-fullwidth page-template-fullwidth-php page page-id-4119 et_divi_builder group-blog et-pb-theme-plastic omnium et-db">
+<a class="evitement" style="display: inline-block;
+   color: #555;
+   background: #fff;
+   padding: .5em;
+   position: absolute;
+   left: -99999rem;
+   z-index: 100;" href="#contenu">Aller au contenu</a>
+<div class="overlay-blue"></div>
+<!--
+  Retiré car fait buguer le footer sous firefox (flex)
+  <div id="page" class="site d-flex flex-column">
+-->
+<header id="masthead" class="site-header sticky-top navbar-static-top navbar-light" role="banner">
+        <div class="container-fluid">
+            <nav class="d-none d-lg-flex navbar navbar-expand-lg p-0" role="navigation">
+                <div id="main-nav" class="collapse navbar-collapse justify-content-end"><ul id="menu-left_menu_en" class="navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4708 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4708">THE GROUP</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4708" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4719 nav-item"><a href="https://www.plasticomnium.com/en/vision-purpose/" class="dropdown-item">Vision &#038; Purpose</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4720 nav-item"><a href="https://www.plasticomnium.com/en/innovation-strategy/" class="dropdown-item">Strategy</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4721 nav-item"><a href="https://www.plasticomnium.com/en/key-figures/" class="dropdown-item">Profile and key figures</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4716 nav-item"><a href="https://www.plasticomnium.com/en/governance/" class="dropdown-item">Governance</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4722 nav-item"><a href="https://www.plasticomnium.com/en/our-history/" class="dropdown-item">Our history</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4709" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children dropdown active menu-item-4709 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4709">TECHNOLOGIES</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4709" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4725 nav-item"><a href="https://www.plasticomnium.com/en/style-and-interactivity/" class="dropdown-item">Design and interactivity</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4724 nav-item"><a href="https://www.plasticomnium.com/en/sustainable-mobility/" class="dropdown-item">Sustainable mobility</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4733 nav-item"><a href="https://www.plasticomnium.com/en/technologies-new-energies/" class="dropdown-item">New energies</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4727" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4119 current_page_item active menu-item-4727 nav-item"><a href="https://www.plasticomnium.com/en/modules-and-personalization/" class="dropdown-item" aria-current="page">Modules and personalization</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15899 nav-item"><a href="https://www.plasticomnium.com/en/lighting/" class="dropdown-item">Lighting</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4734 nav-item"><a href="https://www.plasticomnium.com/en/act-for-all-en/" class="nav-link">SUSTAINABILITY</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4712 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4712">FINANCE</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4712" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9324 nav-item"><a href="https://www.plasticomnium.com/en/analysts-and-investors/" class="dropdown-item">Analysts and investors</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9323 nav-item"><a href="https://www.plasticomnium.com/en/shareholders/" class="dropdown-item">Shareholders</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4729 nav-item"><a href="https://www.plasticomnium.com/en/regulated-information/" class="dropdown-item">Regulated information</a></li>
+</ul>
+</li>
+</ul></div>
+                <div class="navbar-brand">
+                                            <a href="https://www.plasticomnium.com/en/">
+                        <img id="logo-po" src="https://www.plasticomnium.com/wp-content/uploads/2023/03/plastic-omnium-logo-blanc-1.png" alt="">
+                        </a>
+                    
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-start">
+                  <div id="right-nav" class="menu-right_menu_en-container"><ul id="menu-right_menu_en" class="navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4735 nav-item"><a href="https://www.plasticomnium.com/en/careers/" class="nav-link">CAREERS</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13589" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-13589 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-13589">PRESS ROOM</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-13589" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13587 nav-item"><a href="https://www.plasticomnium.com/en/press-releases/" class="dropdown-item">Press releases</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4737 nav-item"><a href="https://www.plasticomnium.com/en/press-room-en/" class="dropdown-item">News</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13588 nav-item"><a href="https://www.plasticomnium.com/en/media-library/" class="dropdown-item">Media Library</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4736 nav-item"><a href="https://www.plasticomnium.com/en/contact-en/" class="nav-link">CONTACT</a></li>
+</ul></div>
+                  <button class="btn btn-search" type="button" onclick="toggleSearch()">
+                  <img id="search-img" src="https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/img/search-white.svg">
+                  </button>
+
+                  <div id="locate-nav" class="menu-locate_menu_en-container"><ul id="menu-locate_menu_en" class="navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4706-en" class="lang-item lang-item-14 lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-4706-en nav-item"><a href="https://www.plasticomnium.com/en/modules-and-personalization/" class="nav-link" hreflang="en-GB" lang="en-GB">EN</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4706-fr" class="lang-item lang-item-3 lang-item-fr menu-item menu-item-type-custom menu-item-object-custom menu-item-4706-fr nav-item"><a href="https://www.plasticomnium.com/fr/modules-et-personnalisation/" class="nav-link" hreflang="fr-FR" lang="fr-FR">FR</a></li>
+</ul></div>                </div>
+            </nav>
+
+            <nav class="d-lg-none navbar navbar-mobile p-0">
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <button class="navbar-toggler navbar-open" type="button" onclick="openMenu();">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <button class="navbar-toggler navbar-close" type="button" onclick="closeMenu();">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-brand">
+                                            <a href="https://www.plasticomnium.com/en/">
+                        <img id ="logo-po-mobile" src="https://www.plasticomnium.com/wp-content/uploads/2023/03/plastic-omnium-logo-blanc-1.png" alt="Plastic Omnium">
+                        </a>
+                                    </div>
+
+                <div class="mobile-search">
+                  <button class="btn btn-search" type="button" onclick="toggleSearch()">
+                    <img src="https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/img/Search.svg">
+                  </button>
+                </div>
+
+                <div id="mobile-nav">
+                  <div class="mobile-nav-menu">
+                  <div id="locate-nav-mobile" class="menu-locate_menu_en-container"><ul id="menu-locate_menu_en-1" class="navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="lang-item lang-item-14 lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-4706-en nav-item"><a href="https://www.plasticomnium.com/en/modules-and-personalization/" class="nav-link" hreflang="en-GB" lang="en-GB">EN</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="lang-item lang-item-3 lang-item-fr menu-item menu-item-type-custom menu-item-object-custom menu-item-4706-fr nav-item"><a href="https://www.plasticomnium.com/fr/modules-et-personnalisation/" class="nav-link" hreflang="fr-FR" lang="fr-FR">FR</a></li>
+</ul></div>
+                  <div class="menu-mobile_menu_en-container"><ul id="menu-mobile_menu_en" class="navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4738" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4738 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4738">THE GROUP</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4738" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4745 nav-item"><a href="https://www.plasticomnium.com/en/vision-purpose/" class="dropdown-item">Vision &#038; Purpose</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4742 nav-item"><a href="https://www.plasticomnium.com/en/innovation-strategy/" class="dropdown-item">Strategy</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4743 nav-item"><a href="https://www.plasticomnium.com/en/key-figures/" class="dropdown-item">Profile and key figures</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4741 nav-item"><a href="https://www.plasticomnium.com/en/governance/" class="dropdown-item">Governance</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4744 nav-item"><a href="https://www.plasticomnium.com/en/our-history/" class="dropdown-item">Our history</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4739" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children dropdown active menu-item-4739 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4739">TECHNOLOGIES</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4739" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4750 nav-item"><a href="https://www.plasticomnium.com/en/style-and-interactivity/" class="dropdown-item">Design and interactivity</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4754 nav-item"><a href="#" class="dropdown-item">Sustainable mobility</a>
+	<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4739" role="menu">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4753 nav-item"><a href="https://www.plasticomnium.com/en/sustainable-mobility/" class="dropdown-item">Sustainable mobility</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4751 nav-item"><a href="https://www.plasticomnium.com/en/technologies-new-energies/" class="dropdown-item">New energies</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4752" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4119 current_page_item active menu-item-4752 nav-item"><a href="https://www.plasticomnium.com/en/modules-and-personalization/" class="dropdown-item" aria-current="page">Modules and personalization</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15897 nav-item"><a href="https://www.plasticomnium.com/en/lighting/" class="dropdown-item">Lighting</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4749 nav-item"><a href="https://www.plasticomnium.com/en/act-for-all-en/" class="nav-link">SUSTAINABILITY</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4740" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4740 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4740">FINANCE</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4740" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9322 nav-item"><a href="https://www.plasticomnium.com/en/analysts-and-investors/" class="dropdown-item">Analysts and investors</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9321 nav-item"><a href="https://www.plasticomnium.com/en/shareholders/" class="dropdown-item">Shareholders</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4747 nav-item"><a href="https://www.plasticomnium.com/en/regulated-information/" class="dropdown-item">Regulated information</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4755 nav-item"><a href="https://www.plasticomnium.com/en/careers/" class="nav-link">CAREERS</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-13592 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-13592">PRESS ROOM</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-13592" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13590 nav-item"><a href="https://www.plasticomnium.com/en/press-releases/" class="dropdown-item">Press releases</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4757 nav-item"><a href="https://www.plasticomnium.com/en/press-room-en/" class="dropdown-item">News</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13591 nav-item"><a href="https://www.plasticomnium.com/en/media-library/" class="dropdown-item">Media Library</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4756 nav-item"><a href="https://www.plasticomnium.com/en/contact-en/" class="nav-link">CONTACT</a></li>
+</ul></div>                  </div>
+                </div>
+            </nav>
+        </div>
+        
+<div id="search">
+  <form role="search" method="get" action="https://www.plasticomnium.com/en/">
+    <input aria-label="Website search field" type="text"
+      name="s"                   
+      id="menu-search-input" 
+      class="menu-input" 
+      placeholder="Search a news, a theme, a keyword ..."
+      value="" />
+    <button>
+        <span class="sr-only">Start a reseach</span>
+    </button>
+  </form>
+    </div>  </header><!-- #masthead -->
+<div id="page" class="site">
+  <div class="back-to-top d-lg-none" onclick="backToTop()"></div>
+            	
+    	<div id="content" class="site-content">
+		<div class="container-fluid p-0">
+			<div class="row">
+                
+	<section id="primary" class="content-area col-sm-12">
+		<div id="main" class="site-main" role="main">
+
+			
+<article id="post-4119" class="post-4119 page type-page status-publish hentry page_category-technologies">
+	    <header class="entry-header header-breadcrumb">
+        
+<nav class="page-breadcrumb" role="navigation" aria-label="Fil d'ariane">
+  <ol>
+              <li>
+                    <a href="https://www.plasticomnium.com">Home</a>
+                        <span>/</span>
+                    </li>
+                  <li>
+                    <a >Technologies</a>
+                        <span>/</span>
+                    </li>
+                  <li>
+                        <a aria-current="page" href="https://www.plasticomnium.com/en/modules-and-personalization/">Modules and personalization</a>
+                          </li>
+          </ol>
+</nav>
+	</header><!-- .entry-header -->
+    	<div class="entry-content">
+		<div id="et-boc" class="et-boc">
+			<div id="et_builder_outer_content" class="et_builder_outer_content">
+		<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_section_regular et_section_transparent" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0 header-linear-black">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div aria-roledescription="carousel" class="po-s2022-carousel-image owl-carousel owl-theme">
+    
+<div class="item" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.501961) 0, transparent 60%) !important">
+    <div style="position: absolute; top:-50%; left: -50%; width:200%; height: 200%;">
+        <video style="/*position:fixed;right: 0;bottom:0;min-width: 100%; min-height: 100%;*/position: absolute; top:0;bottom:0;right:0;left:0;margin: auto;min-width: 50%; min-height: 50%;" playsinline autoplay loop muted>
+            <source src="/wp-content/uploads/2022/12/header-modules-personnalisation.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="owl-item-content">
+    	<div class="container-fluid">
+        	<div class="row">
+        	
+<div class="col-lg-6">
+    <h1 class="page-title">Modules and personalization</h1>
+    <p>
+Integrating ever more components and functionalities in a compact, aerodynamic front-end module demands great technical and logistical expertise.
+And Plastic Omnium has just that. Today, that expertise is broadening to take in other parts of the vehicle, such as the cockpit and center console.
+</p>
+</div>
+<div class="po-s2022-slide-spotlight-block col-lg-6">
+    <div class="po-s2022-slide-spotlight">
+        <div class="slide-spotlight-date">
+            <span></span>
+        </div>
+        <div class="slide-spotlight-title">
+            <span></span>
+        </div>
+        <div class="slide-spotlight-more">
+            <span>
+                <a href="#video-hbpo-header"data-toggle="modal">Discover our video</a>
+            </span>
+        </div>
+    </div>
+</div>
+        	</div>
+    	</div>
+    </div>
+    </div>
+
+</div>
+
+<div class="po-modal modal fade" id="video-hbpo-header" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                
+<video controls>
+<source src="/wp-content/uploads/videos/plastic-omnium-modules-for-emobility-hbpo.mp4" type="video/mp4">
+</video>
+            </div>
+        </div>
+    </div>
+</div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular et_section_transparent" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>SINCE DECEMBER 12 2022, HBPO IS 100% OWNED BY PLASTIC OMNIUM</h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://modules.plasticomnium.com" target="_blank">Learn more about Modules activity </a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://careers.hbpogroup.com" target="_blank">Join us! Discover our job offers</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_section_regular et_section_transparent" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3 et_animated et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_4 et_animated  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_5 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Front-end module</h2>
+<h4>We give cars a face!</h4>
+<p>Rely on us for your front-end module business. We are the only supplier of highly integrated front-end modules in the world. But we can do more than just assemble modules. We are a strong partner for you in development and construction – and deliver your modules just-in-sequence for your series production.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="/en/front-end-module">Discover</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_4 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_6 et_animated  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Active grille shutter</h2>
+<h4>Energy efficiency as a benchmark</h4>
+<p>There has been a CO₂ regulation complying with EU specifications in place for passenger cars and commercial vehicles since 2009. We equip our front-end modules with active air control systems on request. Our Active Grille Shutters are ideal for improving a vehicle’s aerodynamics – whether the vehicle has a combustion engine or an electric motor!</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="/en/active-grille-shutter/">Discover</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_7 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_5 et_animated et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_8 et_animated  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_9 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Active Rollo</h2>
+<h4>Efficiency in the tightest of spaces</h4>
+<p>Our Rollo helps to improve the drag and driving resistance, and thus to save on consumption and indirectly on CO₂. The shutter can be installed wherever there is little space available for a conventional Active Grille Shutter solution.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_4_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_4 et_pb_bg_layout_light" href="/en/active-rollo">Discover</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_section_regular et_section_transparent" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_6 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_10 et_animated  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>INTERIOR MODULES</h2>
+<h4>We can do comfort too</h4>
+<p>A vehicle interior is like a car’s living room. A different look-and-feel makes other requirements necessary. We have two decades of auto industry experience in modularisations and since 2016, we have been supplying module solutions for the interior with our center console.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_5_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_5 et_pb_bg_layout_light" href="/en//interior-modules/">Discover</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_11 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_7 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_12 et_animated  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_13 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Charge LID module </h2>
+<h4>For a quick and easy charging process</h4>
+<p>Not only does an electric vehicle have to be recharged more frequently: charging also takes longer than conventional refuelling. And so our development engineers have devised ideas to make the process simpler for motorists, while also protecting the charging flap from possible damage.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_6_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_6 et_pb_bg_layout_light" href="/en/charge-lid-module">Discover</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+	
+			</div>
+		</div>
+			</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+
+		</div><!-- #main -->
+	</section><!-- #primary -->
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- #content -->
+          <footer id="footer-widget" class="mt-auto row m-0 bg-light" role="contentinfo">
+            <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 col-lg-12 footer-widget-left">
+                    <div class="row">
+                                                <div class="col-12 col-md-3"><section id="media_image-2" class="widget widget_media_image"><a href="/"><img width="300" height="240" src="https://www.plasticomnium.com/wp-content/uploads/2023/03/plastic-omnium-logo-blanc.svg" class="image wp-image-17137  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" /></a></section><section id="text-5" class="widget widget_text">			<div class="textwidget"><p class="adress-footer">1, allée Pierre Burelle<br />
+92593 Levallois Cedex France<br />
+Tél : +33 (0)1 40 87 64 00</p>
+</div>
+		</section></div>
+                                                                      <div class="col-12 col-md-6"><section id="nav_menu-4" class="widget widget_nav_menu"><div class="menu-footer_colonne_1_en-container"><ul id="menu-footer_colonne_1_en" class="menu"><li id="menu-item-8546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8546"><a href="https://www.plasticomnium.com/en/site-map/">SITE MAP</a></li>
+<li id="menu-item-8541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8541"><a href="https://www.plasticomnium.com/en/contact-en/">CONTACT</a></li>
+<li id="menu-item-8544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8544"><a href="https://www.plasticomnium.com/en/legal-notices/">LEGAL NOTICES</a></li>
+<li id="menu-item-8545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8545"><a href="https://www.plasticomnium.com/en/privacy-statement-cookies/">PRIVACY STATEMENT &#038; COOKIES</a></li>
+<li id="menu-item-8557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8557"><a href="https://www.plasticomnium.com/en/privacy-statement-recruitment/">PRIVACY STATEMENT &#038; RECRUITMENT</a></li>
+<li id="menu-item-8543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8543"><a href="https://www.plasticomnium.com/en/general-terms-and-conditions/">GENERAL TERMS AND CONDITIONS</a></li>
+<li id="menu-item-8542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8542"><a href="https://www.plasticomnium.com/en/credits-en/">CREDITS</a></li>
+<li id="menu-item-8540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8540"><a href="https://www.plasticomnium.com/en/accessibility/">ACCESSIBILITY</a></li>
+</ul></div></section></div>
+                                                                      <div class="col-12 col-md-3"><section id="plastic_omnium_email_subscription_widget-4" class="widget widget_plastic_omnium_email_subscription_widget"><h3>Follow all Plastic Omnium News</h3>
+<a    class="po-button po-button-blue"
+      data-toggle="modal" data-target=""    aria-label="Display the Plastic Omnium news subscription form"    href="#po-modal-form-inscription-communiques-presse-financiers" style="display: inline-block;">
+    Sign up</a><div class="po-modal modal fade" id="po-modal-form-inscription-communiques-presse-financiers" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <iframe title=' Plastic Omnium news subscription form' id='iFrameResizer0' class='mj-w-res-iframe' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://app.mailjet.com/widget/iframe/4nrg/GY4' width='100%' style='min-height:570px'></iframe>            </div>
+        </div>
+    </div>
+</div></section><section id="plastic_omnium_social_links_widget-4" class="widget widget_plastic_omnium_social_links_widget"><ul><li>
+                        <a aria-label="Open Plastic Omnium's Twitter page" target="_blank" href="https://twitter.com/plasticomnium">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                            <span>Twitter</span>
+                        </a>
+                     </li><li>
+                        <a aria-label="Open Plastic Omnium's Linkedin page" target="_blank" href="https://www.linkedin.com/company/plastic-omnium">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <span>Linkedin</span>
+                        </a>
+                     </li><li>
+                        <a aria-label="Open Plastic Omnium's Youtube page" target="_blank" href="https://www.youtube.com/channel/UCDBu8Lg8Ls2OCIxz4jSDIjQ">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                            <span>Youtube</span>
+                        </a>
+                     </li></ul></section></div>
+                                          </div>
+                  </div>
+                  <div class="col-12 col-lg-5 footer-widget-right">
+                    <div class="row">
+                        <div class="col">
+                                                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </footer>
+
+</div><!-- #page -->
+
+
+		<!-- GA Google Analytics @ https://m0n.co/ga -->
+		<script type="text/plain" class="cmplz-script cmplz-stats">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-22591712-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WP556FC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_row_3","style":"fade","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_4","style":"slideLeft","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_5","style":"slideRight","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_6","style":"slideLeft","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_7","style":"slideRight","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_5","style":"fade","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_8","style":"slideLeft","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_9","style":"slideRight","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_10","style":"slideLeft","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_11","style":"slideRight","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_12","style":"slideLeft","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_13","style":"slideRight","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+				</script>
+	<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-event//assets/js/po-event-list.js' id='po-event-list-js'></script>
+<script type='text/javascript' src='https://code.highcharts.com/highcharts.js' id='hightcharts-js'></script>
+<script type='text/javascript' src='https://code.highcharts.com/modules/variable-pie.js' id='hightcharts-variablepie-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/javascript/owl.carousel.min.js' id='owl-carousel-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes-2022//assets/js/po-s2022-carousel-image.js' id='po-s2022-carousel-image-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes-2022//assets/js/po-s2022-carousel-video.js' id='po-s2022-carousel-video-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-simple-carousel.js' id='po-simple-carousel-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-block-rollover.js' id='po-block-rollover-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-news-carousel.js' id='po-news-carousel-js'></script>
+<script type='text/javascript' id='po-news-list-js-extra'>
+/* <![CDATA[ */
+var newsListData = {"url":"https:\/\/t-po01-fo.machinalis.eu\/wp-admin\/admin-ajax.php","step":"8"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-news-list.js' id='po-news-list-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-modal.js' id='po-modal-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-home-carousel.js' id='po-home-carousel-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-marquee.js' id='po-marquee-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-carousel-mode-image.js' id='po-carouse-mode-image-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-student-carousel.js' id='po-student-carousel-js'></script>
+<script type='text/javascript' id='po-press-release-list-js-extra'>
+/* <![CDATA[ */
+var pressReleasesListData = {"url":"https:\/\/www.plasticomnium.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-shortcodes//assets/js/po-shortcode-press-release-list.js' id='po-press-release-list-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/plastic-omnium/assets/javascript/t-custom-select.js' id='t-custom-select-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/js/popper.min.js' id='wp-bootstrap-starter-popper-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/js/bootstrap.min.js' id='wp-bootstrap-starter-bootstrapjs-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/js/theme-script.min.js' id='wp-bootstrap-starter-themejs-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/themes/wp-bootstrap-starter/inc/assets/js/skip-link-focus-fix.min.js' id='wp-bootstrap-starter-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js' id='fitvids-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/jquery.mobile.js' id='jquery-mobile-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/magnific-popup.js' id='magnific-popup-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/easypiechart.js' id='easypiechart-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/salvattore.js' id='salvattore-js'></script>
+<script type='text/javascript' id='divi-builder-custom-script-js-extra'>
+/* <![CDATA[ */
+var et_builder_utils_params = {"condition":{"diviTheme":false,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/www.plasticomnium.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.plasticomnium.com\/wp-content\/themes\/wp-bootstrap-starter\/images","builder_images_uri":"https:\/\/www.plasticomnium.com\/wp-content\/plugins\/divi-builder\/includes\/builder\/images","et_frontend_nonce":"2a1a884678","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"442554e814","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"4119","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https:\/\/www.plasticomnium.com\/wp-content\/plugins\/divi-builder\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#7EBEC5","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/js/scripts.min.js' id='divi-builder-custom-script-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/po-divi-interface/scripts/frontend-bundle.min.js' id='po-divi-interface-frontend-bundle-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/core/admin/js/common.js' id='et-core-common-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js' id='cmplz-cookie-js'></script>
+<script type='text/javascript' id='cmplz-cookie-config-js-extra'>
+/* <![CDATA[ */
+var complianz = {"static":"","is_multisite_root":"","set_cookies":[],"block_ajax_content":"","banner_version":"13","version":"5.4.0","a_b_testing":"","do_not_track":"","consenttype":"optin","region":"eu","geoip":"","categories":"<div class=\"cmplz-categories-wrap\"><label for=\"cmplz_functional\"><div class=\"cmplz-slider-checkbox\"><input id=\"cmplz_functional\" style=\"color:#485465\" tabindex=\"0\" data-category=\"cmplz_functional\" class=\"cmplz-consent-checkbox cmplz-slider-checkbox cmplz_functional\" checked disabled size=\"40\" type=\"checkbox\" value=\"1\" \/><span class=\"cmplz-slider cmplz-round \" ><\/span><\/div><span class=\"cc-category\" style=\"color:#485465\">Functional<\/span><\/label><\/div><div class=\"cmplz-categories-wrap\"><label for=\"cmplz_statistics\"><div class=\"cmplz-slider-checkbox\"><input id=\"cmplz_statistics\" style=\"color:#485465\" tabindex=\"0\" data-category=\"cmplz_statistics\" class=\"cmplz-consent-checkbox cmplz-slider-checkbox cmplz_statistics\"   size=\"40\" type=\"checkbox\" value=\"1\" \/><span class=\"cmplz-slider cmplz-round \" ><\/span><\/div><span class=\"cc-category\" style=\"color:#485465\">Statistics<\/span><\/label><\/div><div class=\"cmplz-categories-wrap\"><label for=\"cmplz_marketing\"><div class=\"cmplz-slider-checkbox\"><input id=\"cmplz_marketing\" style=\"color:#485465\" tabindex=\"0\" data-category=\"cmplz_marketing\" class=\"cmplz-consent-checkbox cmplz-slider-checkbox cmplz_marketing\"   size=\"40\" type=\"checkbox\" value=\"1\" \/><span class=\"cmplz-slider cmplz-round \" ><\/span><\/div><span class=\"cc-category\" style=\"color:#485465\">Personalization<\/span><\/label><\/div><style>\t\t\t\t\t.cmplz-slider-checkbox input:checked + .cmplz-slider {\t\t\t\t\t\tbackground-color: #004a97\t\t\t\t\t}\t\t\t\t\t.cmplz-slider-checkbox input:focus + .cmplz-slider {\t\t\t\t\t\tbox-shadow: 0 0 1px #004a97;\t\t\t\t\t}\t\t\t\t\t.cmplz-slider-checkbox .cmplz-slider:before {\t\t\t\t\t\tbackground-color: #ffffff;\t\t\t\t\t}.cmplz-slider-checkbox .cmplz-slider-na:before {\t\t\t\t\t\tcolor:#ffffff;\t\t\t\t\t}\t\t\t\t\t.cmplz-slider-checkbox .cmplz-slider {\t\t\t\t\t    background-color: #F56E28;\t\t\t\t\t}\t\t\t\t\t<\/style><style>#cc-window.cc-window .cmplz-categories-wrap .cc-check svg {stroke: #485465}<\/style>","position":"bottom","title":"bottom-right minimal","theme":"classic","checkbox_style":"slider","use_categories":"hidden","use_categories_optinstats":"visible","header":"","accept":"Accept","revoke":"Manage consent","dismiss":"Refuse all","dismiss_timeout":"10","use_custom_cookie_css":"1","custom_css":".cc-window  \r\n\r\n \r\n\r\n.cc-revoke{\r\n    background-color: #004a97 !important;\r\n    color: #fff !important;\r\n    right: 3em;\r\n    left: inherit;\r\n} \r\n\r\n.cc-revoke.cc-bottom {\r\n    background-color: #004a97 !important;\r\n    color: #fff !important;\r\n    right: 3em;\r\n    left: inherit;\r\n}\r\n\r\n \r\n\r\n \r\n\r\n\r\n\r\n#cmplz-consent-ui, #cmplz-post-consent-ui {} \r\n\r\n#cmplz-consent-ui .cmplz-consent-message {} \r\n\r\n#cmplz-consent-ui button, #cmplz-post-consent-ui button {} \r\n\r\n.cc-revoke.cc-bottom {\r\n    background-color: #C4CBE3 !important;\r\n    color: #004A97!important;\r\n}","readmore_optin":"Cookie Policy","readmore_impressum":"Impressum","accept_informational":"Accept","message_optout":"We use cookies to optimize our website and our service.","message_optin":"Our site and our partners use cookies to personalize the site, to analyze its performance and<br>\r\nto provide you with social media sharing functions.<br>\r\nIn the case of cookies subject to your consent, you can accept all of them, refuse all of them,<br>\r\nor choose to configure them by clicking on \u201cFind out more and personalize\u201d.<br>\r\nFor  more information, consult our confidentiality policy.<br>\r\nTo revise your choices, click on the \u201cmanage cookies\u201d  button at the bottom of the page.<br>","readmore_optout":"Cookie Policy","readmore_optout_dnsmpi":"Do Not Sell My Personal Information","hide_revoke":"","disable_cookiebanner":"","banner_width":"","soft_cookiewall":"","type":"opt-in","layout":"basic","dismiss_on_scroll":"","dismiss_on_timeout":"","cookie_expiry":"365","nonce":"71ecf374ec","url":"https:\/\/www.plasticomnium.com\/wp-json\/complianz\/v1\/?lang=en&locale=en_GB","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"17","cookie_path":"\/","tcf_active":"","colorpalette_background_color":"#f1f1f1","colorpalette_background_border":"#f1f1f1","colorpalette_text_color":"#485465","colorpalette_text_hyperlink_color":"#191e23","colorpalette_toggles_background":"#004a97","colorpalette_toggles_bullet":"#ffffff","colorpalette_toggles_inactive":"#F56E28","colorpalette_border_radius":"0px 0px 0px 0px","border_width":"1px 1px 1px 1px","colorpalette_button_accept_background":"#004a97","colorpalette_button_accept_border":"#004a97","colorpalette_button_accept_text":"#ffffff","colorpalette_button_deny_background":"#f1f1f1","colorpalette_button_deny_border":"#f1f1f1","colorpalette_button_deny_text":"#004a97","colorpalette_button_settings_background":"#f1f1f1","colorpalette_button_settings_border":"#004a97","colorpalette_button_settings_text":"#004a97","buttons_border_radius":"5px 5px 5px 5px","box_shadow":"","animation":"none","animation_fade":"","animation_slide":"","view_preferences":"Learn more and customize","save_preferences":"Save preferences","accept_all":"Accept all","readmore_url":{"eu":"https:\/\/www.plasticomnium.com\/en\/privacy-statement-cookies\/"},"privacy_link":{"eu":""},"placeholdertext":"Click to accept marketing cookies and enable this content"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/complianz-gdpr/assets/js/complianz.min.js' id='cmplz-cookie-config-js'></script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script type='text/javascript' id='et-builder-modules-script-motion-js-extra'>
+/* <![CDATA[ */
+var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/motion-effects.js' id='et-builder-modules-script-motion-js'></script>
+<script type='text/javascript' id='et-builder-modules-script-sticky-js-extra'>
+/* <![CDATA[ */
+var et_pb_sticky_elements = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.plasticomnium.com/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/sticky-elements.js' id='et-builder-modules-script-sticky-js'></script>
+<style id="et-builder-module-design-4119-cached-inline-styles">@media screen and (max-width:991px){#header-title-modules .page-title{font-size:34px!important}}.et-db #et-boc .et-l .et_pb_section_1.et_pb_section.et_section_transparent{background-color:#FFF!important}@media only screen and (max-width:979px){.et-db #et-boc .et-l .et_pb_section_1.et_pb_section.et_section_transparent{background-color:#eaecf3!important}.et-db #et-boc .et-l .et_pb_section_1.et_pb_section.et_section_transparent .et_pb_row_1,.et-db #et-boc .et-l .et_pb_section_1.et_pb_section.et_section_transparent .et_pb_row_3{background-color:#FFF!important;width:100%!important}}@media only screen and (max-width:767px){.page-spotlight .page-spotlight-title{font-size:1.8em;line-height:1.2em}}.et-db #et-boc .et-l .et_pb_section_0{padding-top:0px;padding-bottom:0px;margin-top:0px;margin-bottom:0px}.et-db #et-boc .et-l .et_pb_row_0.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et-db #et-boc .et-l .et_pb_row_0{width:100%;max-width:100%}.et-db #et-boc .et-l .et_pb_section_1{padding-top:20px;padding-bottom:20px}.et-db #et-boc .et-l .et_pb_section_1.et_pb_section{background-color:#FFFFFF!important}.et-db #et-boc .et-l .et_pb_text_4.et_pb_text,.et-db #et-boc .et-l .et_pb_text_2.et_pb_text,.et-db #et-boc .et-l .et_pb_text_3.et_pb_text,.et-db #et-boc .et-l .et_pb_text_1.et_pb_text,.et-db #et-boc .et-l .et_pb_text_5.et_pb_text,.et-db #et-boc .et-l .et_pb_text_0.et_pb_text{color:#485465!important}.et-db #et-boc .et-l .et_pb_text_0{font-size:16px;padding-right:0px!important;padding-left:0px!important;margin-right:0px!important;margin-left:0px!important}.et-db #et-boc .et-l .et_pb_text_0 h2{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:24px;color:#004a97!important;line-height:1.3em;text-align:center}.et-db #et-boc .et-l .et_pb_text_0 h3{color:#FFFFFF!important}.et-db #et-boc .et-l .et_pb_row_2.et_pb_row{padding-top:0px!important;padding-top:0px}.et-db #et-boc .et-l .et_pb_button_6_wrapper .et_pb_button_6,.et-db #et-boc .et-l .et_pb_button_6_wrapper .et_pb_button_6:hover,.et-db #et-boc .et-l .et_pb_button_4_wrapper .et_pb_button_4,.et-db #et-boc .et-l .et_pb_button_4_wrapper .et_pb_button_4:hover,.et-db #et-boc .et-l .et_pb_button_2_wrapper .et_pb_button_2,.et-db #et-boc .et-l .et_pb_button_2_wrapper .et_pb_button_2:hover,.et-db #et-boc .et-l .et_pb_button_0_wrapper .et_pb_button_0,.et-db #et-boc .et-l .et_pb_button_0_wrapper .et_pb_button_0:hover,.et-db #et-boc .et-l .et_pb_button_5_wrapper .et_pb_button_5,.et-db #et-boc .et-l .et_pb_button_5_wrapper .et_pb_button_5:hover,.et-db #et-boc .et-l .et_pb_button_3_wrapper .et_pb_button_3,.et-db #et-boc .et-l .et_pb_button_3_wrapper .et_pb_button_3:hover,.et-db #et-boc .et-l .et_pb_button_1_wrapper .et_pb_button_1,.et-db #et-boc .et-l .et_pb_button_1_wrapper .et_pb_button_1:hover{padding-top:10px!important;padding-right:20px!important;padding-bottom:10px!important;padding-left:20px!important}.et-db #et-boc .et-l .et_pb_button_5.et_pb_button,.et-db #et-boc .et-l .et_pb_button_2.et_pb_button,.et-db #et-boc .et-l .et_pb_button_0.et_pb_button,.et-db #et-boc .et-l .et_pb_button_1.et_pb_button,.et-db #et-boc .et-l .et_pb_button_4.et_pb_button{color:#FFFFFF!important;border-width:3px!important;border-color:#004a97;font-size:14px;background-color:#004a97}.et-db #et-boc .et-l .et_pb_button_5.et_pb_button:hover,.et-db #et-boc .et-l .et_pb_button_4.et_pb_button:hover,.et-db #et-boc .et-l .et_pb_button_6.et_pb_button:hover,.et-db #et-boc .et-l .et_pb_button_3.et_pb_button:hover,.et-db #et-boc .et-l .et_pb_button_0.et_pb_button:hover,.et-db #et-boc .et-l .et_pb_button_1.et_pb_button:hover,.et-db #et-boc .et-l .et_pb_button_2.et_pb_button:hover{color:#004a97!important;border-color:#004a97!important;background-image:initial;background-color:RGBA(0,0,0,0)}.et-db #et-boc .et-l .et_pb_button_6.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_6.et_pb_button:after,.et-db #et-boc .et-l .et_pb_button_3.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_3.et_pb_button:after,.et-db #et-boc .et-l .et_pb_button_0.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_0.et_pb_button:after,.et-db #et-boc .et-l .et_pb_button_1.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_1.et_pb_button:after,.et-db #et-boc .et-l .et_pb_button_2.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_2.et_pb_button:after,.et-db #et-boc .et-l .et_pb_button_4.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_4.et_pb_button:after,.et-db #et-boc .et-l .et_pb_button_5.et_pb_button:before,.et-db #et-boc .et-l .et_pb_button_5.et_pb_button:after{display:none!important}.et-db #et-boc .et-l .et_pb_button_1,.et-db #et-boc .et-l .et_pb_button_0{transition:color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms;border-radius:20px 0px 0px 0px;min-width:180px;text-align:center}.et-db #et-boc .et-l .et_pb_button_3,.et-db #et-boc .et-l .et_pb_button_3:after,.et-db #et-boc .et-l .et_pb_button_4,.et-db #et-boc .et-l .et_pb_button_4:after,.et-db #et-boc .et-l .et_pb_button_5,.et-db #et-boc .et-l .et_pb_button_5:after,.et-db #et-boc .et-l .et_pb_button_6,.et-db #et-boc .et-l .et_pb_button_6:after,.et-db #et-boc .et-l .et_pb_button_2,.et-db #et-boc .et-l .et_pb_button_2:after,.et-db #et-boc .et-l .et_pb_button_0,.et-db #et-boc .et-l .et_pb_button_0:after,.et-db #et-boc .et-l .et_pb_button_1,.et-db #et-boc .et-l .et_pb_button_1:after{transition:all 300ms ease 0ms}.et-db #et-boc .et-l .et_pb_section_2,.et-db #et-boc .et-l .et_pb_section_3{padding-top:0px;padding-bottom:0px;margin-top:0px;margin-bottom:0px;background-color:#fff!important}.et-db #et-boc .et-l .et_pb_row_4,.et-db #et-boc .et-l .et_pb_row_6,.et-db #et-boc .et-l .et_pb_row_5,.et-db #et-boc .et-l .et_pb_row_3,.et-db #et-boc .et-l .et_pb_row_7{background-color:#FFFFFF;width:100%;max-width:1920px}.et-db #et-boc .et-l .et_pb_image_3,.et-db #et-boc .et-l .et_pb_image_1,.et-db #et-boc .et-l .et_pb_image_0,.et-db #et-boc .et-l .et_pb_image_2{width:100%;max-width:100%!important;text-align:left;margin-left:0}.et-db #et-boc .et-l .et_pb_image_2 .et_pb_image_wrap,.et-db #et-boc .et-l .et_pb_image_2 img,.et-db #et-boc .et-l .et_pb_image_0 .et_pb_image_wrap,.et-db #et-boc .et-l .et_pb_image_0 img,.et-db #et-boc .et-l .et_pb_image_1 .et_pb_image_wrap,.et-db #et-boc .et-l .et_pb_image_1 img,.et-db #et-boc .et-l .et_pb_image_3 .et_pb_image_wrap,.et-db #et-boc .et-l .et_pb_image_3 img{width:100%}.et-db #et-boc .et-l .et_pb_text_3,.et-db #et-boc .et-l .et_pb_text_1{font-size:16px;padding-bottom:50px!important}.et-db #et-boc .et-l .et_pb_text_3 h2,.et-db #et-boc .et-l .et_pb_text_1 h2{font-weight:600;text-transform:uppercase;font-size:24px;color:#485465!important;text-align:left}.et-db #et-boc .et-l .et_pb_button_3,.et-db #et-boc .et-l .et_pb_button_4,.et-db #et-boc .et-l .et_pb_button_2,.et-db #et-boc .et-l .et_pb_button_6,.et-db #et-boc .et-l .et_pb_button_5{transition:color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms;border-radius:20px 0px 0px 0px;width:180px;text-align:center}.et-db #et-boc .et-l .et_pb_text_5,.et-db #et-boc .et-l .et_pb_text_4,.et-db #et-boc .et-l .et_pb_text_2{font-size:16px;padding-right:0px!important;padding-bottom:50px!important;padding-left:0px!important;margin-right:0px!important;margin-left:0px!important}.et-db #et-boc .et-l .et_pb_text_2 h2,.et-db #et-boc .et-l .et_pb_text_4 h2,.et-db #et-boc .et-l .et_pb_text_5 h2{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-weight:600;text-transform:uppercase;font-size:24px;color:#485465!important;text-align:left}.et-db #et-boc .et-l .et_pb_button_6.et_pb_button,.et-db #et-boc .et-l .et_pb_button_3.et_pb_button{color:#ffffff!important;border-width:3px!important;border-color:#004a97;font-size:14px;background-color:#004a97}.et-db #et-boc .et-l .et_pb_column_0{background-color:#FFFFFF}.et-db #et-boc .et-l .et_pb_column_4{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;background-image:url("/wp-content/uploads/2022/12/HBPO-Frontend-modules-Pllastic-Omnium.jpg");background-size:cover!important;min-height:300px!important}.et-db #et-boc .et-l .et_pb_column_5,.et-db #et-boc .et-l .et_pb_column_9,.et-db #et-boc .et-l .et_pb_column_6,.et-db #et-boc .et-l .et_pb_column_10{background-color:#FFFFFF;padding-top:10%;padding-right:5%;padding-bottom:10%;padding-left:5%;margin:auto}.et-db #et-boc .et-l .et_pb_column_7{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;background-image:url("/wp-content/uploads/2022/12/active-grille-shutterjpg.jpg");background-size:cover!important;min-height:300px!important}.et-db #et-boc .et-l .et_pb_column_8{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;background-image:url("/wp-content/uploads/2022/12/Rollo.jpg");background-size:cover!important;min-height:300px!important}.et-db #et-boc .et-l .et_pb_column_11{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;background-image:url("/wp-content/uploads/2022/12/hbpo-interieur.jpg");background-size:cover!important;min-height:300px!important}.et-db #et-boc .et-l .et_pb_column_12{background-color:#eaecf3;padding-right:0px;padding-left:0px;background-image:url("/wp-content/uploads/2022/12/hbpo-charge-lid.jpg");background-size:cover!important;min-height:300px!important}.et-db #et-boc .et-l .et_pb_column_13{padding-top:10%;padding-right:5%;padding-bottom:10%;padding-left:5%;margin:auto}.et-db #et-boc .et-l .et_pb_row_3.et_pb_row,.et-db #et-boc .et-l .et_pb_row_7.et_pb_row,.et-db #et-boc .et-l .et_pb_row_6.et_pb_row,.et-db #et-boc .et-l .et_pb_row_4.et_pb_row,.et-db #et-boc .et-l .et_pb_row_5.et_pb_row{padding-top:0px!important;padding-right:0px!important;padding-bottom:0px!important;padding-left:0px!important;margin-top:0px!important;margin-right:0px!important;margin-bottom:0px!important;margin-left:0px!important;margin-left:auto!important;margin-right:auto!important;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px}@media only screen and (min-width:981px){.et-db #et-boc .et-l .et_pb_image_0,.et-db #et-boc .et-l .et_pb_image_1,.et-db #et-boc .et-l .et_pb_image_2,.et-db #et-boc .et-l .et_pb_image_3{display:none!important}}@media only screen and (max-width:980px){.et-db #et-boc .et-l .et_pb_text_1,.et-db #et-boc .et-l .et_pb_text_3{padding-top:50px!important;padding-bottom:50px!important}}</style></body>
+</html>
