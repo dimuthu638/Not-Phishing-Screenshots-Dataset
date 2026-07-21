@@ -1,0 +1,886 @@
+
+<!DOCTYPE html><!--[if lt IE 7]>      <html lang="en-us" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-us" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-us" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="alternate" href="https://www.ubscode.us/en-us/ubsnet/login" hreflang="en-US" />
+    <link rel="alternate" href="https://www.ubscode.com/en-ww/ubsnet/login" hreflang="en" />
+    <link rel="alternate" href="https://www.ubscode.cn/cn-cn/ubsnet/login" hreflang="zh-Hans-CN" />
+    <link rel="alternate" href="https://www.ubscode.cn/zh-cn/ubsnet/login" hreflang="zh-Hant-CN" />
+    <link rel="alternate" href="https://www.ubscode.es/es-es/ubsnet/login" hreflang="es-ES" />
+    <link rel="alternate" href="https://www.ubscode.com.mx/es-mx/ubsnet/login" hreflang="es-MX" />
+    <link rel="alternate" href="https://www.ubscode.com.tr/tr-tr/ubsnet/login" hreflang="tr-TR" />
+    <link rel="alternate" href="https://www.ubscode.com/ru-ru/ubsnet/login" hreflang="ru-RU" />
+    <link rel="alternate" href="https://www.ubscode.com.br/pt-pt/ubsnet/login" hreflang="pt-PT" />
+    <link rel="alternate" href="https://www.ubscode.fr/fr-fr/ubsnet/login" hreflang="fr-FR" />
+    <link rel="alternate" href="https://www.ubscode.de/de-de/ubsnet/login" hreflang="de-DE" />
+    <link rel="alternate" href="https://www.ubscode.it/it-it/ubsnet/login" hreflang="it-IT" />
+    <link rel="alternate" href="https://www.ubscode.com/en-ww/ubsnet/login" hreflang="x-default" />
+
+        <link rel="canonical" href="https://www.ubscode.us/en-us/ubsnet/login" />
+    
+    
+        <meta http-equiv="charset" content="UTF-8" >
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title></title><meta property="og:title" content="">
+<link href="/sfiles/css/bootstrap-select.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/images/favicon.png" rel="shortcut icon" >
+<link href="/sfiles/images/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" >
+<link href="/sfiles/images/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" >
+<link href="/sfiles/images/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon" >
+<link href="/sfiles/fonts/fonts.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/fonts/font-awesome/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/slick/slick.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/animate.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/template.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/js/prettyCheckable/prettyCheckable.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/custom.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/responsive-devices.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/cookiecuttr.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/mailerlite.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/3D/aplink-mrx/published/imagerotator/html/css/basic.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/masonry-infinite.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/mapbox-gl.min.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/sfiles/css/leaflet.min.css" media="screen" rel="stylesheet" type="text/css" >
+
+<script  src="/sfiles/js/jquery-1.12.4.min.js"></script>
+<script  src="/sfiles/js/bootstrap.min.js"></script>
+<script  src="/sfiles/js/modernizr.custom.js"></script>
+<script  src="/sfiles/js/prettyCheckable/prettyCheckable.min.js"></script>
+<script  src="/sfiles/js/jquery.waypoints.min.js"></script>
+<script  src="/sfiles/js/slick.min2.js"></script>
+<script  src="/sfiles/js/bootstrap-select.min.js"></script>
+<script  src="/sfiles/js/scripts.min.js"></script>
+<script  src="/sfiles/js/jquery.cookie.js"></script>
+<script  src="/sfiles/js/jquery.cookiecuttr.min.js"></script>
+<script  src="/sfiles/js/masonry.pkgd.js"></script>
+<script  src="/sfiles/js/infinite-scroll.pkgd.js"></script>
+<script  src="/sfiles/js/masonry-infinite.js"></script>
+<script  src="/sfiles/js/leaflet.js"></script>
+<script  src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/sfiles/js/html5shiv.min.js"></script>
+      <script src="/sfiles/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        window.lang = $('html').attr('lang');
+        $(document).on('ready', function() {
+            callCookies();
+            if($('.cc-cookies').length>0){
+                var btnConfig='<a href="/en-us/content/cookies" class="cc-cookie-config">Cookies settings</a>';
+                var contCookie=$('.cc-cookies>.step1').html();
+                var contCookie2='<div class="step2"><h3>Cookies settings panel</h3><p>This is the advanced settings system for own and third-party cookies. Here you can modify parameters that will directly affect your browsing experience on this website.</p><ul><li><b>Technical cookies (required)</b><p>These cookies are important to give you secure access to areas with personal information or to recognise you when you log on.</p></li><ul><li><b>Customisation Cookies</b><p>These cookies are related to general characteristics such as, for example, the browser you use, and provide you with a personalised experience and content.</p></li></ul><div class="check checkPerso"><b>I do not want Customisation cookies</b> (Your selection will mean that we cannot offer you customised browsing and content)</div><ul><li><b>Analytics Cookies</b><p>They allow anonymous measurement of the number of visits or the activity. They enable us to improve constantly your browsing experience. They will allow you to enjoy continuous improvement in your browsing experience.</p></li></ul><div class="check checkAnalytics"><b>I do not want Analytics cookies</b> (Your selection will mean that we cannot offer you continuous improvement in your browsing experience.)</div><ul><li><b>Advertising Cookies</b><p>They allow us to show you personalised advertising that is relevant to you. Thanks to these cookies you will not see adverts which do not interest you. You will enjoy advertising adapted to you and your preferences.</p></li></ul><div class="check checkPubli"><b>I do not want Advertising cookies</b> (Your selection will mean that you do not benefit from customised advertising, and will only see generic adverts).</div></div>';
+                var btnAccept=$('.cc-cookies>a');
+                $('.cc-cookies').html("<div class='contCookie'></div>");
+                $('.cc-cookies .contCookie').append('<div class="step1">'+contCookie+'</div>');
+                $('.cc-cookies .contCookie').prepend(contCookie2);
+                $('.cc-cookies .contCookie').append(btnConfig);
+                $('.cc-cookies .contCookie').append(btnAccept);
+                $('.cc-cookies .cc-cookie-config').click(function(){
+                    if($('.step2').hasClass('active')==false){
+                        $('.step2').addClass('active');
+                        $(this).html('Consult List of Cookies');
+                        $('.cc-cookies .step1').hide();
+                        $('.cc-cookies .step2').show();
+                        $('.cc-cookie-accept').html('Save settings');
+                        return false;
+                    }else{
+                        return true;
+                    }
+                });
+                $('.cc-cookie-accept, .cc-cookie-decline').click(function (e) {
+                    e.preventDefault();
+                    if ($(this).is('[href$=#decline]')) {
+                        $.cookie("cc_cookie_accept", null, {
+                            path: '/'
+                        });
+                        $.cookie("cc_cookie_decline", "cc_cookie_decline", {
+                            expires: 365,
+                            path: '/'
+                        });
+                        $.cookie("cc_cookie_before", "cc_cookie_before", {
+                            expires: 365,
+                            path: '/'
+                        });
+                        if ("") {
+                            // kill google analytics cookies
+                            $.cookie("__utma", null, {
+                                domain: '.' + "",
+                                path: '/'
+                            });
+                            $.cookie("__utmb", null, {
+                                domain: '.' + "",
+                                path: '/'
+                            });
+                            $.cookie("__utmc", null, {
+                                domain: '.' + "",
+                                path: '/'
+                            });
+                            $.cookie("__utmz", null, {
+                                domain: '.' + "",
+                                path: '/'
+                            });
+                        }
+                    } else {
+                        //console.log("ok");
+                        $.cookie("cc_cookie_decline", null, {
+                            path: '/'
+                        });
+                        $.cookie("cc_cookie_accept", "cc_cookie_accept", {
+                            expires: 365,
+                            path: '/'
+                        });
+                        $.cookie("cc_cookie_before", "cc_cookie_before", {
+                            expires: 365,
+                            path: '/'
+                        });
+                        if($('.checkPerso').hasClass('active')==false){
+                            $.cookie("cc_cookie_perso", "cc_cookie_perso", {
+                                expires: 365,
+                                path: '/'
+                            });
+                        }else{
+                            $.cookie("cc_cookie_perso", null, {
+                                path: '/'
+                            });
+                        }
+                        if($('.checkAnalytics').hasClass('active')==false){
+                            $.cookie("cc_cookie_analytics", "cc_cookie_analytics", {
+                                expires: 365,
+                                path: '/'
+                            });
+                        }else{
+                            $.cookie("cc_cookie_analytics", null, {
+                                path: '/'
+                            });
+                        }
+                        if($('.checkPubli').hasClass('active')==false){
+                            $.cookie("cc_cookie_publi", "cc_cookie_publi", {
+                                expires: 365,
+                                path: '/'
+                            });
+                        }else{
+                            $.cookie("cc_cookie_publi", null, {
+                                path: '/'
+                            });
+                        }
+                    }
+                    $(".cc-cookies").fadeOut(function () {
+                        // reload page to activate cookies
+                        location.reload();
+                    });
+                });
+                $('.cc-cookies .check').click(function(){
+                    $(this).toggleClass('active');
+                    $('.cc-cookie-accept').addClass('modif');
+                    /*if($(this).hasClass('active')==true){
+                        $('.cc-cookie-accept').addClass('cc-cookie-decline');
+                        $('.cc-cookie-accept').attr('href','#decline');
+                        $('.cc-cookie-accept').removeClass('cc-cookie-accept');
+                    }else{
+                        $('.cc-cookie-decline').addClass('cc-cookie-accept');
+                        $('.cc-cookie-decline').attr('href','#accept');
+                        $('.cc-cookie-decline').removeClass('cc-cookie-decline');
+                    }*/
+                });
+            }
+            if(jQuery.cookie("cc_cookie_before") == "cc_cookie_before") {
+                if(jQuery.cookie("cc_cookie_perso") == "cc_cookie_perso") {
+                    $('.checkPerso').removeClass('active');
+                }else{
+                    $('.checkPerso').addClass('active');
+                }
+                if(jQuery.cookie("cc_cookie_publi") == "cc_cookie_publi") {
+                    $('.checkPubli').removeClass('active');
+                }else{
+                    $('.checkPubli').addClass('active');
+                }
+                if(jQuery.cookie("cc_cookie_analytics") == "cc_cookie_analytics") {
+                    $('.checkAnalytics').removeClass('active');
+                }else{
+                    $('.checkAnalytics').addClass('active');
+                }
+            }else{
+                $('.checkPerso').removeClass('active');
+                $('.checkPubli').removeClass('active');
+                $('.checkAnalytics').removeClass('active');
+            }
+            if($.cookie('cc_cookie_accept')=='cc_cookie_accept'){
+                if(jQuery.cookie("cc_cookie_publi") == "cc_cookie_publi") {
+                    //console.log("publi ok");
+                    //Google Tag Manager
+                    /*if($(html).attr('lang')=="tr-tr"){
+                        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','AW-10854341330');
+                    }else{*/
+                        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-57TFGDQ');
+                    //}
+                }
+                if(jQuery.cookie("cc_cookie_analytics") == "cc_cookie_analytics") {
+                    //console.log("analytics ok");
+                    //Yandex.Metrika counter
+                    (function (d, w, c) {
+                        (w[c] = w[c] || []).push(function() {
+                            try {
+                                w.yaCounter42684554 = new Ya.Metrika({
+                                    id:42684554,
+                                    clickmap:true,
+                                    trackLinks:true,
+                                    accurateTrackBounce:true
+                                });
+                            } catch(e) { }
+                        });
+
+                        var n = d.getElementsByTagName("script")[0],
+                            s = d.createElement("script"),
+                            f = function () { n.parentNode.insertBefore(s, n); };
+                        //s.type = "text/javascript";
+                        s.async = true;
+                        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                        if (w.opera == "[object Opera]") {
+                            d.addEventListener("DOMContentLoaded", f, false);
+                        } else { f(); }
+                    })(document, window, "yandex_metrika_callbacks");
+                    if($('html').attr('lang')=="tr-tr"){
+                        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-TPCXFR6');
+                    }
+                }
+            }
+            $('a.cc-cookie-reset2').click(function (f) {
+                //f.preventDefault();
+                $.cookie("cc_cookie_accept", null, {
+                    path: '/'
+                });
+                $.cookie("cc_cookie_decline", null, {
+                    path: '/'
+                });
+                // reload page to activate cookies
+                return true;
+            });
+        });
+        function callCookies(){
+            $.cookieCuttr({
+                cookieAnalytics: false,
+                cookieDeclineButton: false,
+                //cookieDeclineButtonText: 'DO NOT USE COOKIES',
+                cookieAcceptButtonText: 'Accept cookies',
+                cookieNotificationLocationBottom: true,
+                cookiePolicyLink: '/en-us/content/cookies',
+                cookieMessage: "<div class='step1'>Cookies are important for you, they influence on your browsing experience, they help us to protect your privacy and allow us to proceed with your requests that you demand through the website. We use our own and third party cookies to analyze our services and provide you with advertising related to your preferences on the basis of a profile made with your browsing habits (for example, visited pages). If you consent to its installation, click on 'Accept Cookies', or you can also set your preferences by pressing 'Cookie settings'. More information in our <a href='{{cookiePolicyLink}}' title='Cookies policy'>Cookies policy</a>.</div>"
+            });
+        }
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/42684554" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+<body class="page ">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TFGDQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="header" itemscope itemtype="https://schema.org/LocalBusiness">
+    <input type="hidden" id="language" value="en-us"/>
+    <div class="container-fluid mbottom0 p0">
+        <div class="w100">
+            <meta itemprop="name" content="United Barcode Systems, S.L.">
+            <meta itemprop="logo" content="https://www.ubscode.com/sfiles/images/logoUBS2-en.png">
+            <meta itemprop="image" content="https://www.ubscode.com/files/10890ce9fc/k/m/spain_gris4-min.jpg">
+            <meta itemprop="url" content="https://www.ubscode.com/">
+            <meta itemprop="address" content="Pol. Ind. Els Garrofers, 56. 08340 Vilassar de Mar (Barcelona). Spain">
+            <meta itemprop="telephone" content="+34 937 540 410">
+            
+            <div class="blockHeader bbottom first">
+                <div class="boxHeader pending">
+                    <ul class="telefonos mbottom0">
+                        <li class="phoneHeader hidden-xs hidden-sm EN-US">
+                            <p>
+                                US <a href="tel:+1 760 480 07 77"><b>+1 760 480 07 77</b></a>                                        <span class="mleft20">INTL <a href="tel:+34 937 540 410"><b>+34 937 540 410</b></a></span>
+                                                                </p>
+                        </li>
+                        <li class="hidden-md hidden-lg hidden-xl">
+                            <a class="phoneHeader conClickPhone"><i class="fa fa-phone cblue"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="boxHeader contOtros pending">
+                    <ul class="otros">
+                        <li class="emailHeader">
+                                                            <a href="/en-us/contact"><i class="fa fa-envelope"></i></a>
+                                                    </li>
+
+                    </ul>
+                </div>
+
+                <div class="boxHeader pending">
+                    <ul class="sociales">
+                                                <li><a href="https://www.linkedin.com/company/united-barcode-systems" target="_blank"><i class="fa fa-linkedin cblue"></i></a></li>
+                                                <li><a href="https://www.youtube.com/user/ubscode" target="_blank"><i class="fa fa-youtube cblue"></i></a></li>
+                                                <li><a href="https://twitter.com/UBS_Code" target="_blank"><i class="fa fa-twitter cblue"></i></a></li>
+                                            </ul>
+                </div>
+
+                <div class="boxHeader last pending">
+                    <form action="" name="language" method="get">
+                        <select name="lang" id="selectLang" class="form-control selectpicker language" data-max-options="1" name="language">
+                            <option>prefered language</option>
+                            <option  value="en-ww">Worldwide</option><option selected value="en-us">English (US)</option><option  value="es-es">Español (España)</option><option  value="es-mx">Español (Mexico)</option><option  value="pt-pt">Português</option><option  value="it-it">Italiano</option><option  value="ru-ru">Pусский</option><option  value="tr-tr">Türkçe</option><option  value="zh-cn">繁體中文 (Traditional Chinese)</option><option  value="cn-cn">繁体中文 (Simply Chinese)</option><option  value="fr-fr">Français</option><option  value="de-de">Deutsch</option>                        </select>
+                        <input type="hidden" id="Lang" value="en-us"/>
+                    </form>
+                </div>
+
+            </div>
+            <div class="w100 bbottom hidden-md hidden-lg hidden-xl containerPhone">
+                <ul>
+                    <li class="phoneHeader">
+                        <p>
+                            US <b>+1 760 480 07 77</b>                                        <br/>INTL <a href="tel:+34 937 540 410"><b>+34 937 540 410</b></a>
+                                                                        
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bbottom menu p0 conMenu">
+        <div class="container extra">
+            <div class="row p0 m0 dflexDesktop">
+                                <div class="logo">
+                    <a itemprop="url" href="/en-us/" title="Home">
+                                            <img itemprop="logo" src="/sfiles/images/logoUBS-en.png" alt="United Barcode Systems" title="Home"/>
+                                        </a>
+                </div>
+                <ul class="navs hidden-md hidden-lg hidden-xl">
+                    <li class="liSearch">
+                        <i class="fa fa-search btnSearch btnOpenSearch"></i>
+                    </li>
+                    <li class="icoMenu">
+                        <div class="ico"><i class="fa fa-bars"></i></div>
+                    </li>
+                </ul>
+                <div class="intMenu US">
+                    <ul class="firstLevel">
+                        <li class="itemMenu"><a>Corporate</a>
+                            <div class="submenu">
+                                <div class="container extra">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul class="company">
+                                                <li class="final aboutus"><a href="/en-us/content/about-us">About us</a></li>
+                                                <li class="final worldwide"><a href="/en-us/content/ubs-worldwide">UBS worldwide</a></li>
+                                                                                                <li class="final mission"><a href="/en-us/content/mission-vision-values">Mission, Vision and Values</a></li>
+                                                                                                <li class="final quality"><a href="/en-us/content/quality-policy">Quality policy and certifications</a></li>
+                                                                                                <li class="final compromiso"><a href="/en-us/content/sustainable-compromise">Sustainable compromise</a></li>
+                                                                                                                                                <li class="final compliance"><a href="/en-us/content/compliance">Conduct, code and communications channel</a></li>
+                                                                                                <li class="final partners"><a href="/en-us/content/partners">Partners</a></li>
+                                                                                                <li class="final associations"><a href="/en-us/content/associations">Associations</a></li>
+
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="itemMenu"><a>Products</a>
+                            <div class="submenu productos">
+                                <div class="container extra">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul>
+                                                                                                                                                        <li class="hasSub prods prod0">
+                                                        <a>Product Coding</a>
+
+                                                        <div>
+                                                            <ul>
+                                                                                                                                                                                                        <li class="hasSub1 cat15 ">
+                                                                        <a>Thermal Inkjet Printers - TIJ</a>
+                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                        <li class="final iden23">
+                                                                                        <a href="/en-us/product/thermal-inkjet-printers/23/tjx-series">TJX Series</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden38">
+                                                                                        <a href="/en-us/product/thermal-inkjet-printers/38/tjx-uvled">TJX UVLED</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul></div>
+                                                            
+                                                                                                            </li>
+                                                                                                                                                                                                                <li class="hasSub prods prod1">
+                                                        <a>Case and pack coding</a>
+
+                                                        <div>
+                                                            <ul>
+                                                                                                                                                                                                        <li class="hasSub1 cat4 ">
+                                                                        <a>High-Resolution Inkjet Printers</a>
+                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                        <li class="final iden61">
+                                                                                        <a href="/en-us/product/high-resolution-inkjet-printers/61/aplink-hrx">APLINK HRX</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden65">
+                                                                                        <a href="/en-us/product/high-resolution-inkjet-printers/65/aplink-mrx-72e">APLINK MRX72e</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden63">
+                                                                                        <a href="/en-us/product/high-resolution-inkjet-printers/63/aplink-lcx">APLINK LCX</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                                                                                                <li class="hasSub1 cat3 ">
+                                                                        <a>Case and Pack Print & Apply Systems</a>
+                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                        <li class="final iden45">
+                                                                                        <a href="/en-us/product/case-and-pack-print-apply-systems/45/apl35s">APL35s and 35si</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                    </ul></div>
+                                                            
+                                                                                                            </li>
+                                                                                                                                                                                                                <li class="hasSub prods prod2">
+                                                        <a>Pallet Labeling</a>
+
+                                                        <div>
+                                                            <ul>
+                                                                                                                                                                                                        <li class="hasSub1 cat5 ">
+                                                                        <a>Pallet Print & Apply Systems</a>
+                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                        <li class="final iden6">
+                                                                                        <a href="/en-us/product/pallet-print-apply-systems/6/apl38s">APL38s </a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden7">
+                                                                                        <a href="/en-us/product/pallet-print-apply-systems/7/apl-8000-series">APL 8000 Series</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden8">
+                                                                                        <a href="/en-us/product/pallet-print-apply-systems/8/apl-8000-elv-series">APL 8000 ELV Series</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                    </ul></div>
+                                                            
+                                                                                                            </li>
+                                                                                                                                                                                                                <li class="hasSub prods prod3">
+                                                        <a>Software</a>
+
+                                                        <div>
+                                                            <ul>
+                                                                                                                                                                                                        <li class="hasSub1 cat8 ">
+                                                                        <a>Label Designer</a>
+                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                        <li class="final iden18">
+                                                                                        <a href="/en-us/product/label-designer/18/ubs-designer">UBS Designer</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden17">
+                                                                                        <a href="/en-us/product/label-designer/17/ubs-label-library">UBS Label Library</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden49">
+                                                                                        <a href="/en-us/product/label-designer/49/ubs-nicelabel">UBS & NiceLabel</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                <li class="final iden48">
+                                                                                        <a href="/en-us/product/label-designer/48/ubs-codesoft">UBS & Codesoft</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                                                                                                <li class="hasSub1 cat7 ">
+                                                                        <a>Equipments Management</a>
+                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                        <li class="final iden16">
+                                                                                        <a href="/en-us/product/equipments-management/16/ubs-labman">UBS LabMan</a>
+                                                                                    </li>
+                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                    </ul></div>
+                                                            
+                                                                                                            </li>
+                                                                                                                                                                                                                <li class="hasSub prods prod4">
+                                                        <a>Consumables</a>
+
+                                                        
+                                                                                                                    <div>
+                                                            <ul>
+                                                                                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/product/consumables/21/ink">Ink</a>
+                                                                    </li>
+                                                                                                                                                                                                                                                                                <li class="final">
+                                                                        <a href="/en-us/product/consumables/20/labels">Labels</a>
+                                                                    </li>
+                                                                                                                                                                                                                                                                                <li class="final">
+                                                                        <a href="/en-us/product/consumables/19/ribbon">Ribbon</a>
+                                                                    </li>
+                                                                                                                                                                                                    </ul>
+                                                            </div>
+                                                                                                                </li>
+                                                                                                                                                                                                                <li class="hasSub prods prod5">
+                                                        <a> UVLED technology</a>
+
+                                                        
+                                                                                                                    <div>
+                                                            <ul>
+                                                                                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/product/uv-led-technology/64/uvled-lamps-7225">UVLED Curing Systems 7225</a>
+                                                                    </li>
+                                                                                                                                                                                                    </ul>
+                                                            </div>
+                                                                                                                </li>
+                                                                                                                                                    </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="itemMenu"><a>Applications</a>
+                            <div class="submenu">
+                                <div class="container extra">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul class="apps">
+                                                <li class="final"><a href="/en-us/application/21/tjx">Marking and Coding of Primary Product: TIJ</a></li><li class="final"><a href="/en-us/application/2/direct-coding-and-printing-on-boxes">Direct coding and printing on boxes</a></li><li class="final"><a href="/en-us/application/30/direct-printing-using-uvled-curing-system">Direct printing using UVLED curing system </a></li><li class="final"><a href="/en-us/application/3/automatic-labeling-of-secondary-packaging">Automatic, real-time labeling on secondary packaging (boxes, bags, packs)</a></li><li class="final"><a href="/en-us/application/4/end-of-line-pallet-labeling">End-of-line pallet labeling</a></li><li class="final"><a href="/en-us/application/31/automatic-identification-solutions-for-any-production-line">Automatic identification solutions for any production line</a></li>                                                                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="itemMenu"><a>Industries</a>
+                            <div class="submenu">
+                                <div class="container extra">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul class="industrias">
+                                                                                                    <li class="hasSub prods">
+                                                        <a>Agricultural products</a>
+                                                        <div>
+                                                                                                                    <ul>
+                                                                                                                                    <li class="final">
+                                                                        <a href="/en-us/industry/2/processed-foods">Processed foods (baked goods, confectionery, pastries, cereals, canned goods)</a>
+                                                                    </li>
+                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/industry/3/beverages-dairy-products">Beverages and dairy products</a>
+                                                                    </li>
+                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/industry/4/fresh-foods">Fresh foods (fruits, vegetables, meats, fish)</a>
+                                                                    </li>
+                                                                                                                                </ul>
+                                                                                                                    </div>
+                                                    </li>
+                                                                                                        <li class="hasSub prods">
+                                                        <a>Pharmaceuticals and consumer goods</a>
+                                                        <div>
+                                                                                                                    <ul>
+                                                                                                                                    <li class="final">
+                                                                        <a href="/en-us/industry/6/personal-care-and-household-products">Personal care and household products</a>
+                                                                    </li>
+                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/industry/7/cosmetics-pharma">Cosmetics and pharmaceuticals</a>
+                                                                    </li>
+                                                                                                                                </ul>
+                                                                                                                    </div>
+                                                    </li>
+                                                                                                        <li class="hasSub prods">
+                                                        <a>Industrial</a>
+                                                        <div>
+                                                                                                                    <ul>
+                                                                                                                                    <li class="final">
+                                                                        <a href="/en-us/industry/10/automotive">Automotive</a>
+                                                                    </li>
+                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/industry/11/construction">Construction materials</a>
+                                                                    </li>
+                                                                                                                                        <li class="final">
+                                                                        <a href="/en-us/industry/12/chemical-products">Chemical products</a>
+                                                                    </li>
+                                                                                                                                </ul>
+                                                                                                                    </div>
+                                                    </li>
+                                                                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="itemMenu"><a href="/en-us/news">You know what</a></li>
+                        <li class="itemMenu"><a href="/en-us/contact">Contact</a></li>
+                                               <li class="itemMenu liSearch hidden-xs hidden-sm">
+                    <i class="fa fa-search btnSearch btnOpenSearch"></i>
+                </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid contSearch">
+        <div class="container extra">
+            <div class="row">
+                <div class="col-xs-12 p0 ptop15 pbottom15">
+                    <form name="search" class="formSearch" action="/en-us/search" method="get">
+                        <div class="col-xs-7 col-sm-9 col-md-10">
+                            <input type="text" name="q" value="" placeholder="What are you looking for?" class="form-control w100"/>
+                        </div>
+                        <div class="col-xs-5 col-sm-3 col-md-2">
+                            <button type="submit" class="btn btn-blue w100"><i class="fa fa-search mright10"></i> SEARCH</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="fixSocial">
+    <ul>
+        <li class="telefono">
+                        <a href="tel:+34 937 540 410">
+                        <i class="fa fa-phone"></i></a>
+        </li>
+        <li class="contacto">            <a href="/en-us/contact"><i class="fa fa-envelope"></i></a>
+        </li>
+                <li class="linkedin"><a href="https://www.linkedin.com/company/united-barcode-systems" target="_blank"><i class="fa fa-linkedin cblue"></i></a></li>
+                <li><a href="https://www.youtube.com/user/ubscode" target="_blank"><i class="fa fa-youtube cblue"></i></a></li>
+                <li class="twitter"><a href="https://twitter.com/UBS_Code" target="_blank"><i class="fa fa-twitter cblue"></i></a></li>
+                    </ul>
+</div>
+
+
+<div class="container extra breadcrumbs">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="migas">
+                <li>
+                    <a href="/en-us/">Home</a>
+                </li>
+                <li><i class="fa fa-angle-right mright10 mleft10"></i> <a href="/en-us/ubsnet">UBS net</a></li><li><i class="fa fa-angle-right mright10 mleft10"></i> Login</li>            </ul>
+        </div>
+    </div>
+</div>
+    <div id="content">
+        <div class="container pbottom40">
+    <div class="row ptop40">
+        <div class="col-xs-12 mbottom40">
+        <h1>UBS net</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 center fnone mauto mbottom40">
+                <form class="form-signin" id="loginForm" method="POST" action="">
+                                        <h4 class="form-signin-heading alert alert-info">Please, log in with your username and password</h4>
+                    <div class="form-group">
+                        <label for="inputEmail" class="sr-only">User</label>
+                        <input type="text" name="username" id="inputEmail" class="form-control" placeholder="User" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="form-group right">
+                        <button name="login" class="btn btn-blue" type="submit">
+                            <span>Log in <i class="mleft10 fa fa-angle-right"></i></span>
+                        </button>
+                    </div>
+                    <p class="left">To request access to <b>USB net</b>, please contact us by clicking <b><a href="/en-us/contact">aquí</a></b>.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+            </div>
+    
+    <p id="back-top">
+    <a href="#top">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-angle-up fa-stack-1x fa-inverse"></i>
+    </span>
+    </a>
+</p>
+<footer id="footer" class="footer">
+    <div class="container-fluid ptop40 pbottom40 bgBlue center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="tnormal titSection"><b class="cwhite">UBS</b> <span class="cervantis cwhite">Newsletter</span></h4>
+                </div>
+                <div class="col-xs-12 mtop20">
+                    <a class="btnSuscribe">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ptop40 pbottom10">
+        <div class="container extra">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-15 mbottom20">
+                    <h3 class="tupper">Contact information</h3>
+                    <ul>
+                                                        <li class="address">2067 Wineridge Place C, Escondido,<br/>CA 92029<br/>United States
+
+</li>
+                                <li class="phone tupper">US <a href="tel:+1 760 480 07 77"><b>+1 760 480 07 77</b></a></li>
+                                                                                                                                    <li class="phone tupper">INTL <a href="tel:+34 937 540 410"><b>+34 937 540 410</b></a></li>
+                                
+                            <li class="email"><a href="mailto:ubsna@ubscode.com">ubsna@ubscode.com</a></li>
+                                                            <li class="email"><a href="mailto:info@ubscode.com">info@ubscode.com</a></li>
+                                                </ul>
+                    <a href="http://garantia.datax.es/united-barcode-system-s-l" target="_blank"><img src="https://www.datax.es/images/sello.png"></a>
+                    <a href="https://positiveindustry.org/" target="_blank"><img src="/sfiles/images/Positive_Industry.png"></a>
+                </div>
+
+                
+
+                <div class="col-xs-12 col-sm-6 col-md-15 mbottom20">
+                    <h3 class="tupper">Products</h3>
+                    <ul>
+                        <li><a href="/en-us/product/pallet-print-apply-systems/7/apl-8000-series"><i class="fa fa-angle-right mright10"></i> Pallet labeling</a></li>
+                        <li><a href="/en-us/product/case-and-pack-print-apply-systems/45/apl35s"><i class="fa fa-angle-right mright10"></i> Case labeling</a></li>
+                        <li><a href="/en-us/product/high-resolution-inkjet-printers/10/aplink-mrx"><i class="fa fa-angle-right mright10"></i> Direct marking of boxes</a></li>
+                        <li><a href="/en-us/product/thermal-inkjet-printers/23/tjx-series"><i class="fa fa-angle-right mright10"></i> Product coding</a></li>
+                        <li><a href="/en-us/product/equipments-management/16/ubs-labman"><i class="fa fa-angle-right mright10"></i> Software</a></li>
+                        <li><a href="/en-us/product/consumables/21/ink"><i class="fa fa-angle-right mright10"></i> Consumables</a></li>
+                        <li><a href="/en-us/product/uv-led-technology/46/uv-led-lamps"><i class="fa fa-angle-right mright10"></i> UVLED technology</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-15 mbottom20">
+                    <h3 class="tupper">Applications</h3>
+                    <ul>
+                        <li><a href="/en-us/application/21/tjx"><i class="fa fa-angle-right mright10"></i> Primary product</a></li>
+                        <li><a href="/en-us/application/2/direct-coding-and-printing-on-boxes"><i class="fa fa-angle-right mright10"></i> Printing on boxes</a></li>
+                        <li><a href="/en-us/application/30/direct-printing-using-uvled-curing-system"><i class="fa fa-angle-right mright10"></i> Direct printing UV system</a></li>
+                        <li><a href="/en-us/application/3/automatic-labeling-of-secondary-packaging"><i class="fa fa-angle-right mright10"></i> Labeling secondary packaging</a></li>
+                        <li><a href="/en-us/application/4/end-of-line-pallet-labeling"><i class="fa fa-angle-right mright10"></i> Pallet labeling</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-15 mbottom20">
+                    <h3 class="tupper">Industries</h3>
+                    <ul>
+                        <li><a href="/en-us/industry/2/processed-foods"><i class="fa fa-angle-right mright10"></i> Agri-food </a></li>
+                        <li><a href="/en-us/industry/3/beverages-dairy-products"><i class="fa fa-angle-right mright10"></i> Beverages</a></li>
+                        <li><a href="/en-us/industry/6/personal-care-and-household-products"><i class="fa fa-angle-right mright10"></i> Personal care and household products</a></li>
+                        <li><a href="/en-us/industry/7/cosmetics-pharma"><i class="fa fa-angle-right mright10"></i> Cosmetics and pharmaceuticals</a></li>
+                        <li><a href="/en-us/industry/10/automotive"><i class="fa fa-angle-right mright10"></i> Automotive</a></li>
+                        <li><a href="/en-us/industry/11/construction"><i class="fa fa-angle-right mright10"></i> Construction materials</a></li>
+                        <li><a href="/en-us/industry/12/chemical-products"><i class="fa fa-angle-right mright10"></i> Chemical products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-15 mbottom20">
+                                            <img src="/sfiles/images/logoUBS-footer-en.png" alt="UBS. United Barcode Systems. The right choice" title="UBS. United Barcode Systems. The right choice" class="w100"/>
+                                        <ul class="sociales mtop10 mleft10">
+                        <li><a href="https://www.linkedin.com/company/united-barcode-systems" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/ubscode" target="_blank"><i class="fa fa-youtube"></i></a></a></li>
+                        <li><a href="https://twitter.com/UBS_Code" target="_blank"><i class="fa fa-twitter"></i></a></a></li>
+                        <li><a href="/en-us/news"><i class="fa fa-blogger-b"></i></a></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 center mtop20">
+                    <ul class="legales">
+                    <li><a href="/en-us/cv">Work with us</a></li>
+                        <li><a href="/en-us/content/legal-notice">Legal notice</a></li>
+                        <li><a href="/en-us/content/privacy-policy">Privacy policy</a></li>
+                        <li><a href="/en-us/content/social-networks-privacy-policy">Privacy policy social networks</a></li>
+                        <li><a href="/en-us/content/cookies">Cookies policy</a></li>
+                        <li class="final"><a href="/en-us/content/quality-policy">Quality policy and certifications</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        /*$(document).on('ready', function() {
+            if(jQuery.cookie("cc_cookie_publi") == "cc_cookie_publi") {
+                var trackContactSent = function(form_name) {
+                                }
+            }
+        });*/
+    </script>
+
+
+    <div class="popupNews">
+        <div class="contPopupNews" style="position:relative;">
+            <img src="/sfiles/images/headNewsletter.png" alt="" class="w100">
+            <div class="bClose"><i class="fa fa-times"></i></div>
+            <!-- Begin Mailchimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <style type="text/css">
+                        #mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
+                        #mergeRow-gdpr {margin-top: 20px;}
+                        #mergeRow-gdpr fieldset label {font-weight: normal;}
+                        #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+            </style>
+            <div id="mc_embed_signup">
+            <form action="https://ubscode.us11.list-manage.com/subscribe/post?u=cca04639a41f32593413a8081&id=d4971ed0ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <h2>Newsletter</h2>
+                    <div class="mc-field-group">
+                        <label for="mce-FNAME" style="font-family: Univers-Light,sans-serif!important;">Name</label>
+                        <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL" style="font-family: Univers-Light,sans-serif!important;">Email</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <input type="hidden" name="group[31830]" id="mce-group[31830]" value="">
+                    </div>
+
+                    <div class="mc-field-group" style="display:none !important;">
+                        <label for="mce-group[31830]">Idioma_Newsletter </label>
+                        <select name="group[31830]" class="REQ_CSS" id="mce-group[31830]">
+                            <option value=""></option>
+                            <option value="4194304" >Español - España</option>
+                            <option value="8388608" >Español - México</option>
+                            <option value="16777216" selected>Inglés</option>
+                            <option value="33554432" >Francés</option>
+                            <option value="67108864" >Turco</option>
+                            <option value="134217728" >Portugués (Brasil)</option>
+                            <option value="268435456" >Italiano</option>
+                            <option value="536870912" >Ruso</option>
+                        </select>
+                    </div>
+                    
+                    <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                        <div class="content__gdpr">
+                        <p class="xs" style="font-family: Univers-Light,sans-serif!important;">UNITED BARCODE SYSTEMS, S.L. as the data controller will process your data for the purpose of replying to your query or request. You may access, rectify and erase your data, and also exercise other rights by consulting the additional detailed information on data protection in our <a href="/en-us/content/privacy-policy" target="_blank" style="text-rdecoration:underline;"><b>Array</b></a>.</p>
+                            <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+                                <label class="checkbox subfield" for="gdpr_18305"><input type="checkbox" id="gdpr_18305" name="gdpr[18305]" value="Y" class="av-checkbox "><span class="xs">I have read and accept the conditions contained in the privacy policy on processing of my data to manage my query or request.</span> </label>
+                            </fieldset>
+                        </div>
+                        <!-- <div class="content__gdprLegal">
+                            <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href=https://mailchimp.com/legal/terms target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
+                        </div> -->
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cca04639a41f32593413a8081_d4971ed0ca" tabindex="-1" value=""></div>
+                    <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe-" class="button" style="display:block !important;"></div>
+                </div>
+            </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='MMERGE6';ftypes[6]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[7]='MMERGE7';ftypes[7]='text';fnames[8]='MMERGE8';ftypes[8]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+        </div>
+        <div class="bgPopupNews"></div>
+    </div>
+</body>
+</html>
