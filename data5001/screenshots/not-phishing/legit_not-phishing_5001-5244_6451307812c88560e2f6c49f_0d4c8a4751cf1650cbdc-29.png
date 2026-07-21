@@ -1,0 +1,929 @@
+<!DOCTYPE html><html class="feature-rebranding2018"><head><script crossorigin="anonymous">
+				window.__TS = new Date();
+				window.__ID = (Date.now() + Math.random()).toString(36);
+			</script><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/><link rel="shortcut icon" type="image/x-icon" href="//img.imgsmail.ru/r/favicon/favicon.ico"/><meta name="theme-color" content="#005ff9"/><title>Account Mail.Ru</title><script type="application/javascript" crossorigin="anonymous">;(function (window) {
+try {
+	var loadRadarFrom = "unkn";
+	var loadRadarEmail = "";
+	var loadRadarPrntpgid = "";/* global loadRadarFrom, loadRadarEmail, loadRadarPrntpgid */
+var email = loadRadarEmail;
+var from = loadRadarFrom || 'unkn';
+var parent_pgid = loadRadarPrntpgid;
+var p2 = window.location.pathname.split('/').join('_');
+
+var src1 = '//stat.radar.imgsmail.ru/update?p=account&t=rawload_stat&v=1&email=' + email + '&i=' + p2 + ':1';
+if (parent_pgid) {
+	src1 += '&parent_pgid=' + parent_pgid;
+}
+(new Image()).src = src1;
+
+if (window.location.pathname.match(/^\/user\/phones/)) {
+	var p = window.location.pathname.split('/');
+	p.push(from);
+	p.push('rawload');
+	p.push('stat');
+	var src2 = '//stat.radar.imgsmail.ru/update?p=account&t=' + p.join('_') + '&v=1&email=' + email;
+	if (parent_pgid) {
+		src2 += '&parent_pgid=' + parent_pgid;
+	}
+	(new Image()).src = src2;
+}
+} catch (e) { /* ignore */ }
+})(window);</script><script crossorigin="anonymous">window.xrayConfig ={"xrayRadarUrl":"/api/v1/utils/xray","verbose":false,"radarPrefix":"","split":"","gaTrackingId":"","defaultParams":{"p":"old-account","email":""}};
+								var xray=function(){'use strict';function a(a){for(n.push(a);n.length>o.maxSize;)n.shift()}function b(a){return b="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},b(a)}function c(a){return a&&"object"===b(a)&&!d(a)}function d(a){return"[object Array]"===Object.prototype.toString.call(a)}function e(){for(var a,b={},d=0;d<arguments.length;++d)for(var f in a=arguments[d],a)b[f]=b[f]&&c(b[f])&&c(a[f])?e(b[f],a[f]):a[f];return b}function f(a){var b=encodeURIComponent(JSON.stringify(a));return{size:b.length,raw:b}}function g(){this._batchesByUrls={},this._timeoutId=null,this._config={maxBatchSize:6e4,maxChunkSize:4e3,timeout:1000,idle:!1},"undefined"!=typeof window&&window.addEventListener("beforeunload",this.process.bind(this,!0))}function h(a){return"s".concat(a,"s").replace(/s+/g,"s").replace(/^s$/g,"")}function j(a){for(var b in a)("undefined"==typeof a[b]||null===a[b])&&delete a[b];return a}function k(a,b){for(var c=-1,d=0;d<a.length;d++)if(b===a[d]){c=d;break}return c}function l(){this._config={xrayRadarUrl:"https://xray.mail.ru",pgid:(Date.now()+Math.random()).toString(36),radarPrefix:"",r:"undefined"!=typeof document&&document.referrer||"",defaultParams:{p:"mail",t_feature:"",v:1,skipdwh:!1}}}function m(a,b){for(var c=a.split("&"),d=c[0],e={},f=1;f<c.length;++f){var g=c[f].split("="),h=decodeURIComponent(g[0]),j=decodeURIComponent(g[1]);try{j=JSON.parse(j)}catch(a){}e[h]=j}b=b||{},b.immediately?z.sendImmediately(d,e,b.ga):z.send(d,e,b.ga)}var n=[],o={maxSize:500,getLog:function(){return Array.prototype.slice.call(n,0)},clear:function(){n=[]}},p={log:function(){try{(console.debug||console.log).apply(console,arguments)}catch(a){}},error:function(){try{console.error.apply(console,arguments)}catch(a){}},warn:function(){try{console.warn.apply(console,arguments)}catch(a){}}},q=["p","email","split","utm","r","pgid","o_ss","o_v"],r=!1;g.prototype.setConfig=function(a){var b=Math.max;if(!r)return a.timeout=b(1e3,a.timeout||0),this._config=e(this._config,a),void(r=!0);var c=[];for(var d in a){if(d in this._config){c.push(d);continue}this._config[d]=a[d]}c.length&&p.warn("Queue config field(s) "+c.join(", ")+" are already set and can't be modified")},g.prototype.getConfig=function(){return e(this._config,{})},g.prototype.push=function(b,c){a(c);var d=b+"/batch?"+g._buildQueryString(c);c=g._stringifyParams(c);var e=f(c);if(e.size+2>this._config.maxBatchSize)return void p.error("Radar #"+c.uid+" body is too long: "+e.raw);this._batchesByUrls[d]||(this._batchesByUrls[d]=[[]]);var h,j=this._batchesByUrls[d];for(h=0;h<j.length;++h){var k=j[h];if(f(k.concat([c])).size<=this._config.maxBatchSize){k.push(c);break}}h===j.length&&j.push([c]),this._timeoutId||"function"!=typeof setTimeout||(this._timeoutId=setTimeout(this.process.bind(this),this._config.timeout))},g.prototype.process=function(a){for(var b in clearTimeout(this._timeoutId),this._timeoutId=null,this._batchesByUrls){for(var c=this._batchesByUrls[b],d=0;d<c.length;++d)this._send(b,c[d],a);delete this._batchesByUrls[b]}},g.prototype.isIdle=function(){return this._config.idle},g._buildQueryString=function(a){for(var b=[],c=0;c<q.length;++c){var d=q[c],e="string"==typeof a[d]?a[d]:JSON.stringify(a[d]);(delete a[d],"undefined"!=typeof e&&e.length)&&b.push(encodeURIComponent(d)+"="+encodeURIComponent(e))}var f=[];for(var g in a.baseQuery)f.push(g);f=f.sort();for(var h,j=0;j<f.length;++j)h=f[j],b.push(encodeURIComponent(h)+"="+encodeURIComponent(a.baseQuery[h]));return delete a.baseQuery,b.join("&")},g.prototype._send=function(a,b,c){var d={url:a,data:"batch="+encodeURIComponent(JSON.stringify(b)),type:"POST",async:!0};if(!this._config.idle){if("undefined"==typeof XMLHttpRequest&&!navigator.sendBeacon)return void fetch(a,{method:d.type,body:d.data});if(c&&window.navigator.sendBeacon)return void window.navigator.sendBeacon(d.url,d.data);try{var e=new XMLHttpRequest,f="function"==typeof this._config.beforeSend&&!this._config.beforeSend(e,d);if(f)return void e.abort();e.open(d.type,d.url,d.async),e.withCredentials=!0,e.send(d.data)}catch(a){p.error("xray.send failed:",a)}}},g._stringifyParams=function(a){var b={};for(var c in a){if("i"==c){b.i=g._stringifyI(a.i);continue}b[c]="string"==typeof a[c]?a[c]:JSON.stringify(a[c])}return b},g._stringifyI=function(a){var b=[];for(var c in a){var d=a[c];b.push(c+":"+d)}return b.join(",")};var s=0,t=["radarPrefix","split","r","pgid","utm","o_ss","o_v"],u=!1,v=new g,w={rlog_dot_error:"xray_rlog_dot_error",rlog_msg_abs:"xray_rlog_msg_abs",too_long:"xray_too_long",not_configured:"xray_not_configured"},x=32,y=64;l.prototype.logger=o,l.prototype.setConfig=function(a,b){a=a||{},u&&this._deleteProtectedParams(a),this.unsafeSetConfig(a,b)},l.prototype.unsafeSetConfig=function(a,b){a=a||{},u=!0,a.split&&(a.split=h(a.split)),a.defaultParams&&a.defaultParams.i&&(a.defaultParams.i=this._formatIntervals(a.defaultParams.i),delete this._config.defaultParams.i),this._config=b?a:e(this._config,a),a.gaTrackingId&&this._initGA(a.gaTrackingId)},l.prototype._deleteProtectedParams=function(a){for(var b=0;b<t.length;++b)delete a[t[b]];return a},l.prototype.addSplit=function(a){this._config.split=h("".concat(this._config.split||"","s").concat(a))},l.prototype.getConfig=function(){return e(this._config,{})},l.prototype.getTotalSended=function(){return s},l.prototype.setQueueConfig=g.prototype.setConfig.bind(v),l.prototype.getQueueConfig=g.prototype.getConfig.bind(v),l.prototype.getInstanceCopy=function(){var a=new l;return u=!1,a.setConfig(this._config,!0),a},l.prototype.send=function(a,b,c){this._send(a,b,c,!0)},l.prototype._send=function(a,b,c,f){if(f&&!u&&a!==w.not_configured){var g=b||{};g.t=a,this._logOwnError(g,w.not_configured),p.warn("Your xray instance is not configured")}if(b=e(b||{},{}),this._config.middlewares)for(var h=0;h<this._config.middlewares.length;h++){var j=this._config.middlewares[h],k=j(a,b,c);a=k.t,b=k.params,c=k.ga}a=d(a)?a.join("_"):a,b.i&&(b.i=this._formatIntervals(b.i)),b=e(this._config.defaultParams,this._config.expid?{dwh:{expid:this._config.expid}}:{},b,{t:a,split:this._config.split,r:this._config.r,pgid:this._config.pgid,utm:this._config.utm,o_ss:this._config.o_ss,o_v:this._config.o_v,baseQuery:this._config.baseQuery,uid:s++}),b.skipdwh&&b.dwh&&delete b.dwh;for(var l=[b.t_feature,this._config.radarPrefix],m=0;m<l.length;++m)l[m]&&(b.t=l[m]+"_"+b.t);delete b.t_feature;try{b=this._validateParams(b,f)}catch(a){return p.log("xray",b.uid,b),void p.error(a.message)}if(this._config.verbose&&p.log("xray",b.uid,b.t,b,c?"GA: "+!!c:void 0),v.push(this._config.xrayRadarUrl,b),!0===c&&!this._config.gaTrackingId)return void p.error("Radar #"+b.uid+": no GA tracking id specified");var n="string"==typeof c?c:this._config.gaTrackingId;if(!!c&&n&&!v.isIdle()){if(b.i){for(var o in b.i)this._sendGA(a+"_"+o,b.i[o],n);return}this._sendGA(a,b.v,n)}},l.prototype.sendImmediately=function(a,b,c){this.send(a,b,c),v.process()},l.prototype.addMiddleware=function(a){this._config.middlewares||(this._config.middlewares=[]),-1===k(this._config.middlewares,a)&&this._config.middlewares.push(a)},l.prototype.removeMiddleware=function(a){if(this._config.middlewares){var b=k(this._config.middlewares,a);-1<b&&this._config.middlewares.splice(b,1)}},l.prototype._sendGA=function(a,b,c){"function"!=typeof gtag&&this._initGA(c);var d=a.split(/_/g),e=d[1]||d[0],f=d[1]?d[0]:"",g=d.slice(2).join("_"),h={value:b,send_to:c};f&&(h.event_category=f),g&&(h.event_label=g),gtag("event",e,h)},l.prototype._initGA=function(a){if(!window.gtag){var b=document.createElement("script");b.src="https://www.googletagmanager.com/gtag/js?id="+a,b.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(b),window.dataLayer=window.dataLayer||[],window.gtag=function(){window.dataLayer.push(arguments)},gtag("js",new Date)}gtag("config",a,{send_page_view:!1})},l.prototype._logOwnError=function(a,b,c){var d="xray_err",e=a.p;if(e){if(e.length+8+1>x){e=e.slice(0,x-8-1)}d="".concat(e,"_").concat("xray_err")}var f=a.t;f.length>y&&(f=f.slice(0,y)),this._send(b,{skipdwh:!0,rlog:d,rlog_message:{t:f,err:b,value:c}},!1,!1)},l.prototype._validateParams=function(a,b){a=j(a),a.rlog&&-1!==a.rlog.indexOf(".")&&(b&&this._logOwnError(a,w.rlog_dot_error,a.rlog),p.error("Radar #".concat(a.uid,": rlog can not contain file extension")),delete a.rlog,delete a.rlog_message),a.rlog&&a.rlog_message||(a.rlog_message&&(b&&this._logOwnError(a,w.rlog_msg_abs),p.error("Radar #".concat(a.uid,": rlog_message would not be sent without rlog"))),delete a.rlog,delete a.rlog_message);var c={32:[a.p,a.rlog],64:[a.p+"_"+a.t]};for(var d in a.i)c[32].push(d),c[64].push(a.p+"_"+a.t+"_"+d);for(var e in c)for(var f=c[e],g=0;g<f.length;++g)if(f[g]&&f[g].length>e)throw b&&this._logOwnError(a,w.too_long,f[g].slice(0,e)),new Error("Radar #".concat(a.uid,": value is too long: ").concat(c[e][g])+" (len: ".concat(f[g].length,", limit: ").concat(e,")"));return a},l.prototype._formatIntervals=function(a){if(c(a))return a;var b={};if(d(a)){for(var e,f=0;f<a.length;++f)e=a[f].split(":"),b[e[0]]=+e[1]||this._config.defaultParams.v;return b}if("string"==typeof a){var g=a.split(",");return this._formatIntervals(g)}};var z=new l;return m.setConfig=function(a){z.setConfig(j({verbose:a.verbose,pgid:a.pgid,split:a.split,xrayRadarUrl:a.xrayRadarUrl||a.XRAY_RADAR_URL,radarPrefix:a.radarPrefix||a.RadarPrefix,utm:a.utm,o_ss:a.o_ss,o_v:a.o_v,baseQuery:a.baseQuery,gaTrackingId:a.gaTrackingId||a.GA_TRACKING_ID,defaultParams:a.defaultParams||j({p:a.project,email:a.ActiveEmail})})),z.setQueueConfig(j({maxBatchSize:a.MAX_BATCH_SIZE,maxChunkSize:a.MAX_CHUNK_SIZE,beforeSend:a.beforeSend,timeout:a.timeout,idle:a.idle}))},m.getConfig=l.prototype.getConfig.bind(z),m.addSplit=l.prototype.addSplit.bind(z),m.unsafeSetConfig=l.prototype.unsafeSetConfig.bind(z),m.setQueueConfig=l.prototype.setQueueConfig.bind(z),m.getQueueConfig=l.prototype.getQueueConfig.bind(z),m.getTotalSended=l.prototype.getTotalSended.bind(z),m.send=l.prototype.send.bind(z),m.sendImmediately=l.prototype.sendImmediately.bind(z),m.getInstanceCopy=l.prototype.getInstanceCopy.bind(z),m.addMiddleware=l.prototype.addMiddleware.bind(z),m.removeMiddleware=l.prototype.removeMiddleware.bind(z),"undefined"!=typeof window&&"function"==typeof window.define&&window.define.amd&&window.define("@mail/xray",function(){return m}),m}();
+							window.xray = xray;
+							xrayConfig.pgid = window.__ID;
+							window.xray.setConfig(window.xrayConfig);
+							//# sourceURL=@mail/xray.js</script><script crossorigin="anonymous">xray.send('pk-xray-ready');</script><script crossorigin="anonymous">var loadRadarPrntpgid = '';/* global loadRadarPrntpgid */
+(function(window) {
+	var noop = new Function;
+	window.radar = noop;
+	try {
+		var __ID = window.__ID;
+		var xray = window.xray;
+
+		xray.setConfig({
+			baseQuery: {
+				parent_pgid: loadRadarPrntpgid
+			}
+		});
+
+		var radar = function radar(t, i, params, addQuery) {
+			var parts = [];
+			var immediately = true;
+			if (params && 'immediately' in params) {
+				immediately = params.immediately;
+			}
+			parts.push(encodeURIComponent(t));
+			parts.push('v=1');
+			if (i && Array.isArray(i)) {
+				parts.push('i=' + encodeURIComponent(i.join(',')));
+			}
+			parts.push.apply(parts, addQuery || []);
+			if (params && params.rlog_message) {
+				parts.push('rlog=' + (params.rlog_name || 'account_errors'));
+				var message = params.rlog_message;
+				if (typeof message !== 'string') {
+					try {
+						message = JSON.stringify(message);
+					} catch (e) {
+						message = JSON.stringify(e);
+					}
+				}
+
+				parts.push('rlog_message=' + encodeURIComponent(message));
+			}
+			xray(parts.join('&'), {immediately: immediately});
+		};
+
+		window.radar = radar;
+	} catch (_) {
+		// ignore
+	}
+})(window);
+//# sourceURL=onerror.js</script><script crossorigin="anonymous">window._d = window.define;
+							window.define = function(name, fun) {
+								if (name === 'mrg-load-log') {
+									window.loadLog = fun();
+								} else {
+									window._d.apply(null, arguments);
+								}
+							};
+								define('mrg-load-log',function(){function a(a,b){(f[a]||[]).forEach(function(a){a(b)}),f[a]=[]}function b(a,b){f[a]=f[a]||[],f[a].push(b)}function c(b,c,d){var f='',h='',i='';'object'!=typeof d||d.length?'object'!=typeof d&&(f=arguments[2],h=arguments[3],i=arguments[4]||new Date):(f=d.label,h=d.value,i=d.timestamp||new Date),e[b]||(e[b]={}),e[b][f]||(e[b][f]={});var j=e[b][f];j.state!==c&&(j[c]={ts:i,value:h},j.state=c,g.push({namespace:b,state:c,label:f,row:j}),a(c,j),a(c+b,j),a(c+b+f,j))}function d(a){return h[a]||(h[a]={start:c.bind(this,a,'start'),end:c.bind(this,a,'end'),loaded:c.bind(this,a,'loaded'),log:c.bind(this,a),check:function(b){var d=e[a]&&e[a][b];return!!(d&&void 0!==d.end)&&(c(a,'check',b),!0)},error:function(b,d){var e,f,h;if(2===arguments.length&&'object'==typeof arguments[1]?(e=d.label,f=d.namespace,h=d.timestamp||new Date):(e=arguments[1],f=arguments[2],h=arguments[3]||new Date),!e){var i=g.slice(-1)[0];i&&'start'===i.state&&(e=i.label,f=i.namespace)}f||(f=a),e&&c(f,'error',{label:e,value:b,timestamp:h})}}),h[a]}var e={},f={},g=[],h={},i=d('default');return i.ns=i.namespace=d,i.result=function(){return{items:e,events:g}},i.wait=function(a,c,d,e){void 0===e&&(void 0===d?(e=c,c=void 0):(e=d,d=void 0));var f=null,h=g.length,j=0;for(j;j<h;j++){var i=g[j];if((i.namespace===c||!c)&&(i.label===d||!d)&&i.state==a){f=i;break}}f?e(f.row):b(a+(c||'')+(d||''),e)},i});
+							window.define = window._d;
+							//# sourceURL=mrg-load-log.js</script><script crossorigin="anonymous">loadLog.ns('html').start('page');</script><script crossorigin="anonymous">loadLog.ns('html').start('broken-account-counter');</script><script crossorigin="anonymous">(function(window) {
+	try {
+		var __ID = window.__ID;
+		var __TS = window.__TS;
+		var loadLog = window.loadLog;
+		var radar = window.radar;
+
+		var longLoadTimeout = null;
+		var beforeunloadCallback = null;
+		var loaded = false;
+		var broken = false;
+		var PAGES = {
+			USER_PHONES: 'USER_PHONES',
+			USER_DELETE: 'USER_DELETE',
+			USER_GARAGE: 'USER_GARAGE',
+			WEBAUTHN_PAGE: 'WEBAUTHN_PAGE',
+			SECURITY_PASSWORD: 'SECURITY_PASSWORD',
+			SECURITY_RECOVERY: 'SECURITY_RECOVERY',
+			SECURITY_ADD_PHONE: 'SECURITY_ADD_PHONE',
+			SECURITY_CHECKUP: 'SECURITY_CHECKUP',
+			USER_TWO_STEP_AUTH: 'USER_TWO_STEP_AUTH',
+			OAUTH_APPLICATIONS: 'OAUTH_APPLICATIONS',
+			RECOVERY: 'RECOVERY',
+			CAPTCHA: 'CAPTCHA',
+			CLICKER: 'CLICKER',
+			CLICKER_REDIRECT: 'CLICKER_REDIRECT',
+			UNKNOWN: 'UNKNOWN'
+		};
+
+		var currentPage = function() {
+			// TODO сделать эту функцию более надёжной
+			// т.к. /clicker/foobar это 404, а мы определим, что это PAGES.CLICKER
+			var pathname = window.location.pathname + '';
+			if (/^\/user\/phones/i.test(pathname)) {
+				return PAGES.USER_PHONES;
+			}
+			if (/^\/captcha/i.test(pathname)) {
+				return PAGES.CAPTCHA;
+			}
+			if (/^\/user\/2-step-auth/i.test(pathname)) {
+				return PAGES.USER_TWO_STEP_AUTH;
+			}
+			if (/^\/user\/delete/i.test(pathname)) {
+				return PAGES.USER_DELETE;
+			}
+			if (/^\/user\/garage/i.test(pathname)) {
+				return PAGES.USER_GARAGE;
+			}
+			if (/^\/security\/password/i.test(pathname)) {
+				return PAGES.SECURITY_PASSWORD;
+			}
+			if (/^\/security\/recovery\/add-phone/i.test(pathname)) {
+				return PAGES.SECURITY_ADD_PHONE;
+			}
+			if (/^\/security\/recovery/i.test(pathname)) {
+				return PAGES.SECURITY_RECOVERY;
+			}
+			if (/^\/security\/authentication\/keys/i.test(pathname)) {
+				return PAGES.WEBAUTHN_PAGE;
+			}
+			// Из регулярки, этот if должен быть ниже всех security pages
+			if (/^\/security/i.test(pathname)) {
+				return PAGES.SECURITY_CHECKUP;
+			}
+			if (/^\/clicker\/redirect/i.test(pathname)) {
+				return PAGES.CLICKER_REDIRECT;
+			}
+			if (/^\/clicker/i.test(pathname)) {
+				return PAGES.CLICKER;
+			}
+			if (/^\/recovery/i.test(pathname)) {
+				return PAGES.RECOVERY;
+			}
+			if (/^\/oauth\/applications/i.test(pathname)) {
+				return PAGES.OAUTH_APPLICATIONS;
+			}
+			return PAGES.UNKNOWN;
+		};
+
+		window.currentPage = currentPage();
+
+		var reset = function() {
+			if (longLoadTimeout) {
+				window.clearTimeout(longLoadTimeout);
+			}
+			if (beforeunloadCallback) {
+				window.removeEventListener('beforeunload', beforeunloadCallback);
+			}
+		};
+		var sendLoadLog = function() {
+			var items = loadLog.result().items;
+			var start = __TS.valueOf();
+
+			var result = {};
+
+			for (var namespace in items) {
+				Object.keys(items[namespace]).forEach(function(i) {
+					var item = items[namespace][i];
+
+					var key = i.replace(/\?\d+$/, '').replace(/^.+\//, '').replace(/[^A-z0-9_\-]/g, '_');
+					var state = item.state;
+
+					var time = item[state].ts.valueOf() - start;
+
+					var type = state + '_' + namespace;
+					if (!result[type]) {
+						result[type] = [];
+					}
+
+					result[type].push(key + ':' + (time > 0 ? time : 0));
+				});
+			}
+
+			for (var type in result) {
+				radar('loadLog_' + type, result[type], {immediately: false});
+			}
+		};
+		/**
+		 *
+		 * @param {'timeout'|'unload'|'error'|string} cause
+		 */
+		var logBroken = function(cause) {
+			var page = currentPage();
+			var time = new Date() - window.__TS;
+			reset();
+
+			var rlog_message = {};
+			rlog_message.page = page;
+			rlog_message.cause = cause;
+			rlog_message.time = time;
+
+			// защита от ошибок счётчика
+			if (loaded) {
+				// если страница уже была загружена, а мы по ошибке отправляем радар
+				rlog_message.loaded = 1;
+			}
+			if (broken) {
+				// если мы отправляем радар повторно, чтобы найти ошибку в логике отправки
+				rlog_message.broken = 1;
+			}
+
+			rlog_message.location = window.location + '';
+			rlog_message.pgid = __ID;
+
+			var items = loadLog.result().items;
+			var log = {};
+			for (var namespace in items) {
+				log[namespace] = [];
+				Object.keys(items[namespace]).forEach(function(label) {
+					var state = items[namespace][label].state;
+
+					var s = state.replace(/\?\d+$/, '').replace(/^.+\//, '').replace(/[^A-z0-9_\-]/g, '_');
+					var l = label.replace(/\?\d+$/, '').replace(/^.+\//, '').replace(/[^A-z0-9_\-]/g, '_');
+
+					log[namespace].push(l + ':' + s);
+				});
+			}
+
+			rlog_message.loadLog = log;
+
+			// отправляем данные loadLog
+			sendLoadLog();
+
+			var i = [page + ':1', cause + ':1'];
+			var params = {rlog_message: rlog_message, rlog_name: 'account_brokenpage', 'browser_log': true};
+
+			if (window.IS_OLD) {radar('old_brokenpage', i, params)}
+			if (window.IS_IE10) {radar('ie10_brokenpage', i, params)}
+
+			radar('brokenpage', i, params);
+
+			broken = true;
+		};
+
+		longLoadTimeout = window.setTimeout(function() {
+			logBroken('timeout');
+		}, 15000);
+
+		beforeunloadCallback = function() {
+			logBroken('unload');
+		};
+		window.addEventListener('beforeunload', beforeunloadCallback);
+
+		/**
+		 * Функция, которая проверяет некоторые кондишены (аналог ассертов в сишке, например)
+		 * Если кондишен false, то мы сразу считаем, что страница сломана
+		 * @param {boolean} condition
+		 * @param {string} message - сообщение, которое отправим в kaktam
+		 */
+		var loadLogAssert = function(condition, message) {
+			if (!condition) {
+				loadLog.ns('asserts').error(message, message);
+			} else {
+				loadLog.ns('asserts').end(message);
+			}
+		};
+
+
+		['not-found', 'go-to-login', 'go-to-bind', 'go-to-settings'].forEach(function(event) {
+			loadLog.wait(event, 'app', 'app', function() {
+				// помечаем, что аккаунт загружен
+				loadLog.ns('account').loaded('all');
+			});
+		});
+
+		loadLog.wait('started', 'app', 'app', function() {
+			[
+				'clicker',
+				'clicker-redirect',
+				'captcha',
+				'recovery',
+				'oauth-applications',
+				'user-two-step-auth',
+				'user-delete',
+				'user-phones',
+				'user-garage',
+				'webauthn-page',
+				'security-password',
+				'security-recovery',
+				'security-add-phone',
+				'security-checkup'
+			].forEach(function(name) {
+				loadLog.wait('loaded', 'app', name, function() {
+					// помечаем, что аккаунт загружен
+					loadLog.ns('account').loaded('all');
+				});
+			});
+		});
+
+		// если произошла ошибка, то считаем, что аккаунт сломан
+		loadLog.wait('error', function() {
+			logBroken('error');
+		});
+
+		// приложение загружено, стопаем все счётчики и таймеры и отправляем данные loadLog
+		loadLog.wait('loaded', 'account', 'all', function() {
+			var page = currentPage();
+			var time = new Date() - window.__TS;
+			reset();
+
+			// отправляем данные loadLog
+			sendLoadLog();
+
+			var i = [page + ':1', 'time:' + (time > 0 ? time : 0)];
+			var params = {'browser_log': true};
+
+			if (window.IS_OLD) {radar('old_pageload', i, params)}
+			if (window.IS_IE10) {radar('ie10_pageload', i, params)}
+
+			radar('pageload', i, params);
+
+			loaded = true;
+		});
+
+		window.loadLogAssert = loadLogAssert;
+	} catch (_) {
+		//ignore
+	}
+})(window);
+loadLog.ns('html').end('broken-account-counter');
+			//# sourceURL=broken-account-counter.js</script><script crossorigin="anonymous">loadLog.ns('html').start('nano-xhr');</script><script crossorigin="anonymous">window._d = window.define;
+							window.define = function(name, fun) {
+								if (name === 'mrg-nano-xhr') {
+									window.xhr = fun();
+								} else {
+									window._d.apply(null, arguments);
+								}
+							};
+								define("mrg-nano-xhr",function(){var a=new Function,b=function(){var b={readyState:4,status:-1};b.open=b.send=a;try{b=new window.XMLHttpRequest}catch(a){try{b=new window.ActiveXObject("Msxml2.XMLHTTP")}catch(a){try{b=new window.ActiveXObject("Microsoft.XMLHTTP")}catch(a){}}}return b};return{version:"0.0.17",request:function(c,d){var e=c,f="GET",g=null,h=!1,i=!1,j=b(),k=null,l=new Date,m={error:k,xhr:j};"object"==typeof c&&(e=c.url,f=c.method||f,g=c.body||g,h=c.sync||h,i=c.credentials||i),j.url=e;var n=function(){(k||4===j.readyState)&&(n=a,m.error=k,j.duration=new Date-l,j.onerror=j.onreadystatechange=null,"function"==typeof d&&d(k,j))};try{j.onreadystatechange=n,j.onerror=function(a){k=a,n()},j.open(f,e,!h),j.withCredentials=i,j.send(g)}catch(a){k=a,n()}return m}}});
+							window.define = window._d;
+							loadLogAssert(typeof window.xhr !== 'undefined', 'nano-xhr');
+							loadLog.ns('html').end('nano-xhr');
+							//# sourceURL=nano-xhr.js</script><script type="application/json" id="local.kapellmeister.json">{"versions":{"local":{"2kit":"2.3.0","react.env":"2.0.0","oauth.applications":"2.0.0","security":"2.0.0","password":"3.0.0","statuses":"2.0.0","garage":"4.0.1","recovery.methods":"6.0.2","recovery":"3.5.1","wrong.email.remove":"2.0.0","webauthn.keys":"3.0.0"}},"packages":{"2kit":{"path":"/2kit","hb":true},"oauth.applications":{"path":"/oauth.applications.bundle","i18n":true},"statuses":{"path":"/statuses.bundle","i18n":true},"react.env":{"path":"/react-env.bundle","i18n":true},"security":{"path":"/security.bundle","i18n":true},"password":{"path":"/","i18n":true},"garage":{"path":"/garage.bundle","i18n":true,"hb":true},"recovery.methods":{"path":"/","i18n":true},"wrong.email.remove":{"path":"/wrong.email.bundle","i18n":true},"recovery":{"path":"/recovery.bundle","i18n":true,"hb":true},"webauthn.keys":{"i18n":true,"path":"/webauthn"}}}</script><script type="application/json" id="kapellmeister.json">
+				{
+	"version": "1.1.0",
+	"env": "production",
+	"versions": {
+		"projects": {
+			"e.mail.ru": {
+				"react.env": "1.1.0",
+				"2kit": "0.9.4",
+				"ductus": "2.1.0",
+				"2promo": "1.33.1",
+				"renovator": "1.3.0",
+				"category.feedback": "1.0.1",
+				"transaction.header": "1.0.0",
+				"cleanmaster": "3.2.3",
+				"promo": "0.5.23",
+				"password": "2.0.6",
+				"recovery": "2.0.9",
+				"payments.letter": "0.2.17",
+				"garage": "3.0.0",
+				"recovery.methods": "2.3.8",
+				"without.password": "2.1.0",
+				"statuses": "1.0.0",
+				"settings.mail.ru": "1.2.2",
+				"security": "1.1.2",
+				"wrong.email.remove": "1.0.0",
+				"addressbook": "6.0.4",
+				"letter.meta": "1.3.0",
+				"settings.main.page": "1.2.0",
+				"settings.general.page": "1.7.2",
+				"settings.filters.page": "1.0.2",
+				"settings.folders.page": "1.1.5",
+				"settings.actions.page": "1.1.5",
+				"settings.aliases.page": "1.1.2",
+				"settings.collectors.page": "1.1.2",
+				"filters.mail.ru": "6.0.6",
+				"blitz": "1.4.1"
+			},
+			"octavius": {
+				"cleanmaster": "10.1.1",
+				"2promo": "9.3.0",
+				"compose.mail.ru": "33.3.4",
+				"ductus": "3.8.3",
+				"garage": "1.4.0",
+				"filters.mail.ru": "12.3.0",
+				"blitz": "8.3.0",
+				"password": "9.1.0",
+				"2kit": "8.1.0",
+				"react.env": "2.0.0",
+				"statuses": "1.0.0",
+				"onboarding": "5.2.0",
+				"recovery.methods": "11.3.1",
+				"security": "7.1.1",
+				"letter.meta": "6.1.4",
+				"addressbook": "12.4.1",
+				"category.feedback": "6.1.0",
+				"share-folder": "7.2.0",
+				"renovator": "5.1.0",
+				"e.mail.ru.feedback.static": "5.1.0",
+				"settings.cleanmailbox.page": "4.1.0",
+				"settings.general.page": "5.3.5",
+				"2onboarding": "1.3.2"
+			},
+			"account.mail.ru": {
+				"2kit": "1.1.0",
+				"react.env": "2.0.0",
+				"recovery.methods": "4.3.1",
+				"password": "3.1.2",
+				"recovery": "3.5.2",
+				"webauthn.keys": "3.0.3",
+				"oauth.applications": "1.0.1",
+				"garage": "4.0.1",
+				"wrong.email.remove": "2.0.1",
+				"security": "2.1.0",
+				"statuses": "1.0.0"
+			},
+			"id.mail.ru": {
+				"2kit": "1.1.0",
+				"react.env": "2.0.0",
+				"recovery.methods": "11.1.1",
+				"id.main.page": "1.2.0",
+				"id.profile.page": "5.0.1",
+				"id.security.page": "4.1.0",
+				"password": "8.2.1",
+				"without.password": "2.1.0",
+				"statuses": "1.0.0",
+				"wrong.email.remove": "1.0.0"
+			},
+			"login": {
+				"bind": "1.1.0",
+				"react.env": "2.0.0"
+			},
+			"contacts": {
+				"blitz": "1.3.1",
+				"addressbook": "12.4.1",
+				"react.env": "2.0.0",
+				"2kit": "1.9.0"
+			},
+			"settings": {
+				"settings.main.page": "3.2.7",
+				"settings.general.page": "5.3.8",
+				"settings.filters.page": "3.2.3",
+				"settings.folders.page": "4.2.2",
+				"settings.actions.page": "1.1.5",
+				"settings.aliases.page": "3.0.2",
+				"settings.collectors.page": "3.1.0",
+				"cleanmaster": "4.1.2",
+				"filters.mail.ru": "12.5.2",
+				"blitz": "3.0.0",
+				"react.env": "2.0.0",
+				"2kit": "1.13.0",
+				"share-folder": "7.2.1"
+			},
+			"calls": {
+				"addressbook": "6.0.4",
+				"react.env": "2.0.0",
+				"blitz": "1.4.1"
+			},
+			"payment.center": {
+				"payment.center.plug": "1.0.3",
+				"react.env": "2.0.0"
+			},
+			"e.mail.ru.feedback": {
+				"react.env": "2.0.0",
+				"2kit": "2.16.0",
+				"e.mail.ru.feedback.static": "1.0.1"
+			},
+			"account": {
+				"2kit": "1.1.0",
+				"react.env": "2.0.0",
+				"webauthn.keys": "2.0.0",
+				"recovery": "4.3.2",
+				"recovery.methods": "11.3.1",
+				"garage": "8.0.1",
+				"password": "9.1.0",
+				"security": "7.1.1"
+			},
+			"signup": {
+				"react.env": "3.0.0",
+				"choice": "3.1.0"
+			}
+		}
+	},
+	"packages": {
+		"without.password": {
+			"i18n": true,
+			"path": "/without.password.bundle"
+		},
+		"category.feedback": {
+			"i18n": true
+		},
+		"transaction.header": {
+			"i18n": true
+		},
+		"cleanmaster": {
+			"i18n": true
+		},
+		"compose.mail.ru": {
+			"i18n": true,
+			"source": "hb"
+		},
+		"settings": {
+			"path": "/",
+			"i18n": true
+		},
+		"password": {
+			"path": "/",
+			"i18n": true
+		},
+		"react.env": {
+			"path": "/react-env.bundle",
+			"i18n": true
+		},
+		"recovery.methods": {
+			"path": "/",
+			"i18n": true
+		},
+		"2kit": {
+			"path": "/2kit"
+		},
+		"payments.letter": {
+			"i18n": true,
+			"path": "/billet.bundle"
+		},
+		"2promo": {
+			"i18n": true,
+			"source": "cdn"
+		},
+		"oauth.applications": {
+			"path": "/oauth.applications.bundle",
+			"i18n": true
+		},
+		"garage": {
+			"path": "/garage.bundle",
+			"i18n": true,
+			"hb": true,
+			"source": "hb"
+		},
+		"statuses": {
+			"path": "/statuses.bundle",
+			"i18n": true
+		},
+		"security": {
+			"path": "/security.bundle",
+			"i18n": true
+		},
+		"recovery": {
+			"path": "/recovery.bundle",
+			"i18n": true
+		},
+		"wrong.email.remove": {
+			"path": "/wrong.email.bundle",
+			"i18n": true
+		},
+		"letter.meta": {
+			"i18n": true,
+			"path": "/letter.meta"
+		},
+		"addressbook": {
+			"path": "/",
+			"i18n": true
+		},
+		"webauthn.keys": {
+			"i18n": true,
+			"path": "/webauthn"
+		},
+		"blitz": {
+			"path": "/main",
+			"i18n": true
+		},
+		"settings.main.page": {
+			"path": "/mainpage",
+			"i18n": true
+		},
+		"settings.general.page": {
+			"path": "/app",
+			"i18n": true
+		},
+		"settings.folders.page": {
+			"path": "/",
+			"i18n": true
+		},
+		"settings.children.page": {
+			"path": "/app",
+			"i18n": true,
+			"hb": true,
+			"source": "hb"
+		},
+		"settings.filters.page": {
+			"path": "/main",
+			"i18n": true
+		},
+		"settings.actions.page": {
+			"path": "/main",
+			"i18n": true
+		},
+		"settings.aliases.page": {
+			"path": "/main",
+			"i18n": true
+		},
+		"settings.collectors.page": {
+			"path": "/main",
+			"i18n": true
+		},
+		"id.main.page": {
+			"path": "/mainpage",
+			"i18n": true
+		},
+		"bind": {
+			"path": "/main",
+			"i18n": true,
+			"hb": true,
+			"source": "hb"
+		},
+		"renovator": {
+			"path": "/renovator",
+			"i18n": true
+		},
+		"payment.center.plug": {
+			"path": "/main",
+			"i18n": true,
+			"hb": true,
+			"source": "hb"
+		},
+		"e.mail.ru.feedback.static": {
+			"path": "/feedback",
+			"i18n": true,
+			"hb": true,
+			"source": "hb"
+		},
+		"2onboarding": {
+			"path": "/static/js/2onboarding",
+			"i18n": true,
+			"hb": true,
+			"source": "hb"
+		}
+	}
+}
+
+			</script><script crossorigin="anonymous">loadLog.ns('html').start('shazam');</script><script type="application/javascript" id="shazam" crossorigin="anonymous">window._d = window.define;
+							window.define = function(name, fun) {
+								if (name === 'shazam') {
+									window.shazam = fun();
+								} else {
+									window._d.apply(null, arguments);
+								}
+							};
+								var shazam=function(r){var e=/^(\d+)(?:\.(\d+)(?:\.(\d+)(?:-(.+?)\.(\d+))?)?)?$/i;var n={SEMVER:"semver",BRANCH:"branch"};var a={PROD:"production",DEV:"development"};var i=["major","minor","patch","pre","build"];function o(r){return new Error("[kapellmeister-ssi] Failed to "+r)}function t(r,e){for(var n in r){if(typeof r[n]!=="object"){e[n]=r[n]}else{e[n]=Object.create(null);t(r[n],e[n])}}}function s(r){var a=r.match(e);var o={version:r,type:a?n.SEMVER:n.BRANCH};if(a){i.forEach((function(r,e){o[r]=a[e+1]}))}return o}function v(r,e,n){if(r[n]===e[n]){return false}return Number(r[n])>Number(e[n])?r:e}function u(r,e,t){var u=s(r);var c=s(e);if(t===a.DEV){if(u.type===n.BRANCH){return u}if(c.type===n.BRANCH){return c}}if(u.type!==n.SEMVER||c.type!==n.SEMVER){throw o("compare "+u.version+" and "+c.version+" versions due their types")}var l=u;i.some((function(r){var e=v(u,c,r);if(r==="pre"&&e){throw o("compare "+u.version+" and "+c.version+" versions due their inconsistency")}if(e){l=e}return e}));return l}function c(r,e,n){switch(true){case n&&r:return e.url.hbProd;case n&&!r:return e.url.prod;case!n&&r:return e.url.hbDev;case!n&&!r:return e.url.dev}}function l(r,e,a,i){var o=e.version;var t=a.path||"/index";var s="";if(i.isDev&&i.isLocal){return(i.url.local||"./node_modules/")+r+t}var v=e.type===n.BRANCH&&i.isDev;var u=a.hb||false;if(i.hasLang&&i.lang&&!v){s="/"+i.lang}return c(u,i,!v)+"/"+r+"/"+o+s+t}function f(r){var e=r.remote||{};var n=r.local;var i=r.appName||"e.mail.ru";var o=n.lang||e.lang||r.lang||"ru_RU";var v=r.env||a.PROD;var c=e.packages||{};var f=n.packages;var d=e.versions&&e.versions.default||{};if(e.env===a.DEV){v=e.env}if(e.versions&&e.versions.projects[i]){t(e.versions.projects[i],d)}Object.keys(n.versions.local).forEach((function(r){if(!d[r]){d[r]=null}}));Object.keys(d).forEach((function(e){var i=d[e];var t=n.versions.local[e];var p=f[e]||c[e]||{};var h={isDev:v===a.DEV,hasLang:p.i18n&&o,isLocal:p.local,url:r.url,lang:o};var m=null;if(!t){m=s(i)}else if(!i&&t){m=s(t)}else{m=u(t,i,v)}d[e]=l(e,m,p,h)}));return d}if(typeof window!=="undefined"&&window.require){window.require.config({paths:f(r)})}else{throw o("detect RequireJS instance in window")}};
+							window.define = window._d;
+							loadLog.ns('html').end('shazam');
+							//# sourceURL=shazam.min.js</script><link rel="stylesheet" type="text/css" href="//img.imgsmail.ru/pkgs/account.mail.ru/release-fmail-19891.138146/css/index.min.css"/><!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="//img.imgsmail.ru/pkgs/account.mail.ru/release-fmail-19891.138146/css/account/index.ie.min.css" /><![endif]--><style>div[data-mobile-app="true"] {
+				display: none;
+			}
+			div[data-popup="true"] {
+				display: none;
+			}</style><script type="text/html" id="json">{"client":"","login":"","icon64":"","icon":"","scopes":[],"logins":[],"scopesLength":0,"loginsLength":0,"amp_from_url":"","from_url":"","hex_from_url":"","fail_url":"","o2csrf":"","captcha_auth":"","captcha_host":"","fail_auth":"","error_auth":"","emorb_host":"","auth_host":"","locale":"","URL_Path":"/oldaccount","VID":"","IS_DEV":false,"IS_TEST":false,"IS_ALPHA":false,"IS_PRODUCTION":true,"IS_LIGHT_BROWSER":false,"verbose":false,"modern_portal":true,"is_mobile":false,"is_mobile_app":false,"exp_split":"","xrayConfig":{"xrayRadarUrl":"/api/v1/utils/xray","verbose":false,"radarPrefix":"","split":"","gaTrackingId":"","defaultParams":{"p":"old-account","email":""}},"FEATURES":" restore-password-call-ui callui-skin:2 recovery-redirect-to-security-recovery vkc-recovery-url:https://id.vk.com/restore/#/resetPassword mrim-new-recovery-redirect hide-2step-auth-passwords rpc-url:user/2-step-auth/passwords:user/app/passwords rpc-url:user/2-step-auth/passwords/add:user/app/passwords/add rpc-url:user/2-step-auth/passwords/generate:user/app/passwords/generate rpc-url:user/2-step-auth/passwords/remove:user/app/passwords/remove forbid-vkcom-deletion 2count_security 2count_security_recovery 2count_security_password 2count_security_recovery_add-phone 2count_user_garage 2count_wrong-email_remove 2count_oauth_applications 2count_recovery_info 2count_security_password_change 2count_user_password_support_cancel disable-garage-for-child","countersHTML":"\u003cimg src=\"https://rs.mail.ru/d24310277.gif?sz=49&amp;rnd=185577832&ts=1683042432&sz=49\" style=\"width:0;height:0;position:absolute;visibility:hidden;\" alt=\"\"/>\u003c!-- Rating@Mail.ru counter -->\r\n\u003cscript type=\"text/javascript\">\r\nvar _tmr = window._tmr || (window._tmr = []);\r\n_tmr.push({id: \"110605\", type: \"pageView\", start: (new Date()).getTime()});\r\n_tmr.push({id: \"2035946\", type: \"pageView\", start: (new Date()).getTime()});\r\n(function (d, w, id) {\r\n  if (d.getElementById(id)) return;\r\n  var ts = d.createElement(\"script\"); ts.type = \"text/javascript\"; ts.async = true; ts.id = id;\r\n  ts.src = (d.location.protocol == \"https:\" ? \"https:\" : \"http:\") + \"//top-fwz1.mail.ru/js/code.js\";\r\n  var f = function () {var s = d.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(ts, s);};\r\n  if (w.opera == \"[object Opera]\") { d.addEventListener(\"DOMContentLoaded\", f, false); } else { f(); }\r\n})(document, window, \"topmailru-code\");\r\n\u003c/script>\u003cnoscript>\u003cdiv style=\"position:absolute;left:-10000px;\">\r\n\u003cimg src=\"//top-fwz1.mail.ru/counter?id=110605;js=na\" style=\"border:0;\" height=\"1\" width=\"1\" alt=\"Рейтинг@Mail.ru\" />\r\n\u003cimg src=\"//top-fwz1.mail.ru/counter?id=2035946;js=na\" style=\"border:0;\" height=\"1\" width=\"1\" alt=\"Рейтинг@Mail.ru\" />\r\n\u003c/div>\u003c/noscript>\r\n\u003c!-- //Rating@Mail.ru counter -->","headlineHTML":"\u003clink  href=\"https://limg.imgsmail.ru/pkgs/whiteline/2.99.0/external.css\" rel=\"stylesheet\">\u003cdiv id=\"ph-whiteline\" class=\"ph-whiteline\" data-testid=\"whiteline\">\u003c/div>\u003cscript >function parseEmptySlot(slot) {return slot || null;}window.__PHS = parseEmptySlot(\r\n{\"id\": 96571001, \"updated\": \"\", \"version\": \"4\", \"isWhiteline\": true, \"isTargetBlank\": true, \"isModern\": true, \"visitCookieAliases\": [\"tv.mail.ru\", \"games.mail.ru\", \"horo.mail.ru\", \"my.mail.ru\"], \"bizLinks\": \"\", \"parentalControlMode\": \"\", \"experimentId\": \"\", \"siteZone\": \"49\", \"siteId\": \"479\", \"sitezone\": \"49\", \"siteid\": \"479\", \"isDebug\": \"\", \"activeEmail\": \"\", \"maxAccounts\": \"20\", \"loginUrl\": \"\", \"loginPage\": \"\", \"logoutUrl\": \"\", \"logoutPage\": \"\", \"registerBackUrl\": \"\", \"colorTheme\": \"\", \"counters\": {\"thisPropertyIsOnlyForValidJSON\": \"1\",\"counterAuthMenuOpen\": 1126003,\"counterLogin\": 75068996,\"counterLogout\": 75068944,\"counterRegistration\": 75068995,\"counterPassAndSecurity\": 75068940,\"counterPersonal\": 75068936,\"counterChangeMailbox\": 1126018,\"counterAddMailbox\": 1126064}, \"social\": {\"vk\": false,\"ok\": false,\"fb\": false}, \"experiments\": {\"thisPropertyIsOnlyForValidJSON\": \"1\",\"switchUnionQuotaBlock\": true},\"authGate\": true,\"authGateVersion\": \"https://img.imgsmail.ru/hb/e.mail.ru/auth.gate/2.10.0/authGate.js\",\"authGateMobileRedirect\": true,\"enableExtDomains\": true,\"isShowOkCounter\": true,\"isShowVKCounter\": true,\"socialCountersTimer\": \"300000\",\"stayInAccountListOnVisibilityChange\": true,\"securitySettingsLink\": \"https://id.mail.ru/security\",\"isOnMarusia\": true,\"marusiaWidgetUrl\": \"https://marusia-web.go.mail.ru\",\"metricsCookieEnable\": true,\"metricsCookieExpires\": 7,\"metricsCookieParams\": \"utm_source, utm_medium, utm_campaign, utm_content, utm_term, mt_click_id, mt_link_id\"}\r\n\r\n) || {};window.__PHS.settingsId = window.__PHS.id;window.__PHS.id = 96571035;window.__PHS.selfExperimentId = parseEmptySlot();window.__PHS.lang = (parseEmptySlot({\"lang\": \"en_US\", \"account\": {\"account-settings\": \"Settings\", \"sign-up\": \"Registration\", \"help\": \"Help\", \"theme-dark\": \"Dark mode\", \"settings\": \"Personal data\", \"theme-system\": \"Like in the system\", \"appearance\": \"Design\", \"sign-in\": \"Log in\", \"theme-light\": \"Light mode\", \"add\": \"Add account\", \"exit\": \"Exit\", \"theme-setting\": \"Home page settings\", \"children-users\": \"Email for kids\", \"copied\": \"Copied\", \"copy\": \"Copy\", \"security\": \"Password and security\", \"change-avatar\": \"Change avatar\"}, \"search\": {\"placeholder\": \"Search on the web\", \"find\": \"Find\"}, \"projects\": {\"uchiru-pb\": \"Uchi.ru\", \"samokat-pb\": \"Samokat\", \"citymobil\": \"Citymobil\", \"love\": \"Dating\", \"skillbox\": \"Skillbox\", \"calendar-pb\": \"Calendar\", \"vk\": \"VK\", \"worki-find-employee\": \"Find an employee\", \"agent\": \"Mail.ru Agent\", \"myteam\": \"VK Teams\", \"tamtam\": \"TamTam\", \"worki-work\": \"Work\", \"aliexpress\": \"AliExpress\", \"horoscopes\": \"Horoscopes\", \"calendar\": \"Calendar\", \"sport\": \"Sport\", \"todo\": \"Tasks\", \"see-all-projects\": \"See all\", \"cloud\": \"Cloud\", \"mail-pb\": \"Email\", \"geekbrains\": \"GeekBrains\", \"vkpochta\": \"VK Mail\", \"hi-tech\": \"Hi-Tech\", \"cloud-pb\": \"Cloud\", \"contacts\": \"Contacts\", \"mail-for-education\": \"Email for education\", \"lady\": \"Lady\", \"top\": \"Website ranking\", \"ok-short\": \"OK\", \"admin-console\": \"Admin Console\", \"youla\": \"Youla\", \"geekbrains-pb\": \"GeekBrains\", \"health\": \"Health\", \"ok\": \"Odnoklassniki\", \"pets\": \"Pets\", \"vseapteki\": \"All Pharmacies\", \"mail\": \"Email\", \"icq\": \"ICQ New\", \"mailru\": \"Mail.ru\", \"fines\": \"Fines\", \"more\": \"More\", \"youla-with-utm\": \"Youla\", \"mytarget\": \"MyTarget\", \"skillbox-pb\": \"Skillbox\", \"mail-for-business\": \"Email for business\", \"auto\": \"Auto\", \"hotbox\": \"Hotbox\", \"answers\": \"Answers\", \"delivery-club-pb\": \"Delivery Club\", \"cloud-with-utm\": \"Cloud\", \"vkpochta-pb\": \"VK Mail\", \"citymobil-pb\": \"Citymobil\", \"capsula\": \"Capsula\", \"atom\": \"Atom browser\", \"worki\": \"Worki\", \"news\": \"News\", \"smotri\": \"Smotri\", \"business-projects\": \"For business\", \"moymir\": \"My World\", \"calls-pb\": \"Calls\", \"teambox\": \"Cloud for working groups\", \"mailrugroup\": \"Mail.ru Group\", \"marusia\": \"Marusia\", \"kids\": \"Kids\", \"all-projects\": \"All projects\", \"payment-center\": \"Payments\", \"calls\": \"Calls\", \"dom\": \"House\", \"delivery-club\": \"Delivery Club\", \"kino\": \"Cinema\", \"notes\": \"Notes\", \"mygames-pb\": \"MY.GAMES\", \"mygames\": \"MY.GAMES\", \"msc\": \"Cloud for business\", \"marusia-pb\": \"Marusia\", \"tv\": \"TV listings\", \"pogoda\": \"Weather\", \"dobro\": \"Kindness\", \"games\": \"Games\", \"icebox\": \"Icebox\", \"projects\": \"Projects\", \"vk-short\": \"VK\", \"todo-pb\": \"Tasks\", \"citydrive\": \"Citydrive\"}, \"connection-error\": {\"item2\": \"Check internet connection\", \"header\": \"Connection error\", \"subheader\": \"Try\", \"item1\": \"Refresh page\"}}) || {}).lang;window.__PHS.isVkEcosystemPromo = parseEmptySlot();window.__PHS.omicronConfig = parseEmptySlot();window.__PHS._ = {props: {projectsKeys: parseEmptySlot({\"id\": 110546980, \"showPixel\": \"https://rs.mail.ru/pixel/AAD49QGl9YXGTKqFyc8bcfKIE0wmqSbIKss1gxKTWhzZIOjCZW0vO9-YLzLPHW_zQslYCz7SEQaemS1aITJ-8JVI4ZMMVnS-xzrAU5avf0qOI2LUEEsLeTllCl0wYKDtON-lKGMZTl_-mDillERDGnA_X7Ytg4tMWcuXMD1ymUyZmm41hLweBGAZAAAAAKVKYqRBSaoSUYHir_rbV4jiY1pb89q2zZlgJV4qaAU.gif\", \"general\": [\"mailru\", \"mail\", \"cloud-with-utm\", \"ok\", \"vk\", \"news\", \"love\"], \"projectsbar\": [\"mail-pb\", \"cloud-pb\", \"calendar-pb\", \"todo-pb\", \"calls-pb\", \"skillbox-pb\", \"geekbrains-pb\", \"vkpochta-pb\", \"marusia-pb\", \"uchiru-pb\"], \"additional\": [\"auto\", \"horoscopes\", \"kids\", \"dobro\", \"calls\", \"health\", \"kino\", \"lady\", \"dom\", \"cloud\", \"answers\", \"moymir\", \"pets\", \"pogoda\", \"sport\", \"tv\", \"fines\", \"hi-tech\"], \"business\": [\"msc\", \"teambox\", \"mail-for-business\", \"mail-for-education\", \"top\", \"mytarget\", \"myteam\"], \"mailrugroup\": [\"capsula\", \"youla\"], \"items\": {\"uchiru-pb\": {\"url\": \"https://trk.mail.ru/c/ouz2p0?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383469\", \"src_2x\": \"https://r.mradx.net/img/EC/9F0524.png\"},\"love\": {\"url\": \"https://trk.mail.ru/c/k9iu14?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383471\", \"location\": \"love.mail.ru\"},\"calendar-pb\": {\"url\": \"https://trk.mail.ru/c/pcshm0?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"385262526\", \"src_2x\": \"https://r.mradx.net/img/16/BE4D08.png\"},\"vk\": {\"url\": \"https://trk.mail.ru/c/z1q4a7?mt_campaign=mainvkmail&mt_adset=&mt_network=1&mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383473\", \"location\": \"vk.com\"},\"vkpochta\": {\"url\": \"https://trk.mail.ru/c/du7y94?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383474\", \"location\": \"vk.mail.ru\"},\"myteam\": {\"url\": \"https://trk.mail.ru/c/y9dmn7?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383475\", \"img\": \"https://r.mradx.net/img/1F/8B9486.svg\", \"img_dark\": \"https://r.mradx.net/img/F9/B57FC7.svg\"},\"horoscopes\": {\"url\": \"https://trk.mail.ru/c/hc8ne4?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383476\", \"img\": \"https://r.mradx.net/img/37/58CE7A.svg\", \"img_dark\": \"https://r.mradx.net/img/F5/CF0A57.svg\"},\"sport\": {\"url\": \"https://trk.mail.ru/c/h3p427?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383479\", \"img\": \"https://r.mradx.net/img/DC/7B0131.svg\", \"img_dark\": \"https://r.mradx.net/img/04/68591E.svg\"},\"cloud\": {\"url\": \"https://trk.mail.ru/c/flb3c1?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383480\", \"img\": \"https://r.mradx.net/img/48/B93EBC.svg\", \"img_dark\": \"https://r.mradx.net/img/D4/895BFA.svg\"},\"mail-pb\": {\"url\": \"https://trk.mail.ru/c/f1bxj0?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383481\", \"src_2x\": \"https://r.mradx.net/img/4F/0A4157.png\"},\"atom\": {\"url\": \"https://browser.ru\", \"nid\": \"374383482\"},\"hi-tech\": {\"url\": \"https://trk.mail.ru/c/ualdy9?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383483\", \"img\": \"https://r.mradx.net/img/29/1508C6.svg\", \"img_dark\": \"https://r.mradx.net/img/0F/EFC46A.svg\"},\"cloud-pb\": {\"url\": \"https://trk.mail.ru/c/mswrw7?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383484\", \"src_2x\": \"https://r.mradx.net/img/D4/F0A70F.png\"},\"tv\": {\"url\": \"https://trk.mail.ru/c/q1mg62?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383485\", \"img\": \"https://r.mradx.net/img/6A/7DD5EB.svg\", \"img_dark\": \"https://r.mradx.net/img/88/B80883.svg\"},\"top\": {\"url\": \"https://trk.mail.ru/c/w6q683?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383486\", \"img\": \"https://r.mradx.net/img/E6/2FE066.svg\", \"img_dark\": \"https://r.mradx.net/img/7B/33FDC5.svg\"},\"youla\": {\"url\": \"https://trk.mail.ru/c/whets1?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383487\", \"img\": \"https://r.mradx.net/img/98/4FD1C8.svg\", \"img_dark\": \"https://r.mradx.net/img/9A/624631.svg\"},\"geekbrains-pb\": {\"url\": \"https://trk.mail.ru/c/xrpsx5?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383488\", \"src_2x\": \"https://r.mradx.net/img/4D/37A838.png\"},\"health\": {\"url\": \"https://trk.mail.ru/c/rrtzo0?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383489\", \"img\": \"https://r.mradx.net/img/0F/394FCB.svg\", \"img_dark\": \"https://r.mradx.net/img/76/79A5DF.svg\"},\"pets\": {\"url\": \"https://trk.mail.ru/c/xryci5?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383490\", \"img\": \"https://r.mradx.net/img/24/D1B2F4.svg\", \"img_dark\": \"https://r.mradx.net/img/D2/D9A5D5.svg\"},\"skillbox-pb\": {\"url\": \"https://trk.mail.ru/c/zj9cu0?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383492\", \"src_2x\": \"https://r.mradx.net/img/1A/AF4F4D.png\"},\"mail\": {\"url\": \"https://trk.mail.ru/c/y7s979?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383493\", \"location\": \"e.mail.ru\", \"exclude\": \"e\\\\.mail\\\\.ru/payment/center\"},\"icq\": {\"url\": \"https://icq.com\", \"nid\": \"374383494\"},\"mailru\": {\"url\": \"https://trk.mail.ru/c/ds8xq6?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383495\", \"location\": \"mail.ru\"},\"fines\": {\"url\": \"https://trk.mail.ru/c/zh42d1?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383496\", \"img\": \"https://r.mradx.net/img/XY/58FE61.svg\", \"img_dark\": \"https://r.mradx.net/img/06/CEF127.svg\"},\"more\": {\"url\": \"https://trk.mail.ru/c/fnfg28?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383497\"},\"mytarget\": {\"url\": \"https://trk.mail.ru/c/i1k5w9?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383498\", \"img\": \"https://r.mradx.net/img/69/284783.svg\", \"img_dark\": \"https://r.mradx.net/img/34/8BC951.svg\"},\"all-projects\": {\"url\": \"https://trk.mail.ru/c/lb9kv9?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383499\"},\"tamtam\": {\"url\": \"https://tamtam.chat/?fromportal=1\", \"nid\": \"374383500\"},\"mail-for-business\": {\"url\": \"https://trk.mail.ru/c/f1r8s1?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383501\", \"img\": \"https://r.mradx.net/img/73/3FB28A.svg\", \"img_dark\": \"https://r.mradx.net/img/74/14025F.svg\"},\"auto\": {\"url\": \"https://trk.mail.ru/c/oaw194?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383502\", \"img\": \"https://r.mradx.net/img/8D/B85D8A.svg\", \"img_dark\": \"https://r.mradx.net/img/66/3BA42B.svg\"},\"answers\": {\"url\": \"https://trk.mail.ru/c/zlq6h8?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383503\", \"img\": \"https://r.mradx.net/img/65/0A80CC.svg\", \"img_dark\": \"https://r.mradx.net/img/30/CDBA32.svg\"},\"cloud-with-utm\": {\"url\": \"https://trk.mail.ru/c/pqaft6?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383505\", \"location\": \"cloud.mail.ru\"},\"agent\": {\"url\": \"https://agent.mail.ru\", \"nid\": \"374383506\"},\"capsula\": {\"url\": \"https://trk.mail.ru/c/e734n3?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383472\", \"img\": \"https://r.mradx.net/img/EC/970D9B.svg\", \"img_dark\": \"https://r.mradx.net/img/70/6DB003.svg\"},\"msc\": {\"url\": \"https://trk.mail.ru/c/chvh09?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383508\", \"img\": \"https://r.mradx.net/img/48/B93EBC.svg\", \"img_dark\": \"https://r.mradx.net/img/D4/895BFA.svg\"},\"news\": {\"url\": \"https://trk.mail.ru/c/curxh8?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383509\", \"location\": \"news.mail.ru\"},\"lady\": {\"url\": \"https://trk.mail.ru/c/jn0jd3?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383510\", \"img\": \"https://r.mradx.net/img/07/C4F523.svg\", \"img_dark\": \"https://r.mradx.net/img/28/A08DD3.svg\"},\"moymir\": {\"url\": \"https://trk.mail.ru/c/v6h9q7?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"386901323\", \"img\": \"https://r.mradx.net/img/74/AAE776.svg\", \"img_dark\": \"https://r.mradx.net/img/4E/15F324.svg\", \"location\": \"my.mail.ru\"},\"calls-pb\": {\"url\": \"https://trk.mail.ru/c/vamjt1?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"382559367\", \"src_2x\": \"https://r.mradx.net/img/EA/0DC6E0.svg\"},\"kids\": {\"url\": \"https://trk.mail.ru/c/wza2e9?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383511\", \"img\": \"https://r.mradx.net/img/7D/1D969D.svg\", \"img_dark\": \"https://r.mradx.net/img/92/75ED28.svg\"},\"ok\": {\"url\": \"https://trk.mail.ru/c/koydy6?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383512\", \"location\": \"ok.ru\"},\"teambox\": {\"url\": \"https://trk.mail.ru/c/okfi27?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383513\", \"img\": \"https://r.mradx.net/img/DE/E86C18.svg\", \"img_dark\": \"https://r.mradx.net/img/DC/13D9E3.svg\"},\"calls\": {\"url\": \"https://trk.mail.ru/c/qmbmu5?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383514\", \"img\": \"https://r.mradx.net/img/6B/40007A.svg\", \"img_dark\": \"https://r.mradx.net/img/85/BA4E7C.svg\"},\"dom\": {\"url\": \"https://trk.mail.ru/c/yr64b9?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383515\", \"img\": \"https://r.mradx.net/img/B8/FB4268.svg\", \"img_dark\": \"https://r.mradx.net/img/29/58E2D3.svg\"},\"kino\": {\"url\": \"https://trk.mail.ru/c/dz2425?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383517\", \"img\": \"https://r.mradx.net/img/BA/B76EC8.svg\", \"img_dark\": \"https://r.mradx.net/img/D9/C0B709.svg\"},\"vkpochta-pb\": {\"url\": \"https://trk.mail.ru/c/mpplb8?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383518\", \"src_2x\": \"https://r.mradx.net/img/80/B2A9A9.png\"},\"marusia-pb\": {\"url\": \"https://trk.mail.ru/c/z3kin0?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383519\", \"src_2x\": \"https://r.mradx.net/img/C7/24F215.png\"},\"mail-for-education\": {\"url\": \"https://trk.mail.ru/c/q0fnd7?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383520\", \"img\": \"https://r.mradx.net/img/44/F9500F.svg\", \"img_dark\": \"https://r.mradx.net/img/34/CA8219.svg\"},\"pogoda\": {\"url\": \"https://trk.mail.ru/c/eu3tc9?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383521\", \"img\": \"https://r.mradx.net/img/48/7A6B15.svg\", \"img_dark\": \"https://r.mradx.net/img/F4/71CDB4.svg\"},\"dobro\": {\"url\": \"https://trk.mail.ru/c/szuzz5?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"374383522\", \"img\": \"https://r.mradx.net/img/6A/7CCEE9.svg\", \"img_dark\": \"https://r.mradx.net/img/4C/4ABF08.svg\"},\"todo-pb\": {\"url\": \"https://trk.mail.ru/c/zz7cd7?mt_sub1=HOST&mt_sub5=EXP_ID\", \"nid\": \"382559368\", \"src_2x\": \"https://r.mradx.net/img/D9/8B2AD1.svg\"}}}),localization: parseEmptySlot({\"lang\": \"en_US\", \"account\": {\"account-settings\": \"Settings\", \"sign-up\": \"Registration\", \"help\": \"Help\", \"theme-dark\": \"Dark mode\", \"settings\": \"Personal data\", \"theme-system\": \"Like in the system\", \"appearance\": \"Design\", \"sign-in\": \"Log in\", \"theme-light\": \"Light mode\", \"add\": \"Add account\", \"exit\": \"Exit\", \"theme-setting\": \"Home page settings\", \"children-users\": \"Email for kids\", \"copied\": \"Copied\", \"copy\": \"Copy\", \"security\": \"Password and security\", \"change-avatar\": \"Change avatar\"}, \"search\": {\"placeholder\": \"Search on the web\", \"find\": \"Find\"}, \"projects\": {\"uchiru-pb\": \"Uchi.ru\", \"samokat-pb\": \"Samokat\", \"citymobil\": \"Citymobil\", \"love\": \"Dating\", \"skillbox\": \"Skillbox\", \"calendar-pb\": \"Calendar\", \"vk\": \"VK\", \"worki-find-employee\": \"Find an employee\", \"agent\": \"Mail.ru Agent\", \"myteam\": \"VK Teams\", \"tamtam\": \"TamTam\", \"worki-work\": \"Work\", \"aliexpress\": \"AliExpress\", \"horoscopes\": \"Horoscopes\", \"calendar\": \"Calendar\", \"sport\": \"Sport\", \"todo\": \"Tasks\", \"see-all-projects\": \"See all\", \"cloud\": \"Cloud\", \"mail-pb\": \"Email\", \"geekbrains\": \"GeekBrains\", \"vkpochta\": \"VK Mail\", \"hi-tech\": \"Hi-Tech\", \"cloud-pb\": \"Cloud\", \"contacts\": \"Contacts\", \"mail-for-education\": \"Email for education\", \"lady\": \"Lady\", \"top\": \"Website ranking\", \"ok-short\": \"OK\", \"admin-console\": \"Admin Console\", \"youla\": \"Youla\", \"geekbrains-pb\": \"GeekBrains\", \"health\": \"Health\", \"ok\": \"Odnoklassniki\", \"pets\": \"Pets\", \"vseapteki\": \"All Pharmacies\", \"mail\": \"Email\", \"icq\": \"ICQ New\", \"mailru\": \"Mail.ru\", \"fines\": \"Fines\", \"more\": \"More\", \"youla-with-utm\": \"Youla\", \"mytarget\": \"MyTarget\", \"skillbox-pb\": \"Skillbox\", \"mail-for-business\": \"Email for business\", \"auto\": \"Auto\", \"hotbox\": \"Hotbox\", \"answers\": \"Answers\", \"delivery-club-pb\": \"Delivery Club\", \"cloud-with-utm\": \"Cloud\", \"vkpochta-pb\": \"VK Mail\", \"citymobil-pb\": \"Citymobil\", \"capsula\": \"Capsula\", \"atom\": \"Atom browser\", \"worki\": \"Worki\", \"news\": \"News\", \"smotri\": \"Smotri\", \"business-projects\": \"For business\", \"moymir\": \"My World\", \"calls-pb\": \"Calls\", \"teambox\": \"Cloud for working groups\", \"mailrugroup\": \"Mail.ru Group\", \"marusia\": \"Marusia\", \"kids\": \"Kids\", \"all-projects\": \"All projects\", \"payment-center\": \"Payments\", \"calls\": \"Calls\", \"dom\": \"House\", \"delivery-club\": \"Delivery Club\", \"kino\": \"Cinema\", \"notes\": \"Notes\", \"mygames-pb\": \"MY.GAMES\", \"mygames\": \"MY.GAMES\", \"msc\": \"Cloud for business\", \"marusia-pb\": \"Marusia\", \"tv\": \"TV listings\", \"pogoda\": \"Weather\", \"dobro\": \"Kindness\", \"games\": \"Games\", \"icebox\": \"Icebox\", \"projects\": \"Projects\", \"vk-short\": \"VK\", \"todo-pb\": \"Tasks\", \"citydrive\": \"Citydrive\"}, \"connection-error\": {\"item2\": \"Check internet connection\", \"header\": \"Connection error\", \"subheader\": \"Try\", \"item1\": \"Refresh page\"}}),settings: window.__PHS,data: {promo: parseEmptySlot()}},hasExternal: true,bundleUrl: 'https://limg.imgsmail.ru/pkgs/whiteline/2.99.0/external.modern.js'};\u003c/script>\u003cscript  src=\"https://limg.imgsmail.ru/pkgs/whiteline/2.99.0/inline.modern.js\">\u003c/script>\u003cscript >window.abp = false\u003c/script>","footerHTML":"\u003cimg src=\"https://rs.mail.ru/d26047874.gif?sz=49&amp;rnd=110027436&ts=1683042432&sz=49\" style=\"width:0;height:0;position:absolute;visibility:hidden;\" alt=\"\"/>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n\u003cstyle>.portal-footer{position:relative;margin:0;white-space:nowrap;text-align:left;background:#fff;*zoom:1;width:100%;height:28px;margin:0;padding:0;border:0;border-top:1px solid #D5D5D5;border-spacing:0;border-collapse:collapse;font-family:Arial, sans-serif;font-size:0;color:#999;border-collapse:collapse;border-spacing:0}.w-portal-footer__visible{position:relative}.portal-footer td,.portal-footer tr{vertical-align:top;text-align:left;border:none;padding:0;margin:0;width:auto;white-space:nowrap}.portal-footer .portal-footer__col_left{width:1%;padding-right:28px;padding-left:10px;text-align:left}.portal-footer .portal-footer__col_right{text-align:right;padding-right:10px}.portal-footer__link{display:inline-block;*display:inline;*zoom:1;margin:0 8px}.portal-footer__link,.portal-footer__link:link,.portal-footer__link:visited,.portal-footer__link:hover,.portal-footer__link:active,.portal-footer__link:focus{outline:0;cursor:pointer;color:#999;font-size:12px;font-family:Arial, sans-serif;height:28px;line-height:28px;*zoom:1}.portal-footer__link,.portal-footer__link:link,.portal-footer__link:visited{text-decoration:none}.portal-footer__link:hover,.portal-footer__link:active,.portal-footer__link:focus{text-decoration:none;color:#f26d00}#portal-footer__project-links__container{display:none;position:absolute;visibility:hidden}.portal-footer__lang-select{font-size:12px;font-family:Arial, sans-serif;margin-left:8px}.portal-footer__lang-select__button,.portal-footer__lang-select__button:link,.portal-footer__lang-select__button:visited,.portal-footer__lang-select__button:hover,.portal-footer__lang-select__button:active,.portal-footer__lang-select__button:focus{text-decoration:none;position:relative;outline:0;font-size:12px;font-family:Arial, sans-serif;cursor:pointer;color:#999;border-bottom:1px dotted #999;margin:0 8px;*border-bottom-style:dashed;border-bottom-style:dashed\\9}.portal-footer__lang-select__button:hover,.portal-footer__lang-select__button:active,.portal-footer__lang-select__button:focus{color:#f26d00;border-bottom-color:#f26d00}.portal-footer__project-links{white-space:nowrap}\r\n\u003c/style>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\u003cdiv class=\"w-portal-footer\" id=\"w-portal-footer\" data-visibility-class=\"w-portal-footer__visible\">\u003ctable border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"portal-footer portal-footer_portal-footer\">\u003ctbody>\u003ctr>\u003ctd class=\"portal-footer__col portal-footer__col_left\">\u003cdiv class=\"portal-footer__portal-links\">\u003c!--portal-links-->\u003ca class=\"portal-footer__link\" href=\"https://r.mail.ru/n253577115?sz=49&amp;rnd=110027436\" rel=\"noopener\" target=\"_blank\">\u003cspan class=\"portal-footer__link__text\">Mail.ru\u003c/span>\u003c/a>\u003ca class=\"portal-footer__link\" href=\"https://r.mail.ru/n382470676?sz=49&amp;rnd=110027436\" rel=\"noopener\" target=\"_blank\">\u003cspan class=\"portal-footer__link__text\">About the Company\u003c/span>\u003c/a>\u003ca class=\"portal-footer__link\" href=\"https://r.mail.ru/n309433547?sz=49&amp;rnd=110027436\" rel=\"noopener\" target=\"_blank\">\u003cspan class=\"portal-footer__link__text\">Advertisement\u003c/span>\u003c/a>\u003ca class=\"portal-footer__link\" href=\"https://r.mail.ru/n382470677?sz=49&amp;rnd=110027436\" rel=\"noopener\" target=\"_blank\">\u003cspan class=\"portal-footer__link__text\">Employment\u003c/span>\u003c/a>\u003c!--/ portal-links-->\u003c/div>\u003c/td>\u003ctd class=\"portal-footer__col portal-footer__col_right\">\u003cdiv id=\"portal-footer__project-links\" class=\"portal-footer__project-links\" data-project-links-class=\"portal-footer__link\">\u003cb style=\"display:none\" id=\"portal-footer__project-links__insert_before\">\u003c/b>\u003c/div>\u003cscript>void function(){\"use strict\";function c(){var c=e.getElementById(\"portal-footer__project-links\"),g=e.getElementById(\"portal-footer__project-links__insert_before\"),f=e.getElementById(\"portal-footer__project-links__container\"),b,h,a,d,k;if(c&&g&&f){h=[];b=f.getElementsByTagName(\"a\");for(d=b.length;d;)a=b[--d],h.push(a);for(;a=h.pop();)(b=a.getAttribute(\"data-type\"))?(d=\"portal-footer__link portal-footer__link_\"+b,k=\"portal-footer__link__text portal-footer__link__text_\"+b):(d=\"portal-footer__link\",k=\"portal-footer__link__text\"),\r\na.innerHTML='\u003cspan class=\"'+k+'\">'+(\"textContent\"in a?a.textContent:\"innerText\"in a?a.innerText:\"data\"in a?a.data:\"\")+\"\u003c/span>\",(b=a.style)&&b.cssText&&(b.cssText=\"\"),a.className=d,c.insertBefore(a,g);c.removeChild(g);f.parentNode.removeChild(f);return!0}}var e=this.document;c()||(e.addEventListener&&e.addEventListener(\"DOMContentLoaded\",c,!1),window.addEventListener?window.addEventListener(\"load\",c,!1):window.attachEvent(\"onload\",c,!1))}.call(window);\u003c/script>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\u003c/div>","project":"account","img_name":"fauclient","static_files":"//img.imgsmail.ru/pkgs/account.mail.ru/release-fmail-19891.138146","omega":false,"build":"release-fmail-19891 | d650de6 | 2023-03-16T10:05:22.069Z","branch":"release-fmail-19891","version":"138146","urls":{},"redirect":{"need":false,"url":"","email":"","title":"Перенаправление","lang":"en_US"}}</script><script id="__core-keeper__" crossorigin="anonymous">
+								var coreKeeper=function(e){"use strict";function r(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}function t(e,r){return e(r={exports:{}},r.exports),r.exports}var n=t((function(e,r){var t;Object.defineProperty(r,"__esModule",{value:!0}),r.Tag=void 0,(t=r.Tag||(r.Tag={})).Core="core",t.Global="gl",t.Self="self",t.Async="async",t.Ignore="ign",t.Known="known",t.API="api",t.Shared="shr",t.Ext="ext",t.ThirdParty="3rd",t.RB="rb",t.Unknown="unk"}));r(n);var o=n.Tag,a=t((function(e,r){Object.defineProperty(r,"__esModule",{value:!0}),r.coreLoggerHMR=r.coreLoggerDispatchKnownError=r.coreLoggerDispatchAPIError=r.coreLoggerDispatchIgnoredError=r.coreLoggerDispatchSelfError=r.coreLoggerDispatchReactError=r.coreLoggerDispatchError=r.getCoreLogger=r.Tag=void 0,Object.defineProperty(r,"Tag",{enumerable:!0,get:function(){return n.Tag}});r.getCoreLogger=function(){return"undefined"!=typeof coreLogger?coreLogger:void 0};r.coreLoggerDispatchError=function(e,t,n){var o;null===(o=r.getCoreLogger())||void 0===o||o.dispatchError(e,t,n)};r.coreLoggerDispatchReactError=function(e,t,n){var o;null===(o=r.getCoreLogger())||void 0===o||o.dispatchReactError(e,t,n)};r.coreLoggerDispatchSelfError=function(e,t,o,a){r.coreLoggerDispatchError(t,o,{category:e,tag:n.Tag.Self,log:a})};r.coreLoggerDispatchIgnoredError=function(e,t,o,a){r.coreLoggerDispatchError(t,o,{category:e,tag:n.Tag.Ignore,log:a})};r.coreLoggerDispatchAPIError=function(e,t,o,a){r.coreLoggerDispatchError(t,o,{category:e,tag:n.Tag.API,log:a})};r.coreLoggerDispatchKnownError=function(e,t,o,a){r.coreLoggerDispatchError(t,o,{category:e,tag:n.Tag.Known,log:a})};r.coreLoggerHMR=function(e,t){var n=r.getCoreLogger();if(n){var o=n.errors.rules,a=n.errors.opts.errors,i=e.priority||[];o.set("clear"),a&&a.rules&&(o.set(a.rules),i.push.apply(i,[].concat(a.priority||Object.keys(a.rules)))),t&&(o.set(t.rules),i.push.apply(i,t.priority||[])),o.set(e.rules),o.priority(i);try{n.pkg.v="8.0.3",localStorage.setItem(process.env.LOGGER_LS_PRESET_VER_KEY,"8.0.3")}catch(e){}}}}));r(a),a.coreLoggerHMR,a.coreLoggerDispatchKnownError,a.coreLoggerDispatchAPIError,a.coreLoggerDispatchIgnoredError,a.coreLoggerDispatchSelfError,a.coreLoggerDispatchReactError;var i=a.coreLoggerDispatchError;a.getCoreLogger;var c=a.Tag,s="string",u="object";function p(e,r){return typeof e===r}function d(e,r){for(var t in r)Object.defineProperty(e,t,{enumerable:!1,value:r[t]})}var g,f=typeof globalThis===u&&globalThis||typeof window===u&&window||typeof global===u&&global||{},l=f.console,v=f.document||{},h=f.location||{},m=f.navigator||{},y=m.connection,w=f.performance,k=function(){},E=p(w&&w.now,"function")?function(){return w.now()}:Date.now,b=f.setTimeout.bind(f),T=(f.requestAnimationFrame||b).bind(f),_=(f.addEventListener||k).bind(f),L=null,x=void 0;var S=function(e,r){var t;try{(t=new PerformanceObserver((function(e){e.getEntries().map(r)}))).observe({type:e,buffered:!0})}catch(e){}return t},D=function(e){e&&e.disconnect()},z=function(e,r){try{e&&e.takeRecords().map(r)}catch(e){}},R="hidden",P=!1,j=!1,O=-1,C=function(e,r){P||(P=!0,_("pagehide",(function(e){j=!e.persisted})),_("beforeunload",k)),_("visibilitychange",(function(r){v.visibilityState===R&&e(r.timeStamp,j)}),{capture:!0,once:!!r})};v&&(O=v.visibilityState===R?0:1/0,C((function(e){O=e}),!0));var I=function(){return O};function q(e){var r=this.badge,t=e.unit,n=(e.end-e.start)/("KB"===t?1024:1),o=r+e.name+("none"!==t&&t?": %c"+(t&&"raw"!==t?n.toFixed(3)+t:n):"%c"),a="font-weight:bold;"+function(e,r){return"color:#"+((e="KB"===r?e/8:"fps"===r?70-e:e)<5?"ccc":e<10?"666":e<25?"333":e<50?"f90":e<100?"f60":"f00")}(n,t);"entries"in e?((l.groupCollapsed||l.group)(o,a),e.entries.forEach(q,this),l.groupEnd()):l.log(o,a)}var $,M,A=function(e){var r,t,n,o=0,a=(e=e||{}).now||E,i=e.warn,c=e.prefix||"",u=e.addons||[],g=[],f=function(e,t,n){for(r=u.length;r--;)u[r][e](t,n)},l=function(e,u,v,h,m,y,w,k,E){e=c+e,(u===n||k)&&(u=!k&&g[0]||L),v[e]&&i&&i("Timer '"+e+"' exists");var b=y==L,T=v[e]={id:++o,name:e,parent:u,unit:h||"ms",start:b?a():y,end:w!=L?w:L,meta:E};function _(e,r,n){(t=v[e=c+e])?t.stop(r,n):i&&i("Timer '"+e+"' not exists")}return d(T,{stop:function(t,n){if(t==L||t>=0||(n=t,t=x),T.meta=T.meta||n,T.end=t==L?a():t,v[e]=L,m)for(r=g.length;r--;)g[r]===T&&g.splice(r,1);return f("end",T,b),T}}),u&&(u.end!==L&&w==L?i&&i("Timer '"+e+"' stopped"):(T.unit=u.unit,u.entries.push(T))),m&&(T.entries=[],d(T,{add:function(e,r,t,n,o){return l(e,T,v,n,0,r,t).stop(t,o)},time:function(e,r,t){return r>=0||(t=r,r=x),l(e,T,v,t,x,r)},group:function(e,r,t,n){return p(r,"boolean")&&(n=t,t=r,r=L),p(r,s)&&(n=r,r=L,t=0),p(t,s)&&(n=t),l(e,T,v,n,1,r,L,t)},timeEnd:_,groupEnd:_}),!k&&o>1&&g.unshift(T)),f("start",T,b),T};return(n=l(0,L,{},"ms",1,0,0,1)).v="2.0.0-rc.25",n.addons=u,n}({addons:/pk-print/.test(h)?[($={badge:"🔅"},{start:k,end:function(e){e.parent||q.call($,e)}})]:[]}),K=function(e,r,t,n,o,a){T((function(){var i=A.group(e,r,o);for(var c in n)if(n.hasOwnProperty(c)){var s=n[c];i.add(c,s[0],s[1],s[2])}i.stop(t,a)}))},B=m.deviceMemory,H=w.hardwareConcurrency,X=H<=4||B<=4,F=H>4||B>4?"high":X?"low":"unk",G=X||y&&(["slow-2g","2g","3g"].indexOf(y.effectiveType)>-1||y.saveData)?"low":"high",U=((M={})["type_"+F]=[0,1],M["exp_"+G]=[0,1],M);B&&(U.memory=[0,B]),H&&(U.hardware_concurrency=[0,H]),K("pk-device",0,1,U,"raw");var N=0,V=function(){try{var e=w.getEntriesByType("navigation")[0],r=e.fetchStart,t=e.domainLookupStart,n=e.domainLookupEnd,o=e.requestStart,a=e.responseStart,i=e.responseEnd,c=e.domComplete,s=e.domInteractive,u=e.domContentLoadedEventEnd,p=e.loadEventEnd;i&&0===N&&(N=1,K("pk-nav-net",r,i,{dns:[t,n],tcp:[n,o],request:[o,a],response:[a,i]})),c&&1===N&&(N=2,K("pk-nav-dom-ready",i,c,{interactive:[i,s],"content-loaded":[s,u],complete:[u,c]})),p&&2===N&&(N=3,K("pk-nav-dom-load",i,p,{ready:[i,c],load:[c,p]})),3!==N&&b(V,250)}catch(e){}};V();var Y,J=function(e,r,t){return e<=r?"good":e<=t?"needs-improvement":"poor"},Q=0,W=0,Z=function(e){var r,t,n,o=e.startTime,a=e.processingStart-o;o<I()&&(a&&K("pk-fid",0,a,((r={value:[0,a]})["score_"+J(a,100,300)]=[0,a],r)),Q&&K("pk-tbt",0,Q,((t={value:[0,Q]})["score_"+J(Q,300,600)]=[0,Q],t)),W&&K("pk-tti",0,W,((n={value:[0,W]})["score_"+J(W,3800,7300)]=[0,Q],n)),D(Y),D(ee))},ee=S("first-input",Z);C((function(){z(ee,Z)}),!0);var re={},te=S("paint",(function(e){var r,t=e.name,n=e.startTime;n<I()&&(re[t]=[0,n],"first-contentful-paint"===t&&(re["score_"+J(n,1e3,2500)]=[0,n],K("pk-paint",0,n,re),r=n,Y=S("longtask",(function(e){var t=e.startTime,n=e.duration;t>r&&"self"===e.name&&n>0&&(Q+=n-50,W=t+n)})),D(te)))})),ne=0,oe=!1,ae=function(e){var r=e.startTime;r<I()?ne=r:ce()},ie=S("largest-contentful-paint",ae),ce=function(){var e;!oe&&ne&&K("pk-lcp",0,ne,((e={value:[0,ne]})["score_"+J(ne,2500,4e3)]=[0,ne],e)),oe=!0,D(ie)},se=function(){z(ie,ae),ce()};C(se,!0),function(e){try{g||(g=new Promise((function(e){["keydown","mousedown","scroll","mousewheel","touchstart","pointerdown"].map((function(r){_(r,e,{once:!0,passive:!0,capture:!0})}))}))),g.then(e)}catch(e){}}(se);var ue=0,pe=function(e){e.hadRecentInput||(ue+=e.value)},de=S("layout-shift",pe);C((function(e,r){var t;z(de,pe),r&&ue&&K("pk-cls",0,ue,((t={value:[0,ue]})["score_"+J(ue,.1,.25)]=[0,ue],t))}));var ge=y,fe=function(){var e;K("pk-conn",0,1,((e={downlink:[0,ge.downlink],downlinkMax:[0,ge.downlinkMax],rtt:[0,ge.rtt]})["save_data_"+ge.saveData]=[0,1],e["effective_type_"+(ge.effectiveType||"unk")]=[0,1],e),"raw")};try{ge?(fe(),ge.addEventListener("change",fe)):K("pk-conn",0,1,{effective_type_unk:[0,1]},"raw")}catch(M){}var le={name:"@mail-core/dashboard",v:"8.0.3"},ve=window.performance,he=window.setTimeout,me=/^http\/1(\.|$)/i,ye=/^h2/i,we=/^h3/i,ke=/\.js($|\?)/i,Ee=/\.css($|\?)/i,be=/\.(png|gif|jpe?g)($|\?)/i,Te=/\.svg($|\?)/i,_e=/\.woff\d($|\?)/i,Le=/^(html|js|css|svg)$/,xe=[[/\/(ph|ag)\//,"portal"],[/\/hb\//,"hotbox"],[/\/pkgs\//,"pkgs"],[/\.imgsmail\.ru\//,"imgs"],[/\.filin\.mail\.ru\//,"filin"],[/\bmail\\.ru/,"mail"],[/\/\/top-/,"top"],[/analytics/,"analyt"],[new RegExp("\\/\\/"+location.host+"\\/"),"host"]],Se={navigation:"html",script:"js",css:"css",img:"img",svg:"svg",fetch:"xhr",xmlhttprequest:"xhr",iframe:"iframe",subdocument:"iframe"};function De(e){for(var r="",t=0,n=xe;t<n.length;t++){var o=n[t];if(o[0].test(e)){r=o[1];break}}return r||"unk"}var ze={from:De},Re=[],Pe=Object.create(null),je=[],Oe=0,Ce=0,Ie=0,qe=0,$e=0,Me=0,Ae=0;function Ke(e){He();for(var r=Re.length;r--;){var t=Re[r],n=t.name,o=t.decodedBodySize,a=t.encodedBodySize,i=t.transferSize,c=Xe(t.nextHopProtocol),s=Fe(t),u=ze.from(n),p=void 0!==i&&i<a,d="p-"+c+"-t-"+s;ze.onEntry&&ze.onEntry(t,s),qe++,Ce+=o||0,Ie+=a||0,i>0&&(Ae++,Oe+=i||0),a&&!(i>o&&Le.test(s))&&t.initiatorType&&n?($e++,Be("e-"+d,a),Be("e-"+d+"-c-"+ +p,a),Be("e-"+d+"-c-"+ +p+"-f-"+u,a)):(je.push(t),Me++)}Re.length=0;var g=A.group("pk-tfc-"+e,0,!0,"raw"),f=g.add;for(var d in f("encoded-size",0,Ie),f("decoded-size",0,Ce),f("transfer-size",0,Oe),f("encoded-size-s-"+Ge(Ie),0,Ie),f("transfer-size-s-"+Ge(Oe),0,Oe),f("summary-count",0,qe),f("gzip-count",0,$e),f("transfer-count",0,Ae),f("unmeasurable-count",0,Me),Pe){var l=Pe[d];f(d+"-s-"+Ge(l.size),0,l.size)}g.stop(Ie)}function Be(e,r){Pe[e]?(Pe[e].count++,Pe[e].size+=r):Pe[e]={count:1,size:r}}function He(){var e=ve.getEntriesByType("resource");Re.push.apply(Re,e),ve.clearResourceTimings()}function Xe(e){return me.test(e)?"h1":ye.test(e)?"h2":we.test(e)?"h3":"unk"}function Fe(e){var r=e.name,t=Se[e.initiatorType];return ke.test(r)?t="js":Ee.test(r)?t="css":be.test(r)?t="img":Te.test(r)?t="svg":_e.test(r)&&(t="font"),t||"unk"}function Ge(e){var r=e/1024,t=r>3e3?500:r>500?250:r>150?100:r>42?50:14;return r>=5e3?"max":Math.ceil(r/t)*t}var Ue=Object.create(null),Ne=!1,Ve=null;function Ye(){for(var e in Ue)Ve.send(e,Ue[e]);Ue=Object.create(null),Ne=!1}function Je(e,r,t){var n=Ue[r];n||(n={t:r,v:e,i:{},skipdwh:!0},Ue[r]=n),t?n.i[t.slice(0,32)]=e:n.v=e,Ne||(Ne=!0,function e(){(Ve=Ve||function(){var e="undefined"==typeof window?{}:window,r=e.require,t=e.xray;try{t=t&&t.send?t:r("@mail/xray")}catch(e){try{t=r("mrg-xray")}catch(e){}}return t}())?T(Ye):b(e,500)}())}var Qe=function(e){return void 0===e&&(e=Je),{start:k,end:function(r){var t=r.end-r.start;"entries"in r&&null===r.parent&&/^pk-/.test(r.name)&&t&&(e(t,r.name),r.entries.forEach((function(t){var n=t.end-t.start;n>=0&&e(n,r.name,t.name)})))}}},We=Date.now(),Ze=!1,er=!1,rr=0;function tr(e){var r,t=e.type,n=E(),o=n>9e5?"max":n>6e5?"15m":n>3e5?"10m":n>6e4?"5m":n>3e4?"1m":n>15e3?"30s":n>1e4?"15s":n>5e3?"10s":"5s";K("pk-unload",0,n,((r={})[t]=[0,n],r["type_score_"+o]=[0,n],r))}function nr(e){return e<2e3?"fast":e<4e3?"moderate":e<15e3?"slow":e<3e4?"very-slow":"fail"}var or={tag:o.API,category:"5XX",silent:!0,log:!0};var ar=/^(https?:)?\/\/.*?\/+|\/*\?+.+|^\/|api\/+v1\/+/gi,ir=/[^%.a-z\d-]+/g,cr=/^api_v(\d)/g,sr=/\/*cgi-bin/g,ur=/golang/g,pr=/(^|\/)(\d+|(?:\d|[a-z]+\d)[\da-z]{2,})(?=\/|$)/g,dr=/(^|\/)([0-9-a-f]{2,}-[0-9-a-f-]+)(?=\/|$)/g,gr=/(_u?id){2,}|%[%a-z\d._]+/g,fr=/graphql/g;function lr(e){return e&&(!e.responseType||"text"===e.responseType)&&e.responseText||""}return e.api=function(e,r){void 0===r&&(r={});var t=r.error,n=r.duration||1,a=r.url,c=r.category,s=r.responseLength,u=0,p=r.status||"unk",d=r.apiStatus||p;if("object"==typeof e){var g="xhr"in e&&e.xhr||"request"in e&&e.request||"status"in e&&"readyState"in e&&e;if("duration"in e&&(n=e.duration||n),"status"in e&&(d=p=e.status),g&&(p=g.status||p,u=g.readyState||0,s=function(e){var r,t;if(e){t=lr(e);try{r=t.length||+e.getResponseHeader("content-length")||0}catch(e){}}return r}(g),a=a||g.responseURL),"url"in e&&(a=a||e.url),"request"in e&&e.data&&"status"in e.data&&"body"in e.data&&(d=e.data.status),r.log5XX&&(p>=500||d>=500)){var f="[HTTP] "+(g?g.status+" "+g.statusText:"No XHR"),l=new Error(p>=500?f:"[API] "+d+" ("+f+")");l.source=a,l.stack="";try{i(l,{sender:"api",url:a,status:p,apiStatus:d,headers:g&&["content-type","date","x-host","x-request-id","x-mru-json-status","x-mru-request-id"].reduce((function(e,r){return e[r]=g.getResponseHeader(r),e}),{}),response:lr(g).slice(0,140)},or)}catch(t){i(t,l,{category:"api",tag:o.Core})}}}else p=e,d=r.apiStatus||p;var v=A.group("pk-api",0,!0),h=v.add,m="x-"+(!1!==c?function(e){var r=e?e.toLowerCase().replace(ar,"").replace(sr,"pl").replace(dr,"$1uid").replace(pr,"$1id").replace(ir,"_").replace(cr,"v$1").replace(ur,"go").replace(fr,"gql").replace(gr,"_id"):"unk";r.length>24&&(r=r.replace(/([^_]{3,})/g,(function(e,r){return r.replace(/-/.test(r)?/-([a-z])[a-z]*/g:/([^/-])[aeiou]+/g,"$1").replace(/([^aeiou])(\1+)/,"$1")})));return r.slice(0,24).replace(/[_-]+/g,"_")}(a):c||"unk");h(m+"-hit",0,n),4!==u&&h(m+"-r_"+function(e){return 0===e?"unset":1===e?"open":2===e?"headers":3===e?"loading":4===e?"done":"unk"}(u),0,n),s&&h(m+"-l_"+function(e){var r=1024,t="zero";null==e?t="unk":e>0&&e<=r?t=1:e>r&&e<=5*r?t=5:e>5*r&&e<=10*r?t=10:e>10*r&&e<=25*r?t=25:e>25*r&&e<=50*r?t=50:e>50*r&&e<=100*r?t=100:e>100*r&&e<=200*r?t=200:e>200*r&&e<=500*r?t=500:e>500*r&&(t="max");return 0===t?"zero":t}(s),0,s),h(m+"-h_"+p,0,n),p>=200&&p<300&&h(m+"-a_"+d,0,n),n>3e3&&h(m+"-s_"+function(e){return e<=5e3?"5s":e<=1e4?"10s":e<=3e4?"30s":e<=3e5?Math.ceil(e/6e4)+"m":"max"}(n),0,n),t&&h(m+"-e_"+(t instanceof Error&&t.name||t),0,n),v.stop(n)},e.appReady=function(e){if(!er){er=!0;var r=E(),t=A.group("pk-app-ready",0,!0);t.add(e?"fail":"success",0,r),e?(i(e,null,{category:"app-err",tag:c.Self}),t.add("error_"+(e.requireType||e.name||"unk"),0,r)):t.add("score_"+nr(r),0,r),t.stop(r)}},e.init=function(e){var r,t,n;if(void 0===e&&(e={}),!Ze){Ze=!0,null==(rr=e.appReadyTimeout)&&(rr=6e4),n=e.xray,Ve=n||Ve,A.addons.push.apply(A.addons,[Qe()].concat(e.systemAddons||[]));var o=E(),a=(t=/^(\d+)\.(\d+)\.(\d+)/.exec(le.v))?(1e8*(+t[1]+ +t[2]/1e4+ +t[3]/1e8)).toFixed(0):-1;K("pk-init",0,o,((r={})["ver_"+a]=[0,1],r["score_"+nr(o)]=[0,o],r)),function(e){e&&Object.assign(ze,e);try{Re.push.apply(Re,ve.getEntriesByType("navigation")),He(),ve.onresourcetimingbufferfull=He,document.addEventListener("DOMContentLoaded",(function(){Ke("dcl")})),he(Ke,6e4,"1m"),he(Ke,3e5,"5m"),he(Ke,6e5,"10m"),he(Ke,36e5,"1h"),he(Ke,864e5,"1d")}catch(e){}}(e.traffic),e.checkCrossOrigin&&setTimeout((function(){var e=document.querySelectorAll("script"),r=e.length;if(r>0){for(var t=A.group("mc-srp",0,!0);r--;){var n=e[r];n.src&&!n.crossOrigin&&t.add(De(n.src),0,1)}t.stop(1)}}),6e4),_("unload",tr),_("beforeunload",tr),rr&&b((function(){if(!er&&E()<I()){var e={loadTime:Date.now()-We,timeout:rr},r=m.connection;try{e.effectiveType=r&&r.effectiveType||"<<unk>>",e.hidden=v.hidden,e.visState=v.visibilityState,e.now=E()}catch(e){}i("AppTimeout: "+rr,e,{category:"app-timeout",tag:c.Ignore})}}),rr)}},e.pkg=le,e.sendTraffic=Ke,e.unkTFC=je,Object.defineProperty(e,"__esModule",{value:!0}),e}({});
+
+							//# sourceURL=core-keeper.min.js</script><script id="__core-keeper-init__" crossorigin="anonymous">window.coreKeeper && coreKeeper.init();
+							//# sourceURL=core-keeper-init.js</script><script id="__core-logger__" crossorigin="anonymous">
+								var coreLogger=function(e){"use strict";var r=/at\s+(?:([^\s]+)(?:.*?)\()?((?:http|file|\/|:|<|[a-z])[^) ]+:\d+)\)?/,n=/^(.*?)(?:\/<)*@(.*?)$/,t=/^()(https?:\/\/.+)/,o=/^(.*?):(\d+)(?::(\d+))?$/;function a(e){if(null==e)return null;var a=e.match(r);if(null===a&&(a=e.match(n)||e.match(t)),a){var i=a[2].match(o),l={raw:e,fn:void 0===a[1]?"<anonymous>":a[1].trim()||"<anonymous>",file:"",line:0,column:0};return i&&(l.file=i[1],l.line=parseInt(i[2],10)||0,l.column=parseInt(i[3],10)||0),l}return null}var i,l=[],u="MCL:onerror",s=!0,c={},f=null,p=!1,g=!1;function v(e,r,n){if(k(e)||((e=new Error(e)).stackOffset=1),e.uniq){var t=!0===e.uniq?e.stack||e.message||e.name:e.uniq;if(c[t])return;c[t]=1}e.detail=e.detail||r,e.rule=e.rule||n,h(e.message,e.source,e.line,e.col,e)}function y(e,r){for(var n=[],t=2;t<arguments.length;t++)n[t-2]=arguments[t];"function"==typeof e&&(n.unshift(r),r=e,e=!1);try{return r.apply(null,n)}catch(r){return r&&"object"==typeof r&&(r.uniq=e),console.error(r),void v(r)}}function h(){for(var e=[],r=0;r<arguments.length;r++)e[r]=arguments[r];var n=!0;if(p&&""===e[1]&&0===e[2]){p=!1,g=!0;var t=JSON.parse;JSON.parse=function(){try{return t.apply(this,arguments)}catch(e){throw e.name="SyntaxError",e.stackOffset=1,e}}}else if(p&&/~|JSON|SyntaxError/.test(e[0]))p=!1;else{var o="undefined"!=typeof location?location.toString():void 0;n=s,m(e),l.push(e.concat(o)),f&&!c[u]&&y.apply(this,[u,f].concat(e))}for(var a in c)0===a.indexOf("MCL:")&&delete c[a];return n}function d(e){var r=e.reason,n=r;k(r)||(r&&k(r.error)?n=r.error:(n=new Error(r)).name="UhRej",n.detail={sender:"promise",reason:r}),s&&e.preventDefault(),v(n)}function m(e){var r=e[4],n=e[1],t=e[2],o=e[3];if(r&&"UhRej"!==r.name){if(n=r.fileName||n,t=r.lineNumber||t||r.line||0,o=r.columnNumber||o||r.col||0,r.stackOffset||!t||!n){var i=function(e){for(var r=e?e.trim().split("\n"):[],n=[],t=0,o=r.length;t<o;t++){var i=a(r[t]);null!==i&&n.push(i)}return n}(r.stack).slice(r.stackOffset||0);i.length&&(t=i[0].line,o=i[0].column,n=i[0].file,r.stack=r.name+": "+r.message+"\n"+i.map((function(e){return e.raw})).join("\n"))}r.source=e[1]=n,r.line=e[2]=t,r.col=e[3]=o}}function k(e){return e instanceof Error}y.reset=function(){c={}},function(e){e.Core="core",e.Global="gl",e.Self="self",e.Async="async",e.Ignore="ign",e.Known="known",e.API="api",e.Shared="shr",e.Ext="ext",e.ThirdParty="3rd",e.RB="rb",e.Unknown="unk"}(i||(i={}));var w=/\/(.*?)\/([a-z]+)?\.test\((.*?)\)|\s+|([()!])/g,b=/^(!|&&|\|\||[()])$/,E={};function O(e){var r=[],n=String(e||"").trim();if(E[n])return E[n];var t=n.split(w);if(n)for(var o=0;o<t.length;o++){var a=t[o];a&&r.push({op:a}),t[++o]&&r.push({key:t[o+2],re:new RegExp(t[o].replace(/\\/g,"\\"),t[o+1]||"i")}),t[o+=3]&&r.push({op:t[o]})}var i=function(n){for(var t,o,a=!0,i=0,l=0,u=0,s=0,c=0,f=r.length;c<f;c++)if("op"in(t=r[c]))if("("===(o=t.op))l++;else if(")"===o)u===l&&(u=0),l--;else if(u);else if("!"===o)s++;else{if(i||!b.test(o)||0===c||f-c==1)throw new SyntaxError('Failed operation "'+o+'" ('+c+"): "+e);if("||"===(i=o)&&a){if(!l)return a;i=0,u=l}}else if(u);else{if(!(t.key in n))throw new Error('Unknown token "'+t.key+'": '+e);var p=n[t.key],g=null!=p&&!1!==p&&t.re.test(p);s%2&&(g=!g),a=("||"===i||a)&&g,i=0,s=0}return a};return E[n]=i,i}var j={},x=null,S=[],P=[];function C(e,r){x=null;var n=j[e];for(var t in n||(n={test:!1},j[e]=n),r)n[t]=r[t];n.tag=n.tag||i.Unknown,n.category=e,"string"==typeof n.test&&O(n.test)}function R(e){return e&&(S=e,x=null),S}function _(e){var r={},n=null;return y("MCL:match",(function(){null===x&&(x=P.concat(S,Object.keys(j)));for(var t=function(t,o){var a=x[t],i=j[a];if(i&&!r[a]&&(r[a]=1,y("MCL:matchrule:"+a,(function(){return function(e,r){var n=!1;if(!0===e)n=!0;else if("function"==typeof e)n=e(r);else if("string"==typeof e)n=O(e)(r);else if(e&&"object"==typeof e)for(var t in n=!0,e){var o=e[t];if(o instanceof RegExp&&!o.test(r[t])){n=!1;break}}return n}(i.test,e)}))))return n=i,"break"},o=0,a=x.length;o<a;o++){if("break"===t(o))break}})),n}var I=[];var L={category:"unknown",tag:i.Unknown,test:!0,log:!0};function M(e){for(var r=e[0],n=e[1],t=e[2],o=e[3],a=e[4],i={url:e[5]||"",name:a&&a.name||"unk",message:(r||"").toString()||a&&a.message||"<<unknown>>",source:n||"",line:t||0,col:o||0,uniq:a&&a.uniq,stack:a&&a.stack||"",detail:a&&a.detail},l=a&&a.rule||_(i)||L,u=I.length;u--;)y("MCL:notify:"+u,I[u],i,l)}var q,N,U=(function(e,r){Object.defineProperty(r,"__esModule",{value:!0});var n="object"==typeof window&&window||{},t=null,o=[];function a(){if(null===t)try{t=n.xray&&n.xray.send?n.xray:n.require("@mail/xray")}catch(e){try{t=n.require("mrg-xray")}catch(e){}}return t||null}function i(e){null===t?o.push(e):e(t)}r.getGlobalXRaySync=a,r.getGlobalXRay=i,r.createXRayQueue=function(e){var r=[];return i((function(n){n=e?e(n,r):n,r.push=function(e){n.send.apply(n,e)},r.forEach(r.push),r.length=0})),{send:function(){for(var e=[],n=0;n<arguments.length;n++)e[n]=arguments[n];r.push(e)}}},function e(){null===a()?setTimeout(e,100):(o.forEach(i),o.length=0)}()}(q={exports:{}},q.exports),q.exports);(N=U)&&N.__esModule&&Object.prototype.hasOwnProperty.call(N,"default")&&N.default,U.getGlobalXRaySync,U.getGlobalXRay;var X=U.createXRayQueue,D={name:"@mail-core/logger",v:"8.0.1"};var G={Tag:i,reporters:I,rules:{get:function(){return j},set:function(e){if(x=null,"clear"===e)j={};else for(var r in e)if(e.hasOwnProperty(r)){var n=e[r];C(r,"string"==typeof n?{test:n}:n)}},priority:R,basePriority:function(e){return e&&(P=e,x=null),P},update:C,match:_},opts:{}},J=/\.test\./,T="mclp-"+Date.now(),B=document;return e.dispatchError=v,e.dispatchReactError=function(e,r,n){v(e,{sender:"react",info:r},n)},e.errors=G,e.init=function(e){void 0===e&&(e={});var r,n,t,o,a,u,c=window,v=e.errors||{},m=v.rules;if(G.opts=e,m){for(var k in m)if(m.hasOwnProperty(k)){var w=m[k];(w="string"==typeof w?{test:w}:w).log=null==w.log?!1!==v.logByDefault:w.log,w.tag=w.tag||i.Self,C(k,w)}R(v.priority||Object.keys(m))}r=c,n=null==v.silent?!J.test(location.host):!1!==v.silent,y((function(){f=r.onerror,s=!!n,r.onerror=h,r.addEventListener("unhandledrejection",d),r.addEventListener("error",(function(e){g&&(e.stopImmediatePropagation(),g=!1)})),Object.defineProperty(r,"onerror",{configurable:!1,enumerable:!0,get:function(){return f},set:function(e){f=e}})})),!1!==v.preset&&setTimeout((function r(n){var t="https://img.imgsmail.ru/hb/e.mail.ru/@mail-core/logger-preset/"+(v.preset||"base"),o=D.v;try{o=localStorage.getItem("@mail-core/logger:preset:ver")||o}catch(e){}!function(e,r){var n=B.createElement("script");n.type="text/javascript",n.async=!0,n.src=e,n.id=T,!1!==r&&(n.crossOrigin=r||"anonymous");var t=B.getElementById(T),o=B.head;t?o.replaceChild(n,t):o.appendChild(n)}(t+".js?v"+D.v+"&pv="+o+"&f="+(n?Date.now():0),e.crossOrigin),setTimeout(r,18e5,1)}),0,0),C("host",{log:!1!==v.logByDefault}),I.push.apply(I,[(t=e.xray,a=t?(null===(o=t.getConfig().defaultParams)||void 0===o?void 0:o.p)||"unknown":"{project}",u=t||X((function(e,r){var n,t=e.getConfig(),o=t.radarPrefix;return a=((null===(n=t.defaultParams)||void 0===n?void 0:n.p)||"unknown")+(o?"_"+o:""),r.forEach((function(e){e[1]&&e[1].rlog&&e[1].rlog_message&&(e[1].rlog=e[1].rlog.replace("{project}",a),e[1].rlog_message.project=a)})),e})),function(e,r){var n=null==r.log||r.log,t=r.tag,o=r.category,l={},s={i:l,skipdwh:!0};n&&(s.rlog=!0===n?"pk-err-"+(t===i.API?a+"-api":t===i.Self?a+"-self":t===i.Known?a+"-known":t===i.Ignore?a+"-ignore":o):n,s.rlog_message={v:D.v,err:e,tag:t,category:o,project:a,rule:r.test}),r.silent||(l[t===i.Known?"t-"+t+"-c-"+o:"t-"+t+"-c-"+o+"-n-"+e.name.replace(/(.)Error/,"$1").toLowerCase()]=1),u.send("pk-err",s)})].concat(e.reporters||[])),function(e){e.forEach(M),e.length=0,e.push=M}(l),!1!==e.checkJSON&&c.chrome&&!c.StyleMedia&&(p=!0,JSON.parse("~"))},e.pkg=D,e.tryCatch=y,Object.defineProperty(e,"__esModule",{value:!0}),e}({});
+
+							//# sourceURL=core-logger.min.js</script><script id="__core-logger-init__" crossorigin="anonymous">window.coreLogger && coreLogger.init();
+							//# sourceURL=core-logger-init.js</script></head><body><script type="text/javascript" crossorigin="anonymous">var _tmr = window._tmr || (window._tmr = []);
+			_tmr.push({id: "3118422", type: "pageView", start: (new Date()).getTime()});
+			(function (d, w, id) {
+			if (d.getElementById(id)) return;
+			var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+			ts.src = "https://top-fwz1.mail.ru/js/code.js";
+			var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+			if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+			})(document, window, "topmailru-code");</script><noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3118422;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru"/></div></noscript><div id="account-content"><div id="account-headline" class="account-headline" data-mobile-app="false" data-popup="false"><link  href="https://limg.imgsmail.ru/pkgs/whiteline/2.99.0/external.css" rel="stylesheet"><div id="ph-whiteline" class="ph-whiteline" data-testid="whiteline"></div><script >function parseEmptySlot(slot) {return slot || null;}window.__PHS = parseEmptySlot(
+{"id": 96571001, "updated": "", "version": "4", "isWhiteline": true, "isTargetBlank": true, "isModern": true, "visitCookieAliases": ["tv.mail.ru", "games.mail.ru", "horo.mail.ru", "my.mail.ru"], "bizLinks": "", "parentalControlMode": "", "experimentId": "", "siteZone": "49", "siteId": "479", "sitezone": "49", "siteid": "479", "isDebug": "", "activeEmail": "", "maxAccounts": "20", "loginUrl": "", "loginPage": "", "logoutUrl": "", "logoutPage": "", "registerBackUrl": "", "colorTheme": "", "counters": {"thisPropertyIsOnlyForValidJSON": "1","counterAuthMenuOpen": 1126003,"counterLogin": 75068996,"counterLogout": 75068944,"counterRegistration": 75068995,"counterPassAndSecurity": 75068940,"counterPersonal": 75068936,"counterChangeMailbox": 1126018,"counterAddMailbox": 1126064}, "social": {"vk": false,"ok": false,"fb": false}, "experiments": {"thisPropertyIsOnlyForValidJSON": "1","switchUnionQuotaBlock": true},"authGate": true,"authGateVersion": "https://img.imgsmail.ru/hb/e.mail.ru/auth.gate/2.10.0/authGate.js","authGateMobileRedirect": true,"enableExtDomains": true,"isShowOkCounter": true,"isShowVKCounter": true,"socialCountersTimer": "300000","stayInAccountListOnVisibilityChange": true,"securitySettingsLink": "https://id.mail.ru/security","isOnMarusia": true,"marusiaWidgetUrl": "https://marusia-web.go.mail.ru","metricsCookieEnable": true,"metricsCookieExpires": 7,"metricsCookieParams": "utm_source, utm_medium, utm_campaign, utm_content, utm_term, mt_click_id, mt_link_id"}
+
+) || {};window.__PHS.settingsId = window.__PHS.id;window.__PHS.id = 96571035;window.__PHS.selfExperimentId = parseEmptySlot();window.__PHS.lang = (parseEmptySlot({"lang": "en_US", "account": {"account-settings": "Settings", "sign-up": "Registration", "help": "Help", "theme-dark": "Dark mode", "settings": "Personal data", "theme-system": "Like in the system", "appearance": "Design", "sign-in": "Log in", "theme-light": "Light mode", "add": "Add account", "exit": "Exit", "theme-setting": "Home page settings", "children-users": "Email for kids", "copied": "Copied", "copy": "Copy", "security": "Password and security", "change-avatar": "Change avatar"}, "search": {"placeholder": "Search on the web", "find": "Find"}, "projects": {"uchiru-pb": "Uchi.ru", "samokat-pb": "Samokat", "citymobil": "Citymobil", "love": "Dating", "skillbox": "Skillbox", "calendar-pb": "Calendar", "vk": "VK", "worki-find-employee": "Find an employee", "agent": "Mail.ru Agent", "myteam": "VK Teams", "tamtam": "TamTam", "worki-work": "Work", "aliexpress": "AliExpress", "horoscopes": "Horoscopes", "calendar": "Calendar", "sport": "Sport", "todo": "Tasks", "see-all-projects": "See all", "cloud": "Cloud", "mail-pb": "Email", "geekbrains": "GeekBrains", "vkpochta": "VK Mail", "hi-tech": "Hi-Tech", "cloud-pb": "Cloud", "contacts": "Contacts", "mail-for-education": "Email for education", "lady": "Lady", "top": "Website ranking", "ok-short": "OK", "admin-console": "Admin Console", "youla": "Youla", "geekbrains-pb": "GeekBrains", "health": "Health", "ok": "Odnoklassniki", "pets": "Pets", "vseapteki": "All Pharmacies", "mail": "Email", "icq": "ICQ New", "mailru": "Mail.ru", "fines": "Fines", "more": "More", "youla-with-utm": "Youla", "mytarget": "MyTarget", "skillbox-pb": "Skillbox", "mail-for-business": "Email for business", "auto": "Auto", "hotbox": "Hotbox", "answers": "Answers", "delivery-club-pb": "Delivery Club", "cloud-with-utm": "Cloud", "vkpochta-pb": "VK Mail", "citymobil-pb": "Citymobil", "capsula": "Capsula", "atom": "Atom browser", "worki": "Worki", "news": "News", "smotri": "Smotri", "business-projects": "For business", "moymir": "My World", "calls-pb": "Calls", "teambox": "Cloud for working groups", "mailrugroup": "Mail.ru Group", "marusia": "Marusia", "kids": "Kids", "all-projects": "All projects", "payment-center": "Payments", "calls": "Calls", "dom": "House", "delivery-club": "Delivery Club", "kino": "Cinema", "notes": "Notes", "mygames-pb": "MY.GAMES", "mygames": "MY.GAMES", "msc": "Cloud for business", "marusia-pb": "Marusia", "tv": "TV listings", "pogoda": "Weather", "dobro": "Kindness", "games": "Games", "icebox": "Icebox", "projects": "Projects", "vk-short": "VK", "todo-pb": "Tasks", "citydrive": "Citydrive"}, "connection-error": {"item2": "Check internet connection", "header": "Connection error", "subheader": "Try", "item1": "Refresh page"}}) || {}).lang;window.__PHS.isVkEcosystemPromo = parseEmptySlot();window.__PHS.omicronConfig = parseEmptySlot();window.__PHS._ = {props: {projectsKeys: parseEmptySlot({"id": 110546980, "showPixel": "https://rs.mail.ru/pixel/AAD49QGl9YXGTKqFyc8bcfKIE0wmqSbIKss1gxKTWhzZIOjCZW0vO9-YLzLPHW_zQslYCz7SEQaemS1aITJ-8JVI4ZMMVnS-xzrAU5avf0qOI2LUEEsLeTllCl0wYKDtON-lKGMZTl_-mDillERDGnA_X7Ytg4tMWcuXMD1ymUyZmm41hLweBGAZAAAAAKVKYqRBSaoSUYHir_rbV4jiY1pb89q2zZlgJV4qaAU.gif", "general": ["mailru", "mail", "cloud-with-utm", "ok", "vk", "news", "love"], "projectsbar": ["mail-pb", "cloud-pb", "calendar-pb", "todo-pb", "calls-pb", "skillbox-pb", "geekbrains-pb", "vkpochta-pb", "marusia-pb", "uchiru-pb"], "additional": ["auto", "horoscopes", "kids", "dobro", "calls", "health", "kino", "lady", "dom", "cloud", "answers", "moymir", "pets", "pogoda", "sport", "tv", "fines", "hi-tech"], "business": ["msc", "teambox", "mail-for-business", "mail-for-education", "top", "mytarget", "myteam"], "mailrugroup": ["capsula", "youla"], "items": {"uchiru-pb": {"url": "https://trk.mail.ru/c/ouz2p0?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383469", "src_2x": "https://r.mradx.net/img/EC/9F0524.png"},"love": {"url": "https://trk.mail.ru/c/k9iu14?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383471", "location": "love.mail.ru"},"calendar-pb": {"url": "https://trk.mail.ru/c/pcshm0?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "385262526", "src_2x": "https://r.mradx.net/img/16/BE4D08.png"},"vk": {"url": "https://trk.mail.ru/c/z1q4a7?mt_campaign=mainvkmail&mt_adset=&mt_network=1&mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383473", "location": "vk.com"},"vkpochta": {"url": "https://trk.mail.ru/c/du7y94?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383474", "location": "vk.mail.ru"},"myteam": {"url": "https://trk.mail.ru/c/y9dmn7?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383475", "img": "https://r.mradx.net/img/1F/8B9486.svg", "img_dark": "https://r.mradx.net/img/F9/B57FC7.svg"},"horoscopes": {"url": "https://trk.mail.ru/c/hc8ne4?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383476", "img": "https://r.mradx.net/img/37/58CE7A.svg", "img_dark": "https://r.mradx.net/img/F5/CF0A57.svg"},"sport": {"url": "https://trk.mail.ru/c/h3p427?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383479", "img": "https://r.mradx.net/img/DC/7B0131.svg", "img_dark": "https://r.mradx.net/img/04/68591E.svg"},"cloud": {"url": "https://trk.mail.ru/c/flb3c1?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383480", "img": "https://r.mradx.net/img/48/B93EBC.svg", "img_dark": "https://r.mradx.net/img/D4/895BFA.svg"},"mail-pb": {"url": "https://trk.mail.ru/c/f1bxj0?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383481", "src_2x": "https://r.mradx.net/img/4F/0A4157.png"},"atom": {"url": "https://browser.ru", "nid": "374383482"},"hi-tech": {"url": "https://trk.mail.ru/c/ualdy9?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383483", "img": "https://r.mradx.net/img/29/1508C6.svg", "img_dark": "https://r.mradx.net/img/0F/EFC46A.svg"},"cloud-pb": {"url": "https://trk.mail.ru/c/mswrw7?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383484", "src_2x": "https://r.mradx.net/img/D4/F0A70F.png"},"tv": {"url": "https://trk.mail.ru/c/q1mg62?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383485", "img": "https://r.mradx.net/img/6A/7DD5EB.svg", "img_dark": "https://r.mradx.net/img/88/B80883.svg"},"top": {"url": "https://trk.mail.ru/c/w6q683?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383486", "img": "https://r.mradx.net/img/E6/2FE066.svg", "img_dark": "https://r.mradx.net/img/7B/33FDC5.svg"},"youla": {"url": "https://trk.mail.ru/c/whets1?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383487", "img": "https://r.mradx.net/img/98/4FD1C8.svg", "img_dark": "https://r.mradx.net/img/9A/624631.svg"},"geekbrains-pb": {"url": "https://trk.mail.ru/c/xrpsx5?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383488", "src_2x": "https://r.mradx.net/img/4D/37A838.png"},"health": {"url": "https://trk.mail.ru/c/rrtzo0?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383489", "img": "https://r.mradx.net/img/0F/394FCB.svg", "img_dark": "https://r.mradx.net/img/76/79A5DF.svg"},"pets": {"url": "https://trk.mail.ru/c/xryci5?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383490", "img": "https://r.mradx.net/img/24/D1B2F4.svg", "img_dark": "https://r.mradx.net/img/D2/D9A5D5.svg"},"skillbox-pb": {"url": "https://trk.mail.ru/c/zj9cu0?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383492", "src_2x": "https://r.mradx.net/img/1A/AF4F4D.png"},"mail": {"url": "https://trk.mail.ru/c/y7s979?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383493", "location": "e.mail.ru", "exclude": "e\\.mail\\.ru/payment/center"},"icq": {"url": "https://icq.com", "nid": "374383494"},"mailru": {"url": "https://trk.mail.ru/c/ds8xq6?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383495", "location": "mail.ru"},"fines": {"url": "https://trk.mail.ru/c/zh42d1?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383496", "img": "https://r.mradx.net/img/XY/58FE61.svg", "img_dark": "https://r.mradx.net/img/06/CEF127.svg"},"more": {"url": "https://trk.mail.ru/c/fnfg28?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383497"},"mytarget": {"url": "https://trk.mail.ru/c/i1k5w9?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383498", "img": "https://r.mradx.net/img/69/284783.svg", "img_dark": "https://r.mradx.net/img/34/8BC951.svg"},"all-projects": {"url": "https://trk.mail.ru/c/lb9kv9?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383499"},"tamtam": {"url": "https://tamtam.chat/?fromportal=1", "nid": "374383500"},"mail-for-business": {"url": "https://trk.mail.ru/c/f1r8s1?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383501", "img": "https://r.mradx.net/img/73/3FB28A.svg", "img_dark": "https://r.mradx.net/img/74/14025F.svg"},"auto": {"url": "https://trk.mail.ru/c/oaw194?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383502", "img": "https://r.mradx.net/img/8D/B85D8A.svg", "img_dark": "https://r.mradx.net/img/66/3BA42B.svg"},"answers": {"url": "https://trk.mail.ru/c/zlq6h8?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383503", "img": "https://r.mradx.net/img/65/0A80CC.svg", "img_dark": "https://r.mradx.net/img/30/CDBA32.svg"},"cloud-with-utm": {"url": "https://trk.mail.ru/c/pqaft6?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383505", "location": "cloud.mail.ru"},"agent": {"url": "https://agent.mail.ru", "nid": "374383506"},"capsula": {"url": "https://trk.mail.ru/c/e734n3?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383472", "img": "https://r.mradx.net/img/EC/970D9B.svg", "img_dark": "https://r.mradx.net/img/70/6DB003.svg"},"msc": {"url": "https://trk.mail.ru/c/chvh09?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383508", "img": "https://r.mradx.net/img/48/B93EBC.svg", "img_dark": "https://r.mradx.net/img/D4/895BFA.svg"},"news": {"url": "https://trk.mail.ru/c/curxh8?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383509", "location": "news.mail.ru"},"lady": {"url": "https://trk.mail.ru/c/jn0jd3?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383510", "img": "https://r.mradx.net/img/07/C4F523.svg", "img_dark": "https://r.mradx.net/img/28/A08DD3.svg"},"moymir": {"url": "https://trk.mail.ru/c/v6h9q7?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "386901323", "img": "https://r.mradx.net/img/74/AAE776.svg", "img_dark": "https://r.mradx.net/img/4E/15F324.svg", "location": "my.mail.ru"},"calls-pb": {"url": "https://trk.mail.ru/c/vamjt1?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "382559367", "src_2x": "https://r.mradx.net/img/EA/0DC6E0.svg"},"kids": {"url": "https://trk.mail.ru/c/wza2e9?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383511", "img": "https://r.mradx.net/img/7D/1D969D.svg", "img_dark": "https://r.mradx.net/img/92/75ED28.svg"},"ok": {"url": "https://trk.mail.ru/c/koydy6?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383512", "location": "ok.ru"},"teambox": {"url": "https://trk.mail.ru/c/okfi27?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383513", "img": "https://r.mradx.net/img/DE/E86C18.svg", "img_dark": "https://r.mradx.net/img/DC/13D9E3.svg"},"calls": {"url": "https://trk.mail.ru/c/qmbmu5?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383514", "img": "https://r.mradx.net/img/6B/40007A.svg", "img_dark": "https://r.mradx.net/img/85/BA4E7C.svg"},"dom": {"url": "https://trk.mail.ru/c/yr64b9?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383515", "img": "https://r.mradx.net/img/B8/FB4268.svg", "img_dark": "https://r.mradx.net/img/29/58E2D3.svg"},"kino": {"url": "https://trk.mail.ru/c/dz2425?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383517", "img": "https://r.mradx.net/img/BA/B76EC8.svg", "img_dark": "https://r.mradx.net/img/D9/C0B709.svg"},"vkpochta-pb": {"url": "https://trk.mail.ru/c/mpplb8?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383518", "src_2x": "https://r.mradx.net/img/80/B2A9A9.png"},"marusia-pb": {"url": "https://trk.mail.ru/c/z3kin0?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383519", "src_2x": "https://r.mradx.net/img/C7/24F215.png"},"mail-for-education": {"url": "https://trk.mail.ru/c/q0fnd7?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383520", "img": "https://r.mradx.net/img/44/F9500F.svg", "img_dark": "https://r.mradx.net/img/34/CA8219.svg"},"pogoda": {"url": "https://trk.mail.ru/c/eu3tc9?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383521", "img": "https://r.mradx.net/img/48/7A6B15.svg", "img_dark": "https://r.mradx.net/img/F4/71CDB4.svg"},"dobro": {"url": "https://trk.mail.ru/c/szuzz5?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "374383522", "img": "https://r.mradx.net/img/6A/7CCEE9.svg", "img_dark": "https://r.mradx.net/img/4C/4ABF08.svg"},"todo-pb": {"url": "https://trk.mail.ru/c/zz7cd7?mt_sub1=HOST&mt_sub5=EXP_ID", "nid": "382559368", "src_2x": "https://r.mradx.net/img/D9/8B2AD1.svg"}}}),localization: parseEmptySlot({"lang": "en_US", "account": {"account-settings": "Settings", "sign-up": "Registration", "help": "Help", "theme-dark": "Dark mode", "settings": "Personal data", "theme-system": "Like in the system", "appearance": "Design", "sign-in": "Log in", "theme-light": "Light mode", "add": "Add account", "exit": "Exit", "theme-setting": "Home page settings", "children-users": "Email for kids", "copied": "Copied", "copy": "Copy", "security": "Password and security", "change-avatar": "Change avatar"}, "search": {"placeholder": "Search on the web", "find": "Find"}, "projects": {"uchiru-pb": "Uchi.ru", "samokat-pb": "Samokat", "citymobil": "Citymobil", "love": "Dating", "skillbox": "Skillbox", "calendar-pb": "Calendar", "vk": "VK", "worki-find-employee": "Find an employee", "agent": "Mail.ru Agent", "myteam": "VK Teams", "tamtam": "TamTam", "worki-work": "Work", "aliexpress": "AliExpress", "horoscopes": "Horoscopes", "calendar": "Calendar", "sport": "Sport", "todo": "Tasks", "see-all-projects": "See all", "cloud": "Cloud", "mail-pb": "Email", "geekbrains": "GeekBrains", "vkpochta": "VK Mail", "hi-tech": "Hi-Tech", "cloud-pb": "Cloud", "contacts": "Contacts", "mail-for-education": "Email for education", "lady": "Lady", "top": "Website ranking", "ok-short": "OK", "admin-console": "Admin Console", "youla": "Youla", "geekbrains-pb": "GeekBrains", "health": "Health", "ok": "Odnoklassniki", "pets": "Pets", "vseapteki": "All Pharmacies", "mail": "Email", "icq": "ICQ New", "mailru": "Mail.ru", "fines": "Fines", "more": "More", "youla-with-utm": "Youla", "mytarget": "MyTarget", "skillbox-pb": "Skillbox", "mail-for-business": "Email for business", "auto": "Auto", "hotbox": "Hotbox", "answers": "Answers", "delivery-club-pb": "Delivery Club", "cloud-with-utm": "Cloud", "vkpochta-pb": "VK Mail", "citymobil-pb": "Citymobil", "capsula": "Capsula", "atom": "Atom browser", "worki": "Worki", "news": "News", "smotri": "Smotri", "business-projects": "For business", "moymir": "My World", "calls-pb": "Calls", "teambox": "Cloud for working groups", "mailrugroup": "Mail.ru Group", "marusia": "Marusia", "kids": "Kids", "all-projects": "All projects", "payment-center": "Payments", "calls": "Calls", "dom": "House", "delivery-club": "Delivery Club", "kino": "Cinema", "notes": "Notes", "mygames-pb": "MY.GAMES", "mygames": "MY.GAMES", "msc": "Cloud for business", "marusia-pb": "Marusia", "tv": "TV listings", "pogoda": "Weather", "dobro": "Kindness", "games": "Games", "icebox": "Icebox", "projects": "Projects", "vk-short": "VK", "todo-pb": "Tasks", "citydrive": "Citydrive"}, "connection-error": {"item2": "Check internet connection", "header": "Connection error", "subheader": "Try", "item1": "Refresh page"}}),settings: window.__PHS,data: {promo: parseEmptySlot()}},hasExternal: true,bundleUrl: 'https://limg.imgsmail.ru/pkgs/whiteline/2.99.0/external.modern.js'};</script><script  src="https://limg.imgsmail.ru/pkgs/whiteline/2.99.0/inline.modern.js"></script><script >window.abp = false</script></div><div class="header" id="account-header" data-mobile-app="false" data-popup="false"><div class="header__inner"><a href="https://mail.ru" target="_self" class="header__logo"><img src="//img.imgsmail.ru/static.promo/logo/logo.svg" alt="Mail.Ru" height="32" class="header__logo-image"/></a></div></div><style>@keyframes spin {
+				to {
+					transform: rotate(360deg) translatez(0);
+				}
+			}
+
+			.account-loader {
+				fill: #005ff9;
+				display: block;
+				animation: spin 1s cubic-bezier(0.49, 0.28, 0.49, 0.67) infinite;
+				width: 32px;
+				height: 32px;
+				top: 50%;
+				left: 50%;
+				margin: -16px 0 0 -16px;
+				position: absolute;
+			}</style><div class="account-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64"><defs><path id="a" d="M0 0h32v32H0z"></path><mask id="progress"><path fill="#fff" d="M0 0h64v64H0z"></path><use fill="#020202" xlink:href="#a" transform="rotate(-146 32 32)"></use><use fill="#040404" xlink:href="#a" transform="rotate(-144 32 32)"></use><use fill="#060606" xlink:href="#a" transform="rotate(-142 32 32)"></use><use fill="#080808" xlink:href="#a" transform="rotate(-140 32 32)"></use><use fill="#0A0A0A" xlink:href="#a" transform="rotate(-138 32 32)"></use><use fill="#0C0C0C" xlink:href="#a" transform="rotate(-136 32 32)"></use><use fill="#0E0E0E" xlink:href="#a" transform="rotate(-134 32 32)"></use><use fill="#101010" xlink:href="#a" transform="rotate(-132 32 32)"></use><use fill="#131313" xlink:href="#a" transform="rotate(-130 32 32)"></use><use fill="#151515" xlink:href="#a" transform="rotate(-128 32 32)"></use><use fill="#171717" xlink:href="#a" transform="rotate(-126 32 32)"></use><use fill="#191919" xlink:href="#a" transform="rotate(-124 32 32)"></use><use fill="#1B1B1B" xlink:href="#a" transform="rotate(-122 32 32)"></use><use fill="#1D1D1D" xlink:href="#a" transform="rotate(-120 32 32)"></use><use fill="#1F1F1F" xlink:href="#a" transform="rotate(-118 32 32)"></use><use fill="#212121" xlink:href="#a" transform="rotate(-116 32 32)"></use><use fill="#242424" xlink:href="#a" transform="rotate(-114 32 32)"></use><use fill="#262626" xlink:href="#a" transform="rotate(-112 32 32)"></use><use fill="#282828" xlink:href="#a" transform="rotate(-110 32 32)"></use><use fill="#2A2A2A" xlink:href="#a" transform="rotate(-108 32 32)"></use><use fill="#2C2C2C" xlink:href="#a" transform="rotate(-106 32 32)"></use><use fill="#2E2E2E" xlink:href="#a" transform="rotate(-104 32 32)"></use><use fill="#303030" xlink:href="#a" transform="rotate(-102 32 32)"></use><use fill="#323232" xlink:href="#a" transform="rotate(-100 32 32)"></use><use fill="#353535" xlink:href="#a" transform="rotate(-98 32 32)"></use><use fill="#373737" xlink:href="#a" transform="rotate(-96 32 32)"></use><use fill="#393939" xlink:href="#a" transform="rotate(-94 32 32)"></use><use fill="#3B3B3B" xlink:href="#a" transform="rotate(-92 32 32)"></use><use fill="#3D3D3D" xlink:href="#a" transform="rotate(-90 32 32)"></use><use fill="#3F3F3F" xlink:href="#a" transform="rotate(-88 32 32)"></use><use fill="#414141" xlink:href="#a" transform="rotate(-86 32 32)"></use><use fill="#434343" xlink:href="#a" transform="rotate(-84 32 32)"></use><use fill="#464646" xlink:href="#a" transform="rotate(-82 32 32)"></use><use fill="#484848" xlink:href="#a" transform="rotate(-80 32 32)"></use><use fill="#4A4A4A" xlink:href="#a" transform="rotate(-78 32 32)"></use><use fill="#4C4C4C" xlink:href="#a" transform="rotate(-76 32 32)"></use><use fill="#4E4E4E" xlink:href="#a" transform="rotate(-74 32 32)"></use><use fill="#505050" xlink:href="#a" transform="rotate(-72 32 32)"></use><use fill="#525252" xlink:href="#a" transform="rotate(-70 32 32)"></use><use fill="#545454" xlink:href="#a" transform="rotate(-68 32 32)"></use><use fill="#575757" xlink:href="#a" transform="rotate(-66 32 32)"></use><use fill="#595959" xlink:href="#a" transform="rotate(-64 32 32)"></use><use fill="#5B5B5B" xlink:href="#a" transform="rotate(-62 32 32)"></use><use fill="#5D5D5D" xlink:href="#a" transform="rotate(-60 32 32)"></use><use fill="#5F5F5F" xlink:href="#a" transform="rotate(-58 32 32)"></use><use fill="#616161" xlink:href="#a" transform="rotate(-56 32 32)"></use><use fill="#636363" xlink:href="#a" transform="rotate(-54 32 32)"></use><use fill="#656565" xlink:href="#a" transform="rotate(-52 32 32)"></use><use fill="#686868" xlink:href="#a" transform="rotate(-50 32 32)"></use><use fill="#6A6A6A" xlink:href="#a" transform="rotate(-48 32 32)"></use><use fill="#6C6C6C" xlink:href="#a" transform="rotate(-46 32 32)"></use><use fill="#6E6E6E" xlink:href="#a" transform="rotate(-44 32 32)"></use><use fill="#707070" xlink:href="#a" transform="rotate(-42 32 32)"></use><use fill="#727272" xlink:href="#a" transform="rotate(-40 32 32)"></use><use fill="#747474" xlink:href="#a" transform="rotate(-38 32 32)"></use><use fill="#767676" xlink:href="#a" transform="rotate(-36 32 32)"></use><use fill="#797979" xlink:href="#a" transform="rotate(-34 32 32)"></use><use fill="#7B7B7B" xlink:href="#a" transform="rotate(-32 32 32)"></use><use fill="#7D7D7D" xlink:href="#a" transform="rotate(-30 32 32)"></use><use fill="#7F7F7F" xlink:href="#a" transform="rotate(-28 32 32)"></use><use fill="#818181" xlink:href="#a" transform="rotate(-26 32 32)"></use><use fill="#838383" xlink:href="#a" transform="rotate(-24 32 32)"></use><use fill="#858585" xlink:href="#a" transform="rotate(-22 32 32)"></use><use fill="#878787" xlink:href="#a" transform="rotate(-20 32 32)"></use><use fill="#8A8A8A" xlink:href="#a" transform="rotate(-18 32 32)"></use><use fill="#8C8C8C" xlink:href="#a" transform="rotate(-16 32 32)"></use><use fill="#8E8E8E" xlink:href="#a" transform="rotate(-14 32 32)"></use><use fill="#909090" xlink:href="#a" transform="rotate(-12 32 32)"></use><use fill="#929292" xlink:href="#a" transform="rotate(-10 32 32)"></use><use fill="#949494" xlink:href="#a" transform="rotate(-8 32 32)"></use><use fill="#969696" xlink:href="#a" transform="rotate(-6 32 32)"></use><use fill="#989898" xlink:href="#a" transform="rotate(-4 32 32)"></use><use fill="#9B9B9B" xlink:href="#a" transform="rotate(-2 32 32)"></use><use fill="#9D9D9D" xlink:href="#a"></use><use fill="#9F9F9F" xlink:href="#a" transform="rotate(2 32 32)"></use><use fill="#A1A1A1" xlink:href="#a" transform="rotate(4 32 32)"></use><use fill="#A3A3A3" xlink:href="#a" transform="rotate(6 32 32)"></use><use fill="#A5A5A5" xlink:href="#a" transform="rotate(8 32 32)"></use><use fill="#A7A7A7" xlink:href="#a" transform="rotate(10 32 32)"></use><use fill="#A9A9A9" xlink:href="#a" transform="rotate(12 32 32)"></use><use fill="#ACACAC" xlink:href="#a" transform="rotate(14 32 32)"></use><use fill="#AEAEAE" xlink:href="#a" transform="rotate(16 32 32)"></use><use fill="#B0B0B0" xlink:href="#a" transform="rotate(18 32 32)"></use><use fill="#B2B2B2" xlink:href="#a" transform="rotate(20 32 32)"></use><use fill="#B4B4B4" xlink:href="#a" transform="rotate(22 32 32)"></use><use fill="#B6B6B6" xlink:href="#a" transform="rotate(24 32 32)"></use><use fill="#B8B8B8" xlink:href="#a" transform="rotate(26 32 32)"></use><use fill="#BABABA" xlink:href="#a" transform="rotate(28 32 32)"></use><use fill="#BDBDBD" xlink:href="#a" transform="rotate(30 32 32)"></use><use fill="#BFBFBF" xlink:href="#a" transform="rotate(32 32 32)"></use><use fill="#C1C1C1" xlink:href="#a" transform="rotate(34 32 32)"></use><use fill="#C3C3C3" xlink:href="#a" transform="rotate(36 32 32)"></use><use fill="#C5C5C5" xlink:href="#a" transform="rotate(38 32 32)"></use><use fill="#C7C7C7" xlink:href="#a" transform="rotate(40 32 32)"></use><use fill="#C9C9C9" xlink:href="#a" transform="rotate(42 32 32)"></use><use fill="#CBCBCB" xlink:href="#a" transform="rotate(44 32 32)"></use><use fill="#CECECE" xlink:href="#a" transform="rotate(46 32 32)"></use><use fill="#D0D0D0" xlink:href="#a" transform="rotate(48 32 32)"></use><use fill="#D2D2D2" xlink:href="#a" transform="rotate(50 32 32)"></use><use fill="#D4D4D4" xlink:href="#a" transform="rotate(52 32 32)"></use><use fill="#D6D6D6" xlink:href="#a" transform="rotate(54 32 32)"></use><use fill="#D8D8D8" xlink:href="#a" transform="rotate(56 32 32)"></use><use fill="#DADADA" xlink:href="#a" transform="rotate(58 32 32)"></use><use fill="#DCDCDC" xlink:href="#a" transform="rotate(60 32 32)"></use><use fill="#DFDFDF" xlink:href="#a" transform="rotate(62 32 32)"></use><use fill="#E1E1E1" xlink:href="#a" transform="rotate(64 32 32)"></use><use fill="#E3E3E3" xlink:href="#a" transform="rotate(66 32 32)"></use><use fill="#E5E5E5" xlink:href="#a" transform="rotate(68 32 32)"></use><use fill="#E7E7E7" xlink:href="#a" transform="rotate(70 32 32)"></use><use fill="#E9E9E9" xlink:href="#a" transform="rotate(72 32 32)"></use><use fill="#EBEBEB" xlink:href="#a" transform="rotate(74 32 32)"></use><use fill="#EDEDED" xlink:href="#a" transform="rotate(76 32 32)"></use><use fill="#F0F0F0" xlink:href="#a" transform="rotate(78 32 32)"></use><use fill="#F2F2F2" xlink:href="#a" transform="rotate(80 32 32)"></use><use fill="#F4F4F4" xlink:href="#a" transform="rotate(82 32 32)"></use><use fill="#F6F6F6" xlink:href="#a" transform="rotate(84 32 32)"></use><use fill="#F8F8F8" xlink:href="#a" transform="rotate(86 32 32)"></use><use fill="#FAFAFA" xlink:href="#a" transform="rotate(88 32 32)"></use><use fill="#FCFCFC" xlink:href="#a" transform="rotate(90 32 32)"></use><use fill="#FEFEFE" xlink:href="#a" transform="rotate(92 32 32)"></use></mask></defs><path d="M54.6 47.6c-1.98-1.98-5.09-1.98-7.07 0-8.56 8.56-22.6 8.56-31.1 0-8.56-8.56-8.56-22.6 0-31.1 4.54-5.58-3.25-10.7-7.07-7.07-12.4 12.4-12.4 32.8 0 45.3 12.4 12.4 32.8 12.4 45.3 0 1.98-1.98 1.98-5.09 0-7.07zM32 54c-12.1 0-22-9.9-22-22s9.9-22 22-22c2.8 0 5-2.2 5-5s-2.2-5-5-5C14.4 0 0 14.4 0 32s14.4 32 32 32c7.16-.736 5.26-9.84 0-10z" mask="url(#progress)"></path></svg></div><div class="page page_account"><div class="page-resizer"><iframe src="about:blank" class="page-resizer__frame"></iframe></div></div><div class="popup__close-btn"></div><script crossorigin="anonymous">loadLog.ns('html').start('js-globals');</script><script crossorigin="anonymous">window.config = {
+				app    : 'account',
+				imgPath: '\/\/img.imgsmail.ru\/pkgs\/account.mail.ru\/release-fmail-19891.138146'
+			};
+
+			var patron_omega_value = '';window.patron = {
+				build: 'release-fmail-19891 | d650de6 | 2023-03-16T10:05:22.069Z',
+				branch: 'release-fmail-19891',
+				omega: patron_omega_value
+			};
+
+			window.TapSupportEnabled = true;
+
+			window.ajs = {
+				log: function (message) {
+					try {
+						Function.prototype.apply.call(console.log, console,
+							Array.prototype.concat.apply(['[ account ]'], arguments));
+					}
+					catch (error) {}
+				}
+			};
+
+			loadLogAssert(typeof window.config !== 'undefined', 'window.config');
+			loadLog.ns('html').end('js-globals');
+			//# sourceURL=js-globals.js</script><script crossorigin="anonymous">loadLog.ns('html').start('application-loader');</script><script crossorigin="anonymous">radar('bundles_loading');</script><script crossorigin="anonymous">var use_xhr_load = "false";
+					window.__files_to_load = [
+						"\/\/img.imgsmail.ru\/pkgs\/account.mail.ru\/release-fmail-19891.138146/js/en_US/main.js"
+					];
+					var isProduction = "true";/* global use_xhr_load, __files_to_load, shazam, isProduction */
+(function() {
+	window.__after_load_callback = function() {
+		window.require.config({
+			waitSeconds: 0,
+			bundles: {
+				'react.env': ['react', 'react-dom', 'react-intl']
+			}
+		});
+
+		// читаем конфиг капельмейстера, вставленного на сервере с помощью SSI
+		var kapellmeiserJson = document.getElementById('kapellmeister.json').textContent;
+		var KAPELLMEISTER_REMOTE;
+
+		try {
+			KAPELLMEISTER_REMOTE = JSON.parse(kapellmeiserJson);
+		} catch (_) {
+			// проблемы с конфигом - шазам будем брать все пакеты из локального конфига
+		}
+
+		// читаем локальный конфиг капельмейстера, заинлайненный с помощью грантового таска custom-inliner
+		var localKapellmeiserJson = document.getElementById('local.kapellmeister.json').textContent;
+		var KAPELLMEISTER_LOCAL;
+
+		try {
+			KAPELLMEISTER_LOCAL = JSON.parse(localKapellmeiserJson);
+		} catch (_) {
+			// ignore
+		}
+
+		var shazamEnv = (isProduction === 'true') ? 'production' : 'development';
+		shazam({
+			appName: 'account.mail.ru',
+			local: KAPELLMEISTER_LOCAL,
+			remote: KAPELLMEISTER_REMOTE,
+			url: {
+				dev: '/pkgs',
+				prod: '//img.imgsmail.ru/pkgs',
+				local: './node_modules/',
+				hbProd: '//img.imgsmail.ru/hb/e.mail.ru',
+				hbDev: '//static.mail.cloud.devmail.ru/omega',
+			},
+			env: shazamEnv,
+			lang: 'en_US' // подставится mrg-trb-compiler'ом
+		});
+
+		window.require([window.config.app + '/app']);
+	};
+
+	if (use_xhr_load !== 'true') {
+		for (var i = 0; i < __files_to_load.length; i++) {
+			document.write('<script src="' + __files_to_load[i] + '" crossorigin="anonymous"><' + '\/script>');
+		}
+
+		document.write('<script crossorigin="anonymous">__after_load_callback();<' + '\/script>');
+		return;
+	}
+
+	function _f(m, u, l, c, e) {
+		var obj = {
+			url: __url__,
+			msg: m,
+			line: l,
+			column: c,
+			name: e && e.name,
+			stack: e && e.stack,
+			secret: __secret__
+		};
+		var M = JSON.stringify(obj);
+		window.parent && window.parent.postMessage(M, '*');
+	}
+
+	_f.__secret__ = Math.random();
+	window.addEventListener('message', function(evt) {
+		try {
+			var d = evt.data;
+			d = JSON.parse(d);
+			if (d.secret === _f.__secret__) {
+				window.coreLogger && coreLogger.dispatchError(d, null, {category: 'requirejs', tag: 'ign'});
+			}
+		} catch (_) {}
+	}, true);
+
+	function tryDetectRawError(url, source) {
+		try {
+			var iframe = document.createElement('iframe');
+
+			iframe.style.display = 'none';
+			document.body.appendChild(iframe);
+
+			var idoc = iframe.contentWindow && iframe.contentWindow.document || iframe.contentDocument;
+			idoc.open();
+			idoc.writeln([
+				'<script crossorigin="anonymous">window.onerror=' + _f.toString()
+					.replace('__secret__', _f.__secret__)
+					.replace('__url__', function() {return JSON.stringify(url);})
+				+ ';</' + 'script>',
+				'<script crossorigin="anonymous">' + source.replace(/<\/script/g, '<\\/script') + '</' + 'script>'
+			].join('\n'));
+			idoc.close();
+		} catch (_) {}
+	}
+
+	var sources = {};
+	var kapellmeister = window.kapellmeister;
+
+	function evaluateAllScripts() {
+		for (var i = 0; i < __files_to_load.length; i++) {
+			if (typeof sources[__files_to_load[i]] === 'undefined') {
+				return;
+			}
+		}
+
+		__files_to_load.forEach(function(url) {
+			var source = sources[url];
+			try {
+				window.eval.call(window, source + '\n//# sourceURL=' + url);
+			} catch (e) {
+				tryDetectRawError(url, source);
+				throw new Error('Failed to load application bundles');
+			}
+		});
+
+		__after_load_callback();
+	}
+
+	__files_to_load.forEach(function(url) {
+		window.xhr.request(url, function(error, result) {
+			if (error) {
+				throw error;
+			}
+			if (result.status < 200 || result.status >= 400 || result.readyState !== 4) {
+				throw new Error('Error while loading script ' + url);
+			}
+
+			sources[url] = result.responseText;
+			evaluateAllScripts();
+		});
+	});
+
+})();
+loadLog.ns('html').end('application-loader');
+					//# sourceURL=application-loader.js</script></div><div id="account-footer" class="account-footer" data-mobile-app="false" data-popup="false"><img src="https://rs.mail.ru/d26047874.gif?sz=49&amp;rnd=110027436&ts=1683042432&sz=49" style="width:0;height:0;position:absolute;visibility:hidden;" alt=""/>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+<style>.portal-footer{position:relative;margin:0;white-space:nowrap;text-align:left;background:#fff;*zoom:1;width:100%;height:28px;margin:0;padding:0;border:0;border-top:1px solid #D5D5D5;border-spacing:0;border-collapse:collapse;font-family:Arial, sans-serif;font-size:0;color:#999;border-collapse:collapse;border-spacing:0}.w-portal-footer__visible{position:relative}.portal-footer td,.portal-footer tr{vertical-align:top;text-align:left;border:none;padding:0;margin:0;width:auto;white-space:nowrap}.portal-footer .portal-footer__col_left{width:1%;padding-right:28px;padding-left:10px;text-align:left}.portal-footer .portal-footer__col_right{text-align:right;padding-right:10px}.portal-footer__link{display:inline-block;*display:inline;*zoom:1;margin:0 8px}.portal-footer__link,.portal-footer__link:link,.portal-footer__link:visited,.portal-footer__link:hover,.portal-footer__link:active,.portal-footer__link:focus{outline:0;cursor:pointer;color:#999;font-size:12px;font-family:Arial, sans-serif;height:28px;line-height:28px;*zoom:1}.portal-footer__link,.portal-footer__link:link,.portal-footer__link:visited{text-decoration:none}.portal-footer__link:hover,.portal-footer__link:active,.portal-footer__link:focus{text-decoration:none;color:#f26d00}#portal-footer__project-links__container{display:none;position:absolute;visibility:hidden}.portal-footer__lang-select{font-size:12px;font-family:Arial, sans-serif;margin-left:8px}.portal-footer__lang-select__button,.portal-footer__lang-select__button:link,.portal-footer__lang-select__button:visited,.portal-footer__lang-select__button:hover,.portal-footer__lang-select__button:active,.portal-footer__lang-select__button:focus{text-decoration:none;position:relative;outline:0;font-size:12px;font-family:Arial, sans-serif;cursor:pointer;color:#999;border-bottom:1px dotted #999;margin:0 8px;*border-bottom-style:dashed;border-bottom-style:dashed\9}.portal-footer__lang-select__button:hover,.portal-footer__lang-select__button:active,.portal-footer__lang-select__button:focus{color:#f26d00;border-bottom-color:#f26d00}.portal-footer__project-links{white-space:nowrap}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+<div class="w-portal-footer" id="w-portal-footer" data-visibility-class="w-portal-footer__visible"><table border="0" cellspacing="0" cellpadding="0" class="portal-footer portal-footer_portal-footer"><tbody><tr><td class="portal-footer__col portal-footer__col_left"><div class="portal-footer__portal-links"><!--portal-links--><a class="portal-footer__link" href="https://r.mail.ru/n253577115?sz=49&amp;rnd=110027436" rel="noopener" target="_blank"><span class="portal-footer__link__text">Mail.ru</span></a><a class="portal-footer__link" href="https://r.mail.ru/n382470676?sz=49&amp;rnd=110027436" rel="noopener" target="_blank"><span class="portal-footer__link__text">About the Company</span></a><a class="portal-footer__link" href="https://r.mail.ru/n309433547?sz=49&amp;rnd=110027436" rel="noopener" target="_blank"><span class="portal-footer__link__text">Advertisement</span></a><a class="portal-footer__link" href="https://r.mail.ru/n382470677?sz=49&amp;rnd=110027436" rel="noopener" target="_blank"><span class="portal-footer__link__text">Employment</span></a><!--/ portal-links--></div></td><td class="portal-footer__col portal-footer__col_right"><div id="portal-footer__project-links" class="portal-footer__project-links" data-project-links-class="portal-footer__link"><b style="display:none" id="portal-footer__project-links__insert_before"></b></div><script>void function(){"use strict";function c(){var c=e.getElementById("portal-footer__project-links"),g=e.getElementById("portal-footer__project-links__insert_before"),f=e.getElementById("portal-footer__project-links__container"),b,h,a,d,k;if(c&&g&&f){h=[];b=f.getElementsByTagName("a");for(d=b.length;d;)a=b[--d],h.push(a);for(;a=h.pop();)(b=a.getAttribute("data-type"))?(d="portal-footer__link portal-footer__link_"+b,k="portal-footer__link__text portal-footer__link__text_"+b):(d="portal-footer__link",k="portal-footer__link__text"),
+a.innerHTML='<span class="'+k+'">'+("textContent"in a?a.textContent:"innerText"in a?a.innerText:"data"in a?a.data:"")+"</span>",(b=a.style)&&b.cssText&&(b.cssText=""),a.className=d,c.insertBefore(a,g);c.removeChild(g);f.parentNode.removeChild(f);return!0}}var e=this.document;c()||(e.addEventListener&&e.addEventListener("DOMContentLoaded",c,!1),window.addEventListener?window.addEventListener("load",c,!1):window.attachEvent("onload",c,!1))}.call(window);</script></td></tr></tbody></table></div></div><script crossorigin="anonymous">var scripts = document.querySelectorAll('script');
+
+				for (var i=0; i < scripts.length; i++) {
+					var script = scripts[i];
+					if (script.type === 'application/json' || script.type === 'text/html' || script.crossOrigin === 'anonymous') {
+						break;
+					}
+
+					script.crossOrigin = 'anonymous';
+				}</script><script crossorigin="anonymous">loadLog.ns('html').end('page');</script></body></html>
